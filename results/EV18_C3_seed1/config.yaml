@@ -1,0 +1,14 @@
+dataset: endovis2018
+experiment_id: C3
+model:
+  components:
+    dfs: true
+    dm: false
+    dms: false
+  hyperparams:
+    lambda_dfs: 0.5
+    memory_size: 6
+    tau_occ: 0.65
+    tau_rel: 0.95
+model_path: /workspace/models/facebook/sam3/sam3.pt
+seed: 1

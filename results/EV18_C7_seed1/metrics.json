@@ -1,0 +1,11 @@
+{
+  "challenge_iou": 70.85,
+  "iou": 70.85,
+  "mciou": 56.03,
+  "per_class": {
+    "shaft": 61.36,
+    "clasper": 49.73,
+    "wrist": 57.01
+  },
+  "num_frames": 745
+}

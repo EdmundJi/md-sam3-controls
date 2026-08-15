@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# System
+.DS_Store
+._*
+
+# IDE
+.vscode/
+.idea/
+
+# External repositories, cloned by the user (see README)
+/third_party/
+
+# Model weights and data, not redistributable
+/checkpoints/
+/data/
+*.pt
+*.pth
+
+# Run logs
+*.log
