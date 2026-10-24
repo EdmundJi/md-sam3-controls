@@ -1,0 +1,563 @@
+[
+ {
+  "seq_tag": "video12_15750",
+  "dataset_id": 1000,
+  "challenge_iou": 90.69,
+  "iou": 90.69,
+  "mciou": 87.48,
+  "per_class": {
+   "BF": 79.78,
+   "PF": 95.18,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 87.48,
+  "per_class_instantiable": {
+   "BF": 79.78,
+   "PF": 95.18,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 159,
+   "PF": 159,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 159,
+   "PF": 159,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 159,
+  "biou": 90.69,
+  "biou_nonempty": 90.69,
+  "n_frames_nonempty": 159,
+  "ciou_cls_gt": 87.48,
+  "ciou_cls_union": 87.48,
+  "cum_miou": 88.63
+ },
+ {
+  "seq_tag": "video12_19500",
+  "dataset_id": 1001,
+  "challenge_iou": 71.55,
+  "iou": 71.55,
+  "mciou": 70.79,
+  "per_class": {
+   "BF": 53.85,
+   "PF": 87.74,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 70.79,
+  "per_class_instantiable": {
+   "BF": 53.85,
+   "PF": 87.74,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 256,
+   "PF": 280,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 256,
+   "PF": 280,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 319,
+  "biou": 71.55,
+  "biou_nonempty": 71.55,
+  "n_frames_nonempty": 319,
+  "ciou_cls_gt": 70.12,
+  "ciou_cls_union": 61.05,
+  "cum_miou": 59.94
+ },
+ {
+  "seq_tag": "video12_19900",
+  "dataset_id": 1002,
+  "challenge_iou": 58.25,
+  "iou": 58.25,
+  "mciou": 43.67,
+  "per_class": {
+   "BF": 87.35,
+   "PF": 0.0,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 87.35,
+  "per_class_instantiable": {
+   "BF": 87.35,
+   "PF": 0.0,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 159,
+   "PF": 117,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 159,
+   "PF": 0,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 159,
+  "biou": 58.25,
+  "biou_nonempty": 58.25,
+  "n_frames_nonempty": 159,
+  "ciou_cls_gt": 55.58,
+  "ciou_cls_union": 55.58,
+  "cum_miou": 43.73
+ },
+ {
+  "seq_tag": "video17_01563",
+  "dataset_id": 1003,
+  "challenge_iou": 70.71,
+  "iou": 70.71,
+  "mciou": 70.71,
+  "per_class": {
+   "BF": 70.71,
+   "PF": 0.0,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 70.71,
+  "per_class_instantiable": {
+   "BF": 70.71,
+   "PF": 0.0,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 159,
+   "PF": 0,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 159,
+   "PF": 0,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 159,
+  "biou": 70.71,
+  "biou_nonempty": 70.71,
+  "n_frames_nonempty": 159,
+  "ciou_cls_gt": 70.71,
+  "ciou_cls_union": 70.71,
+  "cum_miou": 72.67
+ },
+ {
+  "seq_tag": "video17_01803",
+  "dataset_id": 1004,
+  "challenge_iou": 86.68,
+  "iou": 86.68,
+  "mciou": 43.33,
+  "per_class": {
+   "BF": 86.66,
+   "PF": 0.0,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 86.66,
+  "per_class_instantiable": {
+   "BF": 86.66,
+   "PF": 0.0,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 79,
+   "PF": 1,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 79,
+   "PF": 0,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 79,
+  "biou": 86.68,
+  "biou_nonempty": 86.68,
+  "n_frames_nonempty": 79,
+  "ciou_cls_gt": 86.12,
+  "ciou_cls_union": 86.12,
+  "cum_miou": 43.23
+ },
+ {
+  "seq_tag": "video18_00979",
+  "dataset_id": 1006,
+  "challenge_iou": 94.0,
+  "iou": 94.0,
+  "mciou": 93.65,
+  "per_class": {
+   "BF": 92.62,
+   "PF": 94.67,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 93.65,
+  "per_class_instantiable": {
+   "BF": 92.62,
+   "PF": 94.67,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 79,
+   "PF": 79,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 79,
+   "PF": 79,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 79,
+  "biou": 94.0,
+  "biou_nonempty": 94.0,
+  "n_frames_nonempty": 79,
+  "ciou_cls_gt": 93.65,
+  "ciou_cls_union": 93.65,
+  "cum_miou": 93.84
+ },
+ {
+  "seq_tag": "video18_01139",
+  "dataset_id": 1007,
+  "challenge_iou": 95.71,
+  "iou": 95.71,
+  "mciou": 95.64,
+  "per_class": {
+   "BF": 95.49,
+   "PF": 95.8,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 95.64,
+  "per_class_instantiable": {
+   "BF": 95.49,
+   "PF": 95.8,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 79,
+   "PF": 79,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 79,
+   "PF": 79,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 79,
+  "biou": 95.71,
+  "biou_nonempty": 95.71,
+  "n_frames_nonempty": 79,
+  "ciou_cls_gt": 95.64,
+  "ciou_cls_union": 95.64,
+  "cum_miou": 95.64
+ },
+ {
+  "seq_tag": "video20_03260",
+  "dataset_id": 1008,
+  "challenge_iou": 93.64,
+  "iou": 93.64,
+  "mciou": 93.33,
+  "per_class": {
+   "BF": 94.86,
+   "PF": 91.81,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 93.33,
+  "per_class_instantiable": {
+   "BF": 94.86,
+   "PF": 91.81,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 159,
+   "PF": 159,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 159,
+   "PF": 159,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 159,
+  "biou": 93.64,
+  "biou_nonempty": 93.64,
+  "n_frames_nonempty": 159,
+  "ciou_cls_gt": 93.33,
+  "ciou_cls_union": 93.33,
+  "cum_miou": 92.5
+ },
+ {
+  "seq_tag": "video24_09596",
+  "dataset_id": 1011,
+  "challenge_iou": 55.34,
+  "iou": 55.34,
+  "mciou": 55.34,
+  "per_class": {
+   "BF": 55.34,
+   "PF": 0.0,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 55.34,
+  "per_class_instantiable": {
+   "BF": 55.34,
+   "PF": 0.0,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 159,
+   "PF": 0,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 159,
+   "PF": 0,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 159,
+  "biou": 55.34,
+  "biou_nonempty": 55.34,
+  "n_frames_nonempty": 159,
+  "ciou_cls_gt": 55.34,
+  "ciou_cls_union": 55.34,
+  "cum_miou": 51.23
+ },
+ {
+  "seq_tag": "video24_09836",
+  "dataset_id": 1012,
+  "challenge_iou": 88.48,
+  "iou": 88.48,
+  "mciou": 88.48,
+  "per_class": {
+   "BF": 88.48,
+   "PF": 0.0,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 88.48,
+  "per_class_instantiable": {
+   "BF": 88.48,
+   "PF": 0.0,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 159,
+   "PF": 0,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 159,
+   "PF": 0,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 159,
+  "biou": 88.48,
+  "biou_nonempty": 88.48,
+  "n_frames_nonempty": 159,
+  "ciou_cls_gt": 88.48,
+  "ciou_cls_union": 88.48,
+  "cum_miou": 88.73
+ },
+ {
+  "seq_tag": "video24_10076",
+  "dataset_id": 1013,
+  "challenge_iou": 93.2,
+  "iou": 93.2,
+  "mciou": 93.2,
+  "per_class": {
+   "BF": 93.2,
+   "PF": 0.0,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 93.2,
+  "per_class_instantiable": {
+   "BF": 93.2,
+   "PF": 0.0,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 79,
+   "PF": 0,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 79,
+   "PF": 0,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 79,
+  "biou": 93.2,
+  "biou_nonempty": 93.2,
+  "n_frames_nonempty": 79,
+  "ciou_cls_gt": 93.2,
+  "ciou_cls_union": 93.2,
+  "cum_miou": 93.22
+ }
+]

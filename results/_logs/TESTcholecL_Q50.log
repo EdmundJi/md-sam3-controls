@@ -1,0 +1,79 @@
+[0m[32mINFO 2026-10-23 19:35:14,115 42230 sam3_video_base.py: 125:[0m setting max_num_objects=10000 and num_obj_for_compile=16
+2026-10-23 19:35:24,777 [INFO] inference_ev17: cholec/test: 25 sequences
+2026-10-23 19:36:16,926 [INFO] inference_ev17:   video01_00149: 171 frames, classes=[1], Done in 52.1s
+2026-10-23 19:36:25,715 [INFO] inference_ev17:     bIoU=82.99
+2026-10-23 19:37:04,820 [INFO] inference_ev17:   video01_00400: 80 frames, classes=[1], Done in 39.1s
+2026-10-23 19:37:08,128 [INFO] inference_ev17:     bIoU=77.89
+2026-10-23 19:39:02,134 [INFO] inference_ev17:   video01_14859: 320 frames, classes=[1, 2], Done in 113.8s
+2026-10-23 19:39:10,709 [INFO] inference_ev17:     bIoU=88.55
+2026-10-23 19:40:15,326 [INFO] inference_ev17:   video01_16345: 160 frames, classes=[1, 2], Done in 64.6s
+2026-10-23 19:40:22,725 [INFO] inference_ev17:     bIoU=86.44
+2026-10-23 19:41:15,616 [INFO] inference_ev17:   video01_16585: 80 frames, classes=[1], Done in 52.7s
+2026-10-23 19:41:20,829 [INFO] inference_ev17:     bIoU=79.50
+2026-10-23 19:43:17,744 [INFO] inference_ev17:   video01_28580: 400 frames, classes=[2], Done in 116.8s
+2026-10-23 19:43:25,423 [INFO] inference_ev17:     bIoU=88.20
+2026-10-23 19:44:08,626 [INFO] inference_ev17:   video25_00162: 160 frames, classes=[1], Done in 43.2s
+2026-10-23 19:44:12,023 [INFO] inference_ev17:     bIoU=84.41
+2026-10-23 19:45:13,707 [INFO] inference_ev17:   video25_00402: 160 frames, classes=[1], Done in 61.7s
+2026-10-23 19:45:16,422 [INFO] inference_ev17:     bIoU=94.04
+2026-10-23 19:45:35,110 [INFO] inference_ev17:   video26_01945: 70 frames, classes=[1], Done in 18.7s
+2026-10-23 19:45:37,606 [INFO] inference_ev17:     bIoU=75.11
+2026-10-23 19:46:20,025 [INFO] inference_ev17:   video26_02095: 160 frames, classes=[1], Done in 42.4s
+2026-10-23 19:46:27,127 [INFO] inference_ev17:     bIoU=79.36
+2026-10-23 19:47:00,718 [INFO] inference_ev17:   video27_00256: 64 frames, classes=[1], Done in 33.5s
+2026-10-23 19:47:04,506 [INFO] inference_ev17:     bIoU=88.08
+2026-10-23 19:48:20,317 [INFO] inference_ev17:   video27_00400: 160 frames, classes=[1], Done in 75.7s
+2026-10-23 19:48:25,411 [INFO] inference_ev17:     bIoU=77.86
+2026-10-23 19:48:51,468 [INFO] inference_ev17:   video27_00640: 80 frames, classes=[1], Done in 26.0s
+2026-10-23 19:48:52,012 [INFO] inference_ev17:     bIoU=91.43
+2026-10-23 19:50:22,127 [INFO] inference_ev17:   video28_00234: 326 frames, classes=[1], Done in 90.1s
+2026-10-23 19:50:37,230 [INFO] inference_ev17:     bIoU=83.24
+2026-10-23 19:51:11,711 [INFO] inference_ev17:   video35_00780: 80 frames, classes=[1], Done in 34.4s
+2026-10-23 19:51:12,619 [INFO] inference_ev17:     bIoU=94.55
+2026-10-23 19:51:41,433 [INFO] inference_ev17:   video35_00940: 80 frames, classes=[1], Done in 28.8s
+2026-10-23 19:51:43,637 [INFO] inference_ev17:     bIoU=92.57
+2026-10-23 19:52:12,715 [INFO] inference_ev17:   video35_01100: 80 frames, classes=[1], Done in 29.0s
+2026-10-23 19:52:16,042 [INFO] inference_ev17:     bIoU=95.71
+2026-10-23 19:52:45,638 [INFO] inference_ev17:   video37_00528: 80 frames, classes=[1], Done in 29.5s
+2026-10-23 19:52:47,038 [INFO] inference_ev17:     bIoU=83.34
+2026-10-23 19:55:10,017 [INFO] inference_ev17:   video37_00688: 400 frames, classes=[1], Done in 143.0s
+2026-10-23 19:55:25,120 [INFO] inference_ev17:     bIoU=84.66
+2026-10-23 19:59:37,124 [INFO] inference_ev17:   video43_00365: 502 frames, classes=[1], Done in 252.0s
+2026-10-23 19:59:44,774 [INFO] inference_ev17:     bIoU=88.21
+2026-10-23 20:01:05,811 [INFO] inference_ev17:   video48_00561: 160 frames, classes=[1], Done in 81.0s
+2026-10-23 20:01:10,908 [INFO] inference_ev17:     bIoU=81.15
+2026-10-23 20:01:35,322 [INFO] inference_ev17:   video48_00801: 80 frames, classes=[1], Done in 24.4s
+2026-10-23 20:01:38,518 [INFO] inference_ev17:     bIoU=81.22
+2026-10-23 20:05:05,209 [INFO] inference_ev17:   video52_00000: 560 frames, classes=[1], Done in 206.7s
+2026-10-23 20:05:14,520 [INFO] inference_ev17:     bIoU=88.29
+2026-10-23 20:06:38,884 [INFO] inference_ev17:   video52_02746: 240 frames, classes=[1, 2], Done in 84.4s
+2026-10-23 20:06:47,224 [INFO] inference_ev17:     bIoU=70.05
+2026-10-23 20:07:47,217 [INFO] inference_ev17:   video55_00508: 240 frames, classes=[1], Done in 59.9s
+2026-10-23 20:07:53,556 [INFO] inference_ev17:     bIoU=52.04
+2026-10-23 20:07:53,556 [INFO] inference_ev17: RETENTION: pruned 2636/4868 = 54.15% (mode=quantile)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video01_00149: 88/170 deleted (51.8%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video01_00400: 56/79 deleted (70.9%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video01_14859: 189/319 deleted (59.2%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video01_16345: 131/159 deleted (82.4%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video01_16585: 45/79 deleted (57.0%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video01_28580: 177/399 deleted (44.4%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video25_00162: 96/159 deleted (60.4%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video25_00402: 88/159 deleted (55.4%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video26_01945: 37/69 deleted (53.6%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video26_02095: 22/159 deleted (13.8%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video27_00256: 49/63 deleted (77.8%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video27_00400: 121/159 deleted (76.1%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video27_00640: 46/79 deleted (58.2%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video28_00234: 133/325 deleted (40.9%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video35_00780: 14/79 deleted (17.7%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video35_00940: 39/79 deleted (49.4%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video35_01100: 4/79 deleted (5.1%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video37_00528: 57/79 deleted (72.2%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video37_00688: 138/399 deleted (34.6%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video43_00365: 331/501 deleted (66.1%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video48_00561: 135/159 deleted (84.9%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video48_00801: 62/79 deleted (78.5%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video52_00000: 358/559 deleted (64.0%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video52_02746: 125/239 deleted (52.3%)
+2026-10-23 20:07:53,557 [INFO] inference_ev17:   retention video55_00508: 95/239 deleted (39.8%)
+2026-10-23 20:08:36,114 [INFO] inference_ev17: Challenge IoU: 83.58%

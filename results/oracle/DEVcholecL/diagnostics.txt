@@ -1,0 +1,11 @@
+video12_15750 {'n': 159, 'k_dm': 0, 'mean_q': 0.8753, 'dm_overlap_oracle': 0, 'chance_overlap': 0.0, 'spearman_score_quality': 0.3843937094391076, 'score_r50_overlap_oracle': 44, 'chance_overlap_r50': 39.3}
+video12_19500 {'n': 319, 'k_dm': 0, 'mean_q': 0.6241, 'dm_overlap_oracle': 0, 'chance_overlap': 0.0, 'spearman_score_quality': 0.42726913495649205, 'score_r50_overlap_oracle': 108, 'chance_overlap_r50': 79.3}
+video12_19900 {'n': 159, 'k_dm': 0, 'mean_q': 0.8733, 'dm_overlap_oracle': 0, 'chance_overlap': 0.0, 'spearman_score_quality': 0.5969001815829635, 'score_r50_overlap_oracle': 56, 'chance_overlap_r50': 39.3}
+video17_01563 {'n': 159, 'k_dm': 0, 'mean_q': 0.71, 'dm_overlap_oracle': 0, 'chance_overlap': 0.0, 'spearman_score_quality': 0.3287394305287776, 'score_r50_overlap_oracle': 49, 'chance_overlap_r50': 39.3}
+video17_01803 {'n': 79, 'k_dm': 0, 'mean_q': 0.8669, 'dm_overlap_oracle': 0, 'chance_overlap': 0.0, 'spearman_score_quality': 0.42440200157640146, 'score_r50_overlap_oracle': 27, 'chance_overlap_r50': 19.3}
+video18_00979 {'n': 79, 'k_dm': 0, 'mean_q': 0.9313, 'dm_overlap_oracle': 0, 'chance_overlap': 0.0, 'spearman_score_quality': 0.7007046142166199, 'score_r50_overlap_oracle': 30, 'chance_overlap_r50': 19.3}
+video18_01139 {'n': 79, 'k_dm': 0, 'mean_q': 0.9566, 'dm_overlap_oracle': 0, 'chance_overlap': 0.0, 'spearman_score_quality': 0.10439659596572472, 'score_r50_overlap_oracle': 23, 'chance_overlap_r50': 19.3}
+video20_03260 {'n': 159, 'k_dm': 0, 'mean_q': 0.9335, 'dm_overlap_oracle': 0, 'chance_overlap': 0.0, 'spearman_score_quality': 0.2977194308857255, 'score_r50_overlap_oracle': 47, 'chance_overlap_r50': 39.3}
+video24_09596 {'n': 159, 'k_dm': 0, 'mean_q': 0.5533, 'dm_overlap_oracle': 0, 'chance_overlap': 0.0, 'spearman_score_quality': 0.1185804749020388, 'score_r50_overlap_oracle': 36, 'chance_overlap_r50': 39.3}
+video24_09836 {'n': 159, 'k_dm': 0, 'mean_q': 0.8859, 'dm_overlap_oracle': 0, 'chance_overlap': 0.0, 'spearman_score_quality': 0.6094043625338035, 'score_r50_overlap_oracle': 57, 'chance_overlap_r50': 39.3}
+video24_10076 {'n': 79, 'k_dm': 0, 'mean_q': 0.9333, 'dm_overlap_oracle': 0, 'chance_overlap': 0.0, 'spearman_score_quality': 0.17993978421103973, 'score_r50_overlap_oracle': 19, 'chance_overlap_r50': 19.3}

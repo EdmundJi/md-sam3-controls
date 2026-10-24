@@ -1,0 +1,64 @@
+2026-10-23 15:20:17,603 [INFO] inference_ev17: Config C2-perm: dms=False, dm=True, dfs=False
+2026-10-23 15:20:17,604 [INFO] inference_ev17:   tau_rel=0.95, tau_occ=0.65, lambda_dfs=0.5, M=6
+2026-10-23 15:20:17,616 [INFO] inference_ev17: Loading SAM3 from /workspace/models/facebook/sam3/sam3.pt
+[0m[32mINFO 2026-10-23 15:20:28,922 9755 sam3_video_base.py: 125:[0m setting max_num_objects=10000 and num_obj_for_compile=16
+2026-10-23 15:20:44,780 [INFO] inference_ev17: Found 10 test sequences
+2026-10-23 15:20:44,964 [INFO] inference_ev17: Dataset 1: 75 frames, classes=[1, 2]
+2026-10-23 15:20:47,315 [INFO] src.models.md_sam3:   perm control: 37/74 planned deletions for ds1
+2026-10-23 15:21:07,320 [INFO] inference_ev17:   Done in 22.4s (3.4 fps)
+2026-10-23 15:21:12,441 [INFO] inference_ev17:   DS1: CIoU=81.50%
+2026-10-23 15:21:12,535 [INFO] inference_ev17: Dataset 2: 75 frames, classes=[2]
+2026-10-23 15:21:24,623 [INFO] src.models.md_sam3:   perm control: 37/74 planned deletions for ds2
+2026-10-23 15:21:47,031 [INFO] inference_ev17:   Done in 34.5s (2.2 fps)
+2026-10-23 15:21:53,434 [INFO] inference_ev17:   DS2: CIoU=90.96%
+2026-10-23 15:21:53,629 [INFO] inference_ev17: Dataset 3: 75 frames, classes=[3]
+2026-10-23 15:22:00,933 [INFO] src.models.md_sam3:   perm control: 37/74 planned deletions for ds3
+2026-10-23 15:22:34,425 [INFO] inference_ev17:   Done in 40.8s (1.8 fps)
+2026-10-23 15:22:36,908 [INFO] inference_ev17:   DS3: CIoU=94.68%
+2026-10-23 15:22:36,971 [INFO] inference_ev17: Dataset 4: 75 frames, classes=[2, 3]
+2026-10-23 15:22:39,610 [INFO] src.models.md_sam3:   perm control: 37/74 planned deletions for ds4
+2026-10-23 15:23:11,126 [INFO] inference_ev17:   Done in 34.2s (2.2 fps)
+2026-10-23 15:23:13,938 [INFO] inference_ev17:   DS4: CIoU=94.96%
+2026-10-23 15:23:14,004 [INFO] inference_ev17: Dataset 5: 75 frames, classes=[1, 4]
+2026-10-23 15:23:17,848 [INFO] src.models.md_sam3:   perm control: 37/74 planned deletions for ds5
+2026-10-23 15:23:43,540 [INFO] inference_ev17:   Done in 29.5s (2.5 fps)
+2026-10-23 15:23:59,241 [INFO] inference_ev17:   DS5: CIoU=92.43%
+2026-10-23 15:23:59,415 [INFO] inference_ev17: Dataset 6: 75 frames, classes=[2, 3]
+2026-10-23 15:24:02,809 [INFO] src.models.md_sam3:   perm control: 37/74 planned deletions for ds6
+2026-10-23 15:24:32,244 [INFO] inference_ev17:   Done in 32.8s (2.3 fps)
+2026-10-23 15:24:36,513 [INFO] inference_ev17:   DS6: CIoU=92.87%
+2026-10-23 15:24:36,646 [INFO] inference_ev17: Dataset 7: 75 frames, classes=[1, 4]
+2026-10-23 15:24:40,021 [INFO] src.models.md_sam3:   perm control: 37/74 planned deletions for ds7
+2026-10-23 15:25:01,817 [INFO] inference_ev17:   Done in 25.2s (3.0 fps)
+2026-10-23 15:25:14,315 [INFO] inference_ev17:   DS7: CIoU=78.86%
+2026-10-23 15:25:14,523 [INFO] inference_ev17: Dataset 8: 75 frames, classes=[1, 6]
+2026-10-23 15:25:21,029 [INFO] src.models.md_sam3:   perm control: 37/74 planned deletions for ds8
+2026-10-23 15:25:43,316 [INFO] inference_ev17:   Done in 28.8s (2.6 fps)
+2026-10-23 15:25:52,212 [INFO] inference_ev17:   DS8: CIoU=95.59%
+2026-10-23 15:25:52,312 [INFO] inference_ev17: Dataset 9: 300 frames, classes=[1, 2, 6]
+2026-10-23 15:26:21,632 [INFO] src.models.md_sam3:   perm control: 149/299 planned deletions for ds9
+2026-10-23 15:27:59,924 [INFO] inference_ev17:   Done in 127.6s (2.4 fps)
+2026-10-23 15:28:25,839 [INFO] inference_ev17:   DS9: CIoU=85.86%
+2026-10-23 15:28:25,960 [INFO] inference_ev17: Dataset 10: 300 frames, classes=[3]
+2026-10-23 15:28:49,548 [INFO] src.models.md_sam3:   perm control: 149/299 planned deletions for ds10
+2026-10-23 15:29:41,342 [INFO] inference_ev17:   Done in 75.4s (4.0 fps)
+2026-10-23 15:30:12,013 [INFO] inference_ev17:   DS10: CIoU=94.32%
+2026-10-23 15:30:12,014 [INFO] inference_ev17: RETENTION: pruned 594/1190 = 49.92% (mode=perm)
+2026-10-23 15:30:12,014 [INFO] inference_ev17:   retention ds1: 37/74 deleted (50.0%)
+2026-10-23 15:30:12,014 [INFO] inference_ev17:   retention ds2: 37/74 deleted (50.0%)
+2026-10-23 15:30:12,014 [INFO] inference_ev17:   retention ds3: 37/74 deleted (50.0%)
+2026-10-23 15:30:12,014 [INFO] inference_ev17:   retention ds4: 37/74 deleted (50.0%)
+2026-10-23 15:30:12,014 [INFO] inference_ev17:   retention ds5: 37/74 deleted (50.0%)
+2026-10-23 15:30:12,014 [INFO] inference_ev17:   retention ds6: 37/74 deleted (50.0%)
+2026-10-23 15:30:12,014 [INFO] inference_ev17:   retention ds7: 37/74 deleted (50.0%)
+2026-10-23 15:30:12,014 [INFO] inference_ev17:   retention ds8: 37/74 deleted (50.0%)
+2026-10-23 15:30:12,014 [INFO] inference_ev17:   retention ds9: 149/299 deleted (49.8%)
+2026-10-23 15:30:12,014 [INFO] inference_ev17:   retention ds10: 149/299 deleted (49.8%)
+2026-10-23 15:31:21,043 [INFO] inference_ev17: 
+=== RESULTS ===
+2026-10-23 15:31:21,043 [INFO] inference_ev17: Challenge IoU: 90.16%
+2026-10-23 15:31:21,043 [INFO] inference_ev17: IoU:           90.16%
+2026-10-23 15:31:21,043 [INFO] inference_ev17: mcIoU:         60.28%
+2026-10-23 15:31:21,043 [INFO] inference_ev17: Per-class: {'BF': 88.21, 'PF': 80.76, 'LND': 94.26, 'VS': 77.64, 'GR': 0.0, 'MCS': 81.07, 'UP': 0.0}
+2026-10-23 15:31:21,044 [INFO] inference_ev17: 
+Results saved to /workspace/results/ipcai/EV17_R50-perm_s12

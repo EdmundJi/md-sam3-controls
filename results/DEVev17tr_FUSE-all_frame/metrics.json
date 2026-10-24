@@ -1,0 +1,34 @@
+{
+ "challenge_iou": 82.44,
+ "biou": 82.44,
+ "num_frames": 1792,
+ "picks": [
+  284,
+  207,
+  181,
+  184,
+  122,
+  154,
+  108,
+  95,
+  93,
+  83,
+  227,
+  54
+ ],
+ "runs": [
+  "/workspace/results/ipcai/DEVev17tr_keep",
+  "/workspace/results/ipcai/DEVev17tr_DM_sp",
+  "/workspace/results/ipcai/DEVev17tr_delall",
+  "/workspace/results/ipcai/DEVev17tr_Q25",
+  "/workspace/results/ipcai/DEVev17tr_Q25w16",
+  "/workspace/results/ipcai/DEVev17tr_Q50",
+  "/workspace/results/ipcai/DEVev17tr_Q50w16",
+  "/workspace/results/ipcai/DEVev17tr_Q75",
+  "/workspace/results/ipcai/DEVev17tr_Q75w16",
+  "/workspace/results/ipcai/DEVev17tr_R25-score",
+  "/workspace/results/ipcai/DEVev17tr_R50-score",
+  "/workspace/results/ipcai/DEVev17tr_R75-score"
+ ],
+ "rule": "frame"
+}

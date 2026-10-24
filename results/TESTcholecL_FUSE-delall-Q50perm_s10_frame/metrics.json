@@ -1,0 +1,14 @@
+{
+ "challenge_iou": 84.06,
+ "biou": 84.06,
+ "num_frames": 4868,
+ "picks": [
+  2263,
+  2605
+ ],
+ "runs": [
+  "/workspace/results/ipcai/TESTcholecL_delall",
+  "/workspace/results/ipcai/TESTcholecL_Q50-perm_s10"
+ ],
+ "rule": "frame"
+}

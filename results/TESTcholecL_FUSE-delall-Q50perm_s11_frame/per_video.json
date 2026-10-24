@@ -1,0 +1,127 @@
+[
+ {
+  "seq_tag": "video01_00149",
+  "challenge_iou": 82.48,
+  "num_frames": 170
+ },
+ {
+  "seq_tag": "video01_00400",
+  "challenge_iou": 79.63,
+  "num_frames": 79
+ },
+ {
+  "seq_tag": "video01_14859",
+  "challenge_iou": 88.11,
+  "num_frames": 319
+ },
+ {
+  "seq_tag": "video01_16345",
+  "challenge_iou": 85.98,
+  "num_frames": 159
+ },
+ {
+  "seq_tag": "video01_16585",
+  "challenge_iou": 80.12,
+  "num_frames": 79
+ },
+ {
+  "seq_tag": "video01_28580",
+  "challenge_iou": 87.7,
+  "num_frames": 399
+ },
+ {
+  "seq_tag": "video25_00162",
+  "challenge_iou": 83.54,
+  "num_frames": 159
+ },
+ {
+  "seq_tag": "video25_00402",
+  "challenge_iou": 93.96,
+  "num_frames": 159
+ },
+ {
+  "seq_tag": "video26_01945",
+  "challenge_iou": 75.26,
+  "num_frames": 69
+ },
+ {
+  "seq_tag": "video26_02095",
+  "challenge_iou": 78.56,
+  "num_frames": 159
+ },
+ {
+  "seq_tag": "video27_00256",
+  "challenge_iou": 89.45,
+  "num_frames": 63
+ },
+ {
+  "seq_tag": "video27_00400",
+  "challenge_iou": 82.05,
+  "num_frames": 159
+ },
+ {
+  "seq_tag": "video27_00640",
+  "challenge_iou": 91.52,
+  "num_frames": 79
+ },
+ {
+  "seq_tag": "video28_00234",
+  "challenge_iou": 83.44,
+  "num_frames": 325
+ },
+ {
+  "seq_tag": "video35_00780",
+  "challenge_iou": 94.58,
+  "num_frames": 79
+ },
+ {
+  "seq_tag": "video35_00940",
+  "challenge_iou": 92.38,
+  "num_frames": 79
+ },
+ {
+  "seq_tag": "video35_01100",
+  "challenge_iou": 95.72,
+  "num_frames": 79
+ },
+ {
+  "seq_tag": "video37_00528",
+  "challenge_iou": 83.09,
+  "num_frames": 79
+ },
+ {
+  "seq_tag": "video37_00688",
+  "challenge_iou": 84.7,
+  "num_frames": 399
+ },
+ {
+  "seq_tag": "video43_00365",
+  "challenge_iou": 87.99,
+  "num_frames": 501
+ },
+ {
+  "seq_tag": "video48_00561",
+  "challenge_iou": 81.14,
+  "num_frames": 159
+ },
+ {
+  "seq_tag": "video48_00801",
+  "challenge_iou": 81.26,
+  "num_frames": 79
+ },
+ {
+  "seq_tag": "video52_00000",
+  "challenge_iou": 88.16,
+  "num_frames": 559
+ },
+ {
+  "seq_tag": "video52_02746",
+  "challenge_iou": 78.62,
+  "num_frames": 239
+ },
+ {
+  "seq_tag": "video55_00508",
+  "challenge_iou": 52.1,
+  "num_frames": 239
+ }
+]

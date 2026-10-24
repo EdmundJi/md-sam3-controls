@@ -1,0 +1,40 @@
+dataset: endovis2017
+experiment_id: C2-shift
+full_config:
+  adaptive_beta: 1.0
+  adaptive_tau: false
+  block_occ_pollution: false
+  dfs: false
+  dfs_mode: diversity
+  dm: true
+  dms: false
+  frame_format: jpg95
+  group_gate: false
+  lambda_dfs: 0.5
+  memory_size: 6
+  min_occ_frames: 2
+  num_maskmem_override: null
+  occ_score_thresh: 0.0
+  prune_mask_file: /workspace/results/ipcai/EV17_C2_ref/retention_decisions.json
+  prune_mode: shift
+  prune_rate: 0.0
+  prune_seed: 5
+  srg_quantile: 0.5
+  store_mem_entries: false
+  tau_occ: 0.65
+  tau_rel: 0.95
+model:
+  components:
+    dfs: false
+    dm: true
+    dms: false
+  hyperparams:
+    adaptive_beta: 1.0
+    adaptive_tau: false
+    dfs_mode: diversity
+    lambda_dfs: 0.5
+    memory_size: 6
+    tau_occ: 0.65
+    tau_rel: 0.95
+model_path: /workspace/models/facebook/sam3/sam3.pt
+seed: 1

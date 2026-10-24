@@ -1,0 +1,104 @@
+[0m[32mINFO 2026-10-23 20:49:00,013 49808 sam3_video_base.py: 125:[0m setting max_num_objects=10000 and num_obj_for_compile=16
+2026-10-23 20:49:29,742 [INFO] inference_ev17: cholec/test: 25 sequences
+2026-10-23 20:49:34,639 [INFO] src.models.md_sam3:   perm control: 88/170 planned deletions for video01_00149
+2026-10-23 20:50:27,513 [INFO] inference_ev17:   video01_00149: 171 frames, classes=[1], Done in 57.8s
+2026-10-23 20:50:32,822 [INFO] inference_ev17:     bIoU=79.49
+2026-10-23 20:50:36,918 [INFO] src.models.md_sam3:   perm control: 56/79 planned deletions for video01_00400
+2026-10-23 20:51:08,544 [INFO] inference_ev17:   video01_00400: 80 frames, classes=[1], Done in 35.7s
+2026-10-23 20:51:09,272 [INFO] inference_ev17:     bIoU=76.39
+2026-10-23 20:51:14,151 [INFO] src.models.md_sam3:   perm control: 189/319 planned deletions for video01_14859
+2026-10-23 20:52:34,730 [INFO] inference_ev17:   video01_14859: 320 frames, classes=[1, 2], Done in 85.4s
+2026-10-23 20:52:38,130 [INFO] inference_ev17:     bIoU=88.67
+2026-10-23 20:52:43,140 [INFO] src.models.md_sam3:   perm control: 131/159 planned deletions for video01_16345
+2026-10-23 20:53:10,512 [INFO] inference_ev17:   video01_16345: 160 frames, classes=[1, 2], Done in 32.4s
+2026-10-23 20:53:12,724 [INFO] inference_ev17:     bIoU=86.18
+2026-10-23 20:53:14,819 [INFO] src.models.md_sam3:   perm control: 45/79 planned deletions for video01_16585
+2026-10-23 20:53:29,857 [INFO] inference_ev17:   video01_16585: 80 frames, classes=[1], Done in 17.0s
+2026-10-23 20:53:31,320 [INFO] inference_ev17:     bIoU=79.73
+2026-10-23 20:53:38,965 [INFO] src.models.md_sam3:   perm control: 177/399 planned deletions for video01_28580
+2026-10-23 20:54:44,421 [INFO] inference_ev17:   video01_28580: 400 frames, classes=[2], Done in 73.1s
+2026-10-23 20:54:56,611 [INFO] inference_ev17:     bIoU=88.29
+2026-10-23 20:55:03,021 [INFO] src.models.md_sam3:   perm control: 96/159 planned deletions for video25_00162
+2026-10-23 20:55:53,932 [INFO] inference_ev17:   video25_00162: 160 frames, classes=[1], Done in 57.3s
+2026-10-23 20:55:55,853 [INFO] inference_ev17:     bIoU=84.06
+2026-10-23 20:55:58,283 [INFO] src.models.md_sam3:   perm control: 88/159 planned deletions for video25_00402
+2026-10-23 20:56:38,315 [INFO] inference_ev17:   video25_00402: 160 frames, classes=[1], Done in 42.4s
+2026-10-23 20:56:39,359 [INFO] inference_ev17:     bIoU=93.92
+2026-10-23 20:56:39,996 [INFO] src.models.md_sam3:   perm control: 37/69 planned deletions for video26_01945
+2026-10-23 20:56:52,629 [INFO] inference_ev17:   video26_01945: 70 frames, classes=[1], Done in 13.3s
+2026-10-23 20:56:53,818 [INFO] inference_ev17:     bIoU=73.99
+2026-10-23 20:56:57,340 [INFO] src.models.md_sam3:   perm control: 22/159 planned deletions for video26_02095
+2026-10-23 20:57:42,134 [INFO] inference_ev17:   video26_02095: 160 frames, classes=[1], Done in 48.3s
+2026-10-23 20:57:44,231 [INFO] inference_ev17:     bIoU=78.12
+2026-10-23 20:57:46,520 [INFO] src.models.md_sam3:   perm control: 49/63 planned deletions for video27_00256
+2026-10-23 20:58:01,307 [INFO] inference_ev17:   video27_00256: 64 frames, classes=[1], Done in 17.0s
+2026-10-23 20:58:02,747 [INFO] inference_ev17:     bIoU=89.46
+2026-10-23 20:58:07,931 [INFO] src.models.md_sam3:   perm control: 121/159 planned deletions for video27_00400
+2026-10-23 20:58:48,931 [INFO] inference_ev17:   video27_00400: 160 frames, classes=[1], Done in 46.2s
+2026-10-23 20:58:50,174 [INFO] inference_ev17:     bIoU=72.83
+2026-10-23 20:58:51,110 [INFO] src.models.md_sam3:   perm control: 46/79 planned deletions for video27_00640
+2026-10-23 20:59:11,845 [INFO] inference_ev17:   video27_00640: 80 frames, classes=[1], Done in 21.7s
+2026-10-23 20:59:12,819 [INFO] inference_ev17:     bIoU=91.48
+2026-10-23 20:59:18,350 [INFO] src.models.md_sam3:   perm control: 133/325 planned deletions for video28_00234
+2026-10-23 21:00:39,707 [INFO] inference_ev17:   video28_00234: 326 frames, classes=[1], Done in 86.9s
+2026-10-23 21:00:41,916 [INFO] inference_ev17:     bIoU=83.29
+2026-10-23 21:00:42,745 [INFO] src.models.md_sam3:   perm control: 14/79 planned deletions for video35_00780
+2026-10-23 21:00:59,916 [INFO] inference_ev17:   video35_00780: 80 frames, classes=[1], Done in 18.0s
+2026-10-23 21:01:00,453 [INFO] inference_ev17:     bIoU=94.63
+2026-10-23 21:01:02,509 [INFO] src.models.md_sam3:   perm control: 39/79 planned deletions for video35_00940
+2026-10-23 21:01:25,101 [INFO] inference_ev17:   video35_00940: 80 frames, classes=[1], Done in 24.6s
+2026-10-23 21:01:25,622 [INFO] inference_ev17:     bIoU=92.49
+2026-10-23 21:01:26,469 [INFO] src.models.md_sam3:   perm control: 4/79 planned deletions for video35_01100
+2026-10-23 21:01:41,923 [INFO] inference_ev17:   video35_01100: 80 frames, classes=[1], Done in 16.3s
+2026-10-23 21:01:44,520 [INFO] inference_ev17:     bIoU=95.73
+2026-10-23 21:01:46,740 [INFO] src.models.md_sam3:   perm control: 57/79 planned deletions for video37_00528
+2026-10-23 21:02:04,035 [INFO] inference_ev17:   video37_00528: 80 frames, classes=[1], Done in 19.5s
+2026-10-23 21:02:05,012 [INFO] inference_ev17:     bIoU=83.63
+2026-10-23 21:02:08,323 [INFO] src.models.md_sam3:   perm control: 138/399 planned deletions for video37_00688
+2026-10-23 21:03:10,021 [INFO] inference_ev17:   video37_00688: 400 frames, classes=[1], Done in 65.0s
+2026-10-23 21:03:22,117 [INFO] inference_ev17:     bIoU=84.31
+2026-10-23 21:03:34,642 [INFO] src.models.md_sam3:   perm control: 331/501 planned deletions for video43_00365
+2026-10-23 21:05:44,040 [INFO] inference_ev17:   video43_00365: 502 frames, classes=[1], Done in 141.8s
+2026-10-23 21:05:51,465 [INFO] inference_ev17:     bIoU=88.14
+2026-10-23 21:05:52,851 [INFO] src.models.md_sam3:   perm control: 135/159 planned deletions for video48_00561
+2026-10-23 21:06:29,827 [INFO] inference_ev17:   video48_00561: 160 frames, classes=[1], Done in 38.4s
+2026-10-23 21:06:33,071 [INFO] inference_ev17:     bIoU=81.40
+2026-10-23 21:06:33,772 [INFO] src.models.md_sam3:   perm control: 62/79 planned deletions for video48_00801
+2026-10-23 21:06:48,836 [INFO] inference_ev17:   video48_00801: 80 frames, classes=[1], Done in 15.8s
+2026-10-23 21:06:50,191 [INFO] inference_ev17:     bIoU=81.34
+2026-10-23 21:06:55,197 [INFO] src.models.md_sam3:   perm control: 358/559 planned deletions for video52_00000
+2026-10-23 21:09:17,827 [INFO] inference_ev17:   video52_00000: 560 frames, classes=[1], Done in 147.6s
+2026-10-23 21:09:24,374 [INFO] inference_ev17:     bIoU=88.34
+2026-10-23 21:09:26,612 [INFO] src.models.md_sam3:   perm control: 125/239 planned deletions for video52_02746
+2026-10-23 21:10:14,017 [INFO] inference_ev17:   video52_02746: 240 frames, classes=[1, 2], Done in 49.6s
+2026-10-23 21:10:16,832 [INFO] inference_ev17:     bIoU=68.22
+2026-10-23 21:10:19,919 [INFO] src.models.md_sam3:   perm control: 95/239 planned deletions for video55_00508
+2026-10-23 21:11:16,182 [INFO] inference_ev17:   video55_00508: 240 frames, classes=[1], Done in 59.3s
+2026-10-23 21:11:18,001 [INFO] inference_ev17:     bIoU=52.08
+2026-10-23 21:11:18,001 [INFO] inference_ev17: RETENTION: pruned 2636/4868 = 54.15% (mode=perm)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video01_00149: 88/170 deleted (51.8%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video01_00400: 56/79 deleted (70.9%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video01_14859: 189/319 deleted (59.2%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video01_16345: 131/159 deleted (82.4%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video01_16585: 45/79 deleted (57.0%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video01_28580: 177/399 deleted (44.4%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video25_00162: 96/159 deleted (60.4%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video25_00402: 88/159 deleted (55.4%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video26_01945: 37/69 deleted (53.6%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video26_02095: 22/159 deleted (13.8%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video27_00256: 49/63 deleted (77.8%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video27_00400: 121/159 deleted (76.1%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video27_00640: 46/79 deleted (58.2%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video28_00234: 133/325 deleted (40.9%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video35_00780: 14/79 deleted (17.7%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video35_00940: 39/79 deleted (49.4%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video35_01100: 4/79 deleted (5.1%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video37_00528: 57/79 deleted (72.2%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video37_00688: 138/399 deleted (34.6%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video43_00365: 331/501 deleted (66.1%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video48_00561: 135/159 deleted (84.9%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video48_00801: 62/79 deleted (78.5%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video52_00000: 358/559 deleted (64.0%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video52_02746: 125/239 deleted (52.3%)
+2026-10-23 21:11:18,001 [INFO] inference_ev17:   retention video55_00508: 95/239 deleted (39.8%)
+2026-10-23 21:12:03,311 [INFO] inference_ev17: Challenge IoU: 83.13%

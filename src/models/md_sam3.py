@@ -64,8 +64,29 @@ class MDSam3Config:
     # Matched-retention controls: does DM's gain come from WHICH frames it
     # drops, or merely from HOW MANY? 'random'/'stride' discard the same
     # fraction of frames while ignoring reliability entirely.
-    prune_mode: str = "reliability"   # 'reliability' | 'random' | 'stride'
+    prune_mode: str = "reliability"   # 'reliability' | 'random' | 'stride' | 'perm' | 'shift' | 'even' | 'replay'
     prune_rate: float = 0.0            # target fraction pruned (random/stride)
+    # Seed for the random controls. The old code hard-wired 12345, so every
+    # 'random' run was the same single draw.
+    prune_seed: int = 12345
+    # 'perm'/'shift' replay a reference run's per-sequence decisions
+    # (retention_decisions.json written by the reference run):
+    #   perm  - delete exactly as many entries per sequence as the reference,
+    #           at uniformly random positions (exact per-sequence rate match)
+    #   shift - the reference deletion pattern circularly shifted by a random
+    #           offset: same count and same run structure, but misaligned
+    #           with the score
+    #   replay - delete exactly the listed entries (oracle and score-ranked
+    #           deletion lists built offline, scripts/oracle_decisions.py)
+    prune_mask_file: str = ""
+    # 'quantile': online rank rule. Delete entry t if its score is below the
+    # prune_rate-quantile of the scores of earlier entries of this sequence
+    # (the last quantile_window of them; 0 = all). Causal, single pass.
+    quantile_window: int = 0
+    # Input frames handed to SAM3. 'jpg95' reproduces all earlier runs (lossy
+    # JPEG q95); 'png' is lossless (PNG bytes under a .jpg name: SAM3's tracker
+    # loader filters by extension but PIL decodes by content).
+    frame_format: str = "jpg95"
 
     # Direction C: DFS standalone (without DM)
     block_occ_pollution: bool = False  # delete occluded frames from nco to preserve pre-occ window
@@ -206,15 +227,90 @@ class MDSam3Inferencer:
         self.n_prune_seen = 0
         self.n_pruned = 0
         self._stride_acc = 0.0
-        self._prune_rng = random.Random(12345)
+        self._prune_rng = random.Random(cfg.prune_seed)
+        self.seq_tag = ""
+        # {seq_tag: {"tested": [frame_idx...], "deleted": [frame_idx...]}}
+        self.decisions: Dict[str, Dict[str, List[int]]] = {}
+        self._ref_decisions = None
+        self._planned: Optional[set] = None
+        # C7-store diagnostic: were re-inserted entries actually read?
+        self.reinject_log: List[dict] = []
 
-    def _should_prune(self, eff_score: float, tau_eff: float) -> bool:
+    def _read_window(self, nco: dict, t: int, n_frames: int) -> set:
+        """Replicates SAM3's frame_filter (use_memory_selection=True): the
+        non-conditioning entries that the memory read for frame t attends to.
+        Read-only; used only for the re-injection diagnostic."""
+        if t <= 0:
+            return set()
+        p = self.predictor
+        max_num = min(n_frames, getattr(p, "max_obj_ptrs_in_encoder", 16))
+        mf = getattr(p, "mf_threshold", 0.01)
+        valid = []
+        for i in range(t - 1, 0, -1):
+            e = nco.get(i)
+            if e is None or "eff_iou_score" not in e:
+                continue
+            if self._get_eff_score(e) > mf:
+                valid.insert(0, i)
+            if len(valid) >= max_num - 1:
+                break
+        if (t - 1) not in valid:
+            valid.append(t - 1)
+        k = getattr(p, "num_maskmem", 7) - 1
+        return set(valid[-k:])
+
+    def _plan_sequence(self):
+        """For 'perm'/'shift', fix this sequence's deletion set up front from
+        the reference run's decisions on the same sequence."""
+        mode = self.cfg.prune_mode
+        self._qhist = []          # per-sequence score history ('quantile')
+        if mode not in ("perm", "shift", "even", "replay"):
+            return
+        if self._ref_decisions is None:
+            import json
+            if not self.cfg.prune_mask_file:
+                raise ValueError(f"prune_mode={mode} needs prune_mask_file")
+            with open(self.cfg.prune_mask_file) as f:
+                self._ref_decisions = json.load(f)["sequences"]
+        ref = self._ref_decisions[self.seq_tag]
+        tested = list(ref["tested"])
+        deleted = set(ref["deleted"])
+        # String seed: deterministic across processes, independent per sequence
+        rng = random.Random(f"{self.cfg.prune_seed}:{self.seq_tag}:{mode}")
+        if mode == "replay":
+            self._planned = set(deleted)
+        elif mode == "perm":
+            self._planned = set(rng.sample(tested, len(deleted)))
+        elif mode == "even":
+            # deterministic: k entries spaced as evenly as possible
+            n, k = len(tested), len(deleted)
+            self._planned = {tested[int((j + 0.5) * n / k)] for j in range(k)} if k else set()
+        else:
+            n = len(tested)
+            off = rng.randrange(1, n) if n > 1 else 0
+            self._planned = {tested[(i + off) % n]
+                             for i, t in enumerate(tested) if t in deleted}
+        logger.info(f"  {mode} control: {len(self._planned)}/{len(tested)} "
+                    f"planned deletions for {self.seq_tag}")
+
+    def _should_prune(self, eff_score: float, tau_eff: float,
+                      frame_idx: Optional[int] = None) -> bool:
         """DM retention decision. 'reliability' is the method under study;
-        'random'/'stride' are rate-matched controls that ignore eff_score."""
+        'random'/'stride'/'perm'/'shift' are rate-matched controls that ignore
+        eff_score."""
         self.n_prune_seen += 1
         mode = self.cfg.prune_mode
         if mode == "random":
             hit = self._prune_rng.random() < self.cfg.prune_rate
+        elif mode in ("perm", "shift", "even", "replay"):
+            if frame_idx is None or self._planned is None:
+                raise RuntimeError(f"prune_mode={mode} is only supported on the joint path")
+            hit = frame_idx in self._planned
+        elif mode == "quantile":
+            w = self.cfg.quantile_window
+            h = self._qhist[-w:] if w else self._qhist
+            hit = bool(h) and eff_score < float(np.quantile(h, self.cfg.prune_rate))
+            self._qhist.append(float(eff_score))
         elif mode == "stride":
             self._stride_acc += self.cfg.prune_rate
             hit = self._stride_acc >= 1.0
@@ -224,6 +320,13 @@ class MDSam3Inferencer:
             hit = eff_score < tau_eff
         if hit:
             self.n_pruned += 1
+        if frame_idx is not None:
+            d = self.decisions.setdefault(self.seq_tag, {"tested": [], "deleted": []})
+            d["tested"].append(int(frame_idx))
+            # score of the entry, logged for every mode (does not affect the decision)
+            d.setdefault("scores", []).append(round(float(eff_score), 6))
+            if hit:
+                d["deleted"].append(int(frame_idx))
         return hit
 
     def run_sequence(
@@ -244,11 +347,21 @@ class MDSam3Inferencer:
         try:
             for i, fp in enumerate(frame_files):
                 img = cv2.imread(fp)
-                cv2.imwrite(os.path.join(tmpdir, f"{i:05d}.jpg"), img,
-                            [cv2.IMWRITE_JPEG_QUALITY, 95])
+                out = os.path.join(tmpdir, f"{i:05d}.jpg")
+                if self.cfg.frame_format == "png":
+                    ok, buf = cv2.imencode(".png", img)
+                    assert ok
+                    with open(out, "wb") as fh:
+                        fh.write(buf.tobytes())
+                else:
+                    cv2.imwrite(out, img, [cv2.IMWRITE_JPEG_QUALITY, 95])
             H, W = cv2.imread(frame_files[0]).shape[:2]
             n = len(frame_files)
 
+            self._plan_sequence()
+            if self.cfg.prune_mode in ("perm", "shift", "even", "replay") and (
+                    self.cfg.group_gate or self.cfg.dms or self.cfg.block_occ_pollution):
+                raise ValueError("perm/shift controls are implemented for the joint path only")
             if self.cfg.group_gate:
                 return self._run_groupgate(tmpdir, H, W, n, init_masks, init_frame_local_idx)
             if self.cfg.dms or self.cfg.block_occ_pollution:
@@ -302,7 +415,7 @@ class MDSam3Inferencer:
                     if grp_rel_history:
                         tau_eff = min(tau_eff, self.cfg.adaptive_beta * float(
                             np.quantile(grp_rel_history, self.cfg.srg_quantile)))
-                if self._should_prune(eff, tau_eff):
+                if self._should_prune(eff, tau_eff, frame_idx):
                     del nco[frame_idx]
 
             preds[frame_idx] = pred_type
@@ -345,12 +458,27 @@ class MDSam3Inferencer:
         device = next(self.predictor.parameters()).device if hasattr(self.predictor, 'parameters') else torch.device('cuda')
         rel_history: List[float] = []  # visible-frame reliability, for SRG
         score_log = os.environ.get("MDSAM3_SCORE_LOG")
+        pending_reads: List[dict] = []   # re-injections awaiting the read check
 
         for frame_idx, obj_ids, _, video_masks, obj_scores in self.predictor.propagate_in_video(
             state, start_frame_idx=0, max_frame_num_to_track=n_frames,
             reverse=False, tqdm_disable=True, propagate_preflight=True
         ):
             nco = state["output_dict"]["non_cond_frame_outputs"]
+
+            # Diagnostic (C7-store): the read for this frame has already used
+            # the pool as it stood before this frame's entry was added.
+            if pending_reads:
+                win = self._read_window(nco, frame_idx, n_frames)
+                for rec in pending_reads:
+                    rec["read"] |= set(rec["injected"]) & win
+                    rec["checked"] += 1
+                done = [r for r in pending_reads if r["checked"] >= 5]
+                for r in done:
+                    self.reinject_log.append({"seq": self.seq_tag, "obj": int(cls_id), "t": r["t"],
+                                              "injected": sorted(r["injected"]),
+                                              "read_within_5": sorted(r["read"])})
+                pending_reads = [r for r in pending_reads if r["checked"] < 5]
 
             if len(obj_ids) == 0:
                 obj_preds[frame_idx] = np.zeros((H, W), dtype=np.uint8)
@@ -404,7 +532,12 @@ class MDSam3Inferencer:
                     frame_idx - last_recovery_frame > 5):
                 selected = ot.select_occ_mem()
                 if selected:
+                    before = set(nco.keys())
                     self._inject_occ_mem(state, nco, selected, cls_id, device)
+                    if self.cfg.store_mem_entries:
+                        new = sorted(set(nco.keys()) - before)
+                        pending_reads.append({"t": int(frame_idx), "injected": new,
+                                              "read": set(), "checked": 0})
                 last_recovery_frame = frame_idx
 
     def _inject_occ_mem(self, state, nco: dict, frames: List[FrameRecord],
@@ -568,6 +701,15 @@ CONFIG_PRESETS = {
     # SRG applied to the COUPLED path (group-level self-calibration):
     # tests whether SRG needs per-instance decoupling to pay off.
     "C2-SRG": MDSam3Config(dms=False, dm=True, dfs=False, adaptive_tau=True),
+    # Exact per-sequence rate-matched controls for C2 (need --prune-mask-file
+    # pointing at a C2 run's retention_decisions.json, and --prune-seed)
+    "C2-perm":  MDSam3Config(dms=False, dm=True, dfs=False, prune_mode="perm"),
+    "C2-shift": MDSam3Config(dms=False, dm=True, dfs=False, prune_mode="shift"),
+    "C2-even":  MDSam3Config(dms=False, dm=True, dfs=False, prune_mode="even"),
+    # Deletes exactly the entries listed in --prune-mask-file
+    "C2-replay": MDSam3Config(dms=False, dm=True, dfs=False, prune_mode="replay"),
+    # Online rank rule (needs --prune-rate; optional --quantile-window)
+    "C2-quant": MDSam3Config(dms=False, dm=True, dfs=False, prune_mode="quantile"),
     "C7-SRG": MDSam3Config(dms=True, dm=True, dfs=True, dfs_mode="diversity",
                             adaptive_tau=True),
     # DMS deconfound: independent propagation + group-level gating
@@ -593,9 +735,8 @@ CONFIG_PRESETS = {
 def build_md_sam3(cfg: MDSam3Config, checkpoint_path: str,
                   device: str = "cuda") -> MDSam3Inferencer:
     """Load SAM3 tracker with visual backbone and wrap with MD-SAM3."""
-    # SAM3-DMS must come before vanilla sam3 to get the extended API
     from src.paths import ensure_on_syspath
-    ensure_on_syspath()
+    ensure_on_syspath()   # SAM3-DMS first
 
     from sam3.model_builder import build_sam3_video_model  # noqa: must come from SAM3-DMS
 

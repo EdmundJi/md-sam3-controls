@@ -1,0 +1,502 @@
+[
+ {
+  "dataset_id": 1,
+  "challenge_iou": 83.34,
+  "iou": 83.34,
+  "mciou": 73.23,
+  "per_class": {
+   "BF": 89.66,
+   "PF": 56.81,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 73.23,
+  "per_class_instantiable": {
+   "BF": 89.66,
+   "PF": 56.81,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 74,
+   "PF": 66,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 74,
+   "PF": 66,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 74,
+  "biou": 83.34,
+  "biou_nonempty": 83.34,
+  "n_frames_nonempty": 74,
+  "ciou_cls_gt": 75.11,
+  "ciou_cls_union": 75.11,
+  "cum_miou": 76.21
+ },
+ {
+  "dataset_id": 2,
+  "challenge_iou": 85.48,
+  "iou": 85.48,
+  "mciou": 42.74,
+  "per_class": {
+   "BF": 0.0,
+   "PF": 85.47,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 85.47,
+  "per_class_instantiable": {
+   "BF": 0.0,
+   "PF": 85.47,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 0,
+   "PF": 74,
+   "LND": 0,
+   "VS": 2,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 0,
+   "PF": 74,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 74,
+  "biou": 85.48,
+  "biou_nonempty": 85.48,
+  "n_frames_nonempty": 74,
+  "ciou_cls_gt": 84.22,
+  "ciou_cls_union": 84.22,
+  "cum_miou": 42.3
+ },
+ {
+  "dataset_id": 3,
+  "challenge_iou": 94.41,
+  "iou": 94.41,
+  "mciou": 47.2,
+  "per_class": {
+   "BF": 0.0,
+   "PF": 0.0,
+   "LND": 94.41,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 94.41,
+  "per_class_instantiable": {
+   "BF": 0.0,
+   "PF": 0.0,
+   "LND": 94.41,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 0,
+   "PF": 0,
+   "LND": 74,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 3,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 0,
+   "PF": 0,
+   "LND": 74,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 74,
+  "biou": 94.41,
+  "biou_nonempty": 94.41,
+  "n_frames_nonempty": 74,
+  "ciou_cls_gt": 92.48,
+  "ciou_cls_union": 92.48,
+  "cum_miou": 47.42
+ },
+ {
+  "dataset_id": 4,
+  "challenge_iou": 94.44,
+  "iou": 94.44,
+  "mciou": 62.43,
+  "per_class": {
+   "BF": 0.0,
+   "PF": 91.57,
+   "LND": 95.72,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 93.64,
+  "per_class_instantiable": {
+   "BF": 0.0,
+   "PF": 91.57,
+   "LND": 95.72,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 0,
+   "PF": 74,
+   "LND": 74,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 1,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 0,
+   "PF": 74,
+   "LND": 74,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 74,
+  "biou": 94.44,
+  "biou_nonempty": 94.44,
+  "n_frames_nonempty": 74,
+  "ciou_cls_gt": 93.22,
+  "ciou_cls_union": 93.22,
+  "cum_miou": 62.44
+ },
+ {
+  "dataset_id": 5,
+  "challenge_iou": 91.33,
+  "iou": 91.33,
+  "mciou": 60.66,
+  "per_class": {
+   "BF": 89.23,
+   "PF": 0.0,
+   "LND": 0.0,
+   "VS": 92.76,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 90.99,
+  "per_class_instantiable": {
+   "BF": 89.23,
+   "PF": 0.0,
+   "LND": 0.0,
+   "VS": 92.76,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 64,
+   "PF": 0,
+   "LND": 0,
+   "VS": 60,
+   "GR": 1,
+   "MCS": 0,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 64,
+   "PF": 0,
+   "LND": 0,
+   "VS": 60,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 74,
+  "biou": 91.33,
+  "biou_nonempty": 91.33,
+  "n_frames_nonempty": 74,
+  "ciou_cls_gt": 90.28,
+  "ciou_cls_union": 85.24,
+  "cum_miou": 58.33
+ },
+ {
+  "dataset_id": 6,
+  "challenge_iou": 91.15,
+  "iou": 91.15,
+  "mciou": 29.13,
+  "per_class": {
+   "BF": 0.0,
+   "PF": 28.38,
+   "LND": 59.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 43.69,
+  "per_class_instantiable": {
+   "BF": 0.0,
+   "PF": 28.38,
+   "LND": 59.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 0,
+   "PF": 66,
+   "LND": 74,
+   "VS": 0,
+   "GR": 7,
+   "MCS": 0,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 0,
+   "PF": 66,
+   "LND": 74,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 74,
+  "biou": 91.15,
+  "biou_nonempty": 91.15,
+  "n_frames_nonempty": 74,
+  "ciou_cls_gt": 44.01,
+  "ciou_cls_union": 40.99,
+  "cum_miou": 21.26
+ },
+ {
+  "dataset_id": 7,
+  "challenge_iou": 89.96,
+  "iou": 89.96,
+  "mciou": 56.98,
+  "per_class": {
+   "BF": 78.2,
+   "PF": 0.0,
+   "LND": 0.0,
+   "VS": 92.76,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 85.48,
+  "per_class_instantiable": {
+   "BF": 78.2,
+   "PF": 0.0,
+   "LND": 0.0,
+   "VS": 92.76,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 74,
+   "PF": 0,
+   "LND": 0,
+   "VS": 53,
+   "GR": 19,
+   "MCS": 0,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 74,
+   "PF": 0,
+   "LND": 0,
+   "VS": 53,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 74,
+  "biou": 89.96,
+  "biou_nonempty": 89.96,
+  "n_frames_nonempty": 74,
+  "ciou_cls_gt": 70.8,
+  "ciou_cls_union": 68.89,
+  "cum_miou": 44.29
+ },
+ {
+  "dataset_id": 8,
+  "challenge_iou": 95.28,
+  "iou": 95.28,
+  "mciou": 63.44,
+  "per_class": {
+   "BF": 95.65,
+   "PF": 0.0,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 94.67,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 95.16,
+  "per_class_instantiable": {
+   "BF": 95.65,
+   "PF": 0.0,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 94.67,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 74,
+   "PF": 0,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 74,
+   "UP": 3
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 74,
+   "PF": 0,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 74,
+   "UP": 0
+  },
+  "num_frames": 74,
+  "biou": 95.28,
+  "biou_nonempty": 95.28,
+  "n_frames_nonempty": 74,
+  "ciou_cls_gt": 93.88,
+  "ciou_cls_union": 93.88,
+  "cum_miou": 63.55
+ },
+ {
+  "dataset_id": 9,
+  "challenge_iou": 89.61,
+  "iou": 89.61,
+  "mciou": 56.98,
+  "per_class": {
+   "BF": 84.88,
+   "PF": 74.92,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 68.1,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 75.97,
+  "per_class_instantiable": {
+   "BF": 84.88,
+   "PF": 74.92,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 68.1,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 255,
+   "PF": 253,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 297,
+   "UP": 2
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 255,
+   "PF": 253,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 297,
+   "UP": 0
+  },
+  "num_frames": 299,
+  "biou": 89.61,
+  "biou_nonempty": 89.61,
+  "n_frames_nonempty": 299,
+  "ciou_cls_gt": 76.49,
+  "ciou_cls_union": 72.73,
+  "cum_miou": 55.14
+ },
+ {
+  "dataset_id": 10,
+  "challenge_iou": 92.93,
+  "iou": 92.93,
+  "mciou": 46.47,
+  "per_class": {
+   "BF": 0.0,
+   "PF": 0.0,
+   "LND": 92.93,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 92.93,
+  "per_class_instantiable": {
+   "BF": 0.0,
+   "PF": 0.0,
+   "LND": 92.93,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 0,
+   "PF": 0,
+   "LND": 299,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 35,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 0,
+   "PF": 0,
+   "LND": 299,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "num_frames": 299,
+  "biou": 92.93,
+  "biou_nonempty": 92.93,
+  "n_frames_nonempty": 299,
+  "ciou_cls_gt": 87.44,
+  "ciou_cls_union": 87.44,
+  "cum_miou": 46.6
+ }
+]

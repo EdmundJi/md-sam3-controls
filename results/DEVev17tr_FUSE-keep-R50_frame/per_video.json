@@ -1,0 +1,42 @@
+[
+ {
+  "seq_tag": "tr1",
+  "challenge_iou": 91.09,
+  "num_frames": 224
+ },
+ {
+  "seq_tag": "tr2",
+  "challenge_iou": 90.97,
+  "num_frames": 224
+ },
+ {
+  "seq_tag": "tr3",
+  "challenge_iou": 95.04,
+  "num_frames": 224
+ },
+ {
+  "seq_tag": "tr4",
+  "challenge_iou": 86.85,
+  "num_frames": 224
+ },
+ {
+  "seq_tag": "tr5",
+  "challenge_iou": 58.52,
+  "num_frames": 224
+ },
+ {
+  "seq_tag": "tr6",
+  "challenge_iou": 72.95,
+  "num_frames": 224
+ },
+ {
+  "seq_tag": "tr7",
+  "challenge_iou": 57.29,
+  "num_frames": 224
+ },
+ {
+  "seq_tag": "tr8",
+  "challenge_iou": 90.48,
+  "num_frames": 224
+ }
+]

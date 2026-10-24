@@ -1,0 +1,31 @@
+{
+  "challenge_iou": 72.94,
+  "iou": 72.94,
+  "mciou": 52.3,
+  "per_class": {
+    "shaft": 63.83,
+    "clasper": 51.89,
+    "wrist": 41.19
+  },
+  "num_frames": 2965,
+  "per_class_instantiable": {
+    "shaft": 67.07,
+    "clasper": 51.89,
+    "wrist": 50.21
+  },
+  "mciou_instantiable": 56.39,
+  "n_frames_per_class": {
+    "shaft": 2794,
+    "clasper": 2920,
+    "wrist": 2333
+  },
+  "n_frames_per_class_instantiable": {
+    "shaft": 2659,
+    "clasper": 2920,
+    "wrist": 1914
+  },
+  "biou": 72.94,
+  "ciou_cls_gt": 53.2,
+  "ciou_cls_union": 52.12,
+  "cum_miou": 48.93
+}

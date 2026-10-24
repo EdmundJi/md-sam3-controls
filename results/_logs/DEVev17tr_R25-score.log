@@ -1,0 +1,36 @@
+[0m[32mINFO 2026-10-23 18:12:35,532 29575 sam3_video_base.py: 125:[0m setting max_num_objects=10000 and num_obj_for_compile=16
+2026-10-23 18:12:55,590 [INFO] inference_ev17: ev17train/all: 8 sequences
+2026-10-23 18:13:01,885 [INFO] src.models.md_sam3:   replay control: 56/224 planned deletions for tr1
+2026-10-23 18:14:07,428 [INFO] inference_ev17:   tr1: 225 frames, classes=[1, 2, 7], Done in 71.8s
+2026-10-23 18:14:20,649 [INFO] inference_ev17:     bIoU=90.08
+2026-10-23 18:14:27,811 [INFO] src.models.md_sam3:   replay control: 56/224 planned deletions for tr2
+2026-10-23 18:15:16,620 [INFO] inference_ev17:   tr2: 225 frames, classes=[2, 7], Done in 55.9s
+2026-10-23 18:15:49,233 [INFO] inference_ev17:     bIoU=90.61
+2026-10-23 18:16:00,765 [INFO] src.models.md_sam3:   replay control: 56/224 planned deletions for tr3
+2026-10-23 18:16:52,235 [INFO] inference_ev17:   tr3: 225 frames, classes=[3], Done in 63.0s
+2026-10-23 18:17:15,349 [INFO] inference_ev17:     bIoU=94.86
+2026-10-23 18:17:25,561 [INFO] src.models.md_sam3:   replay control: 56/224 planned deletions for tr4
+2026-10-23 18:18:26,625 [INFO] inference_ev17:   tr4: 225 frames, classes=[2, 3], Done in 71.2s
+2026-10-23 18:18:45,532 [INFO] inference_ev17:     bIoU=90.64
+2026-10-23 18:18:59,758 [INFO] src.models.md_sam3:   replay control: 56/224 planned deletions for tr5
+2026-10-23 18:19:51,245 [INFO] inference_ev17:   tr5: 225 frames, classes=[1], Done in 65.6s
+2026-10-23 18:20:12,031 [INFO] inference_ev17:     bIoU=53.37
+2026-10-23 18:20:23,827 [INFO] src.models.md_sam3:   replay control: 56/224 planned deletions for tr6
+2026-10-23 18:21:10,842 [INFO] inference_ev17:   tr6: 225 frames, classes=[3, 6], Done in 58.7s
+2026-10-23 18:21:25,069 [INFO] inference_ev17:     bIoU=72.88
+2026-10-23 18:21:31,965 [INFO] src.models.md_sam3:   replay control: 56/224 planned deletions for tr7
+2026-10-23 18:22:20,836 [INFO] inference_ev17:   tr7: 225 frames, classes=[1], Done in 55.7s
+2026-10-23 18:22:50,966 [INFO] inference_ev17:     bIoU=45.75
+2026-10-23 18:22:57,367 [INFO] src.models.md_sam3:   replay control: 56/224 planned deletions for tr8
+2026-10-23 18:24:28,822 [INFO] inference_ev17:   tr8: 225 frames, classes=[1, 5, 6], Done in 97.8s
+2026-10-23 18:24:43,645 [INFO] inference_ev17:     bIoU=90.44
+2026-10-23 18:24:43,645 [INFO] inference_ev17: RETENTION: pruned 448/1792 = 25.00% (mode=replay)
+2026-10-23 18:24:43,645 [INFO] inference_ev17:   retention tr1: 56/224 deleted (25.0%)
+2026-10-23 18:24:43,645 [INFO] inference_ev17:   retention tr2: 56/224 deleted (25.0%)
+2026-10-23 18:24:43,645 [INFO] inference_ev17:   retention tr3: 56/224 deleted (25.0%)
+2026-10-23 18:24:43,645 [INFO] inference_ev17:   retention tr4: 56/224 deleted (25.0%)
+2026-10-23 18:24:43,645 [INFO] inference_ev17:   retention tr5: 56/224 deleted (25.0%)
+2026-10-23 18:24:43,645 [INFO] inference_ev17:   retention tr6: 56/224 deleted (25.0%)
+2026-10-23 18:24:43,645 [INFO] inference_ev17:   retention tr7: 56/224 deleted (25.0%)
+2026-10-23 18:24:43,645 [INFO] inference_ev17:   retention tr8: 56/224 deleted (25.0%)
+2026-10-23 18:26:37,037 [INFO] inference_ev17: Challenge IoU: 78.58%

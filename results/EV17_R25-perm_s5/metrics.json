@@ -1,0 +1,49 @@
+{
+  "challenge_iou": 89.75,
+  "iou": 89.75,
+  "mciou": 60.0,
+  "per_class": {
+    "BF": 89.36,
+    "PF": 78.83,
+    "LND": 94.23,
+    "VS": 79.87,
+    "GR": 0.0,
+    "MCS": 77.74,
+    "UP": 0.0
+  },
+  "mciou_instantiable": 85.92,
+  "per_class_instantiable": {
+    "BF": 89.36,
+    "PF": 78.83,
+    "LND": 94.23,
+    "VS": 81.28,
+    "GR": 0.0,
+    "MCS": 85.91,
+    "UP": 0.0
+  },
+  "n_frames_per_class": {
+    "BF": 541,
+    "PF": 533,
+    "LND": 521,
+    "VS": 115,
+    "GR": 27,
+    "MCS": 410,
+    "UP": 5
+  },
+  "n_frames_per_class_instantiable": {
+    "BF": 541,
+    "PF": 533,
+    "LND": 521,
+    "VS": 113,
+    "GR": 0,
+    "MCS": 371,
+    "UP": 0
+  },
+  "num_frames": 1190,
+  "biou": 89.75,
+  "biou_nonempty": 89.75,
+  "n_frames_nonempty": 1190,
+  "ciou_cls_gt": 86.65,
+  "ciou_cls_union": 86.04,
+  "cum_miou": 60.44
+}

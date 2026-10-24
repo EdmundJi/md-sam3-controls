@@ -1,0 +1,92 @@
+[
+ {
+  "seq_tag": "test1",
+  "challenge_iou": 62.71,
+  "num_frames": 249
+ },
+ {
+  "seq_tag": "test2",
+  "challenge_iou": 89.7,
+  "num_frames": 248
+ },
+ {
+  "seq_tag": "test3",
+  "challenge_iou": 82.62,
+  "num_frames": 248
+ },
+ {
+  "seq_tag": "train1",
+  "challenge_iou": 84.38,
+  "num_frames": 148
+ },
+ {
+  "seq_tag": "train2",
+  "challenge_iou": 78.82,
+  "num_frames": 148
+ },
+ {
+  "seq_tag": "train3",
+  "challenge_iou": 54.34,
+  "num_frames": 148
+ },
+ {
+  "seq_tag": "train4",
+  "challenge_iou": 81.94,
+  "num_frames": 148
+ },
+ {
+  "seq_tag": "train5",
+  "challenge_iou": 86.45,
+  "num_frames": 148
+ },
+ {
+  "seq_tag": "train6",
+  "challenge_iou": 87.98,
+  "num_frames": 148
+ },
+ {
+  "seq_tag": "train7",
+  "challenge_iou": 37.42,
+  "num_frames": 148
+ },
+ {
+  "seq_tag": "train9",
+  "challenge_iou": 69.23,
+  "num_frames": 148
+ },
+ {
+  "seq_tag": "train10",
+  "challenge_iou": 85.48,
+  "num_frames": 148
+ },
+ {
+  "seq_tag": "train11",
+  "challenge_iou": 90.72,
+  "num_frames": 148
+ },
+ {
+  "seq_tag": "train12",
+  "challenge_iou": 54.21,
+  "num_frames": 148
+ },
+ {
+  "seq_tag": "train13",
+  "challenge_iou": 75.36,
+  "num_frames": 148
+ },
+ {
+  "seq_tag": "train14",
+  "challenge_iou": 47.89,
+  "num_frames": 148
+ },
+ {
+  "seq_tag": "train15",
+  "challenge_iou": 90.25,
+  "num_frames": 148
+ },
+ {
+  "seq_tag": "train16",
+  "challenge_iou": 62.55,
+  "num_frames": 148
+ }
+]

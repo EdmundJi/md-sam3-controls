@@ -1,0 +1,596 @@
+[
+ {
+  "seq_id": 1,
+  "seq_tag": "test1",
+  "challenge_iou": 56.8,
+  "iou": 56.8,
+  "mciou": 36.88,
+  "per_class": {
+   "shaft": 46.86,
+   "clasper": 22.06,
+   "wrist": 41.73
+  },
+  "num_frames": 249,
+  "per_class_instantiable": {
+   "shaft": 46.86,
+   "clasper": 22.06,
+   "wrist": 41.73
+  },
+  "mciou_instantiable": 36.88,
+  "n_frames_per_class": {
+   "shaft": 243,
+   "clasper": 249,
+   "wrist": 246
+  },
+  "n_frames_per_class_instantiable": {
+   "shaft": 243,
+   "clasper": 249,
+   "wrist": 246
+  },
+  "biou": 56.8,
+  "ciou_cls_gt": 36.8,
+  "ciou_cls_union": 36.48,
+  "cum_miou": 36.13
+ },
+ {
+  "seq_id": 2,
+  "seq_tag": "test2",
+  "challenge_iou": 90.27,
+  "iou": 90.27,
+  "mciou": 67.26,
+  "per_class": {
+   "shaft": 71.21,
+   "clasper": 70.25,
+   "wrist": 60.32
+  },
+  "num_frames": 248,
+  "per_class_instantiable": {
+   "shaft": 71.21,
+   "clasper": 70.25,
+   "wrist": 60.32
+  },
+  "mciou_instantiable": 67.26,
+  "n_frames_per_class": {
+   "shaft": 246,
+   "clasper": 247,
+   "wrist": 222
+  },
+  "n_frames_per_class_instantiable": {
+   "shaft": 246,
+   "clasper": 247,
+   "wrist": 222
+  },
+  "biou": 90.27,
+  "ciou_cls_gt": 67.75,
+  "ciou_cls_union": 66.41,
+  "cum_miou": 62.51
+ },
+ {
+  "seq_id": 3,
+  "seq_tag": "test3",
+  "challenge_iou": 65.61,
+  "iou": 65.61,
+  "mciou": 64.07,
+  "per_class": {
+   "shaft": 66.06,
+   "clasper": 56.6,
+   "wrist": 69.55
+  },
+  "num_frames": 248,
+  "per_class_instantiable": {
+   "shaft": 66.06,
+   "clasper": 56.6,
+   "wrist": 69.55
+  },
+  "mciou_instantiable": 64.07,
+  "n_frames_per_class": {
+   "shaft": 242,
+   "clasper": 245,
+   "wrist": 231
+  },
+  "n_frames_per_class_instantiable": {
+   "shaft": 242,
+   "clasper": 245,
+   "wrist": 231
+  },
+  "biou": 65.61,
+  "ciou_cls_gt": 63.92,
+  "ciou_cls_union": 63.67,
+  "cum_miou": 59.17
+ },
+ {
+  "seq_id": 101,
+  "seq_tag": "train1",
+  "challenge_iou": 81.97,
+  "iou": 81.97,
+  "mciou": 37.4,
+  "per_class": {
+   "shaft": 67.5,
+   "clasper": 44.71,
+   "wrist": 0.0
+  },
+  "num_frames": 148,
+  "per_class_instantiable": {
+   "shaft": 67.5,
+   "clasper": 44.71,
+   "wrist": 0.0
+  },
+  "mciou_instantiable": 56.1,
+  "n_frames_per_class": {
+   "shaft": 143,
+   "clasper": 148,
+   "wrist": 97
+  },
+  "n_frames_per_class_instantiable": {
+   "shaft": 143,
+   "clasper": 148,
+   "wrist": 0
+  },
+  "biou": 81.97,
+  "ciou_cls_gt": 45.71,
+  "ciou_cls_union": 45.21,
+  "cum_miou": 39.08
+ },
+ {
+  "seq_id": 102,
+  "seq_tag": "train2",
+  "challenge_iou": 70.78,
+  "iou": 70.78,
+  "mciou": 40.49,
+  "per_class": {
+   "shaft": 45.9,
+   "clasper": 40.6,
+   "wrist": 34.96
+  },
+  "num_frames": 148,
+  "per_class_instantiable": {
+   "shaft": 45.9,
+   "clasper": 40.6,
+   "wrist": 34.96
+  },
+  "mciou_instantiable": 40.49,
+  "n_frames_per_class": {
+   "shaft": 136,
+   "clasper": 134,
+   "wrist": 134
+  },
+  "n_frames_per_class_instantiable": {
+   "shaft": 136,
+   "clasper": 134,
+   "wrist": 134
+  },
+  "biou": 70.78,
+  "ciou_cls_gt": 40.12,
+  "ciou_cls_union": 39.82,
+  "cum_miou": 41.4
+ },
+ {
+  "seq_id": 103,
+  "seq_tag": "train3",
+  "challenge_iou": 51.69,
+  "iou": 51.69,
+  "mciou": 28.87,
+  "per_class": {
+   "shaft": 51.38,
+   "clasper": 35.24,
+   "wrist": 0.0
+  },
+  "num_frames": 148,
+  "per_class_instantiable": {
+   "shaft": 51.38,
+   "clasper": 35.24,
+   "wrist": 0.0
+  },
+  "mciou_instantiable": 43.31,
+  "n_frames_per_class": {
+   "shaft": 146,
+   "clasper": 141,
+   "wrist": 92
+  },
+  "n_frames_per_class_instantiable": {
+   "shaft": 146,
+   "clasper": 141,
+   "wrist": 0
+  },
+  "biou": 51.69,
+  "ciou_cls_gt": 34.64,
+  "ciou_cls_union": 34.57,
+  "cum_miou": 27.27
+ },
+ {
+  "seq_id": 104,
+  "seq_tag": "train4",
+  "challenge_iou": 82.25,
+  "iou": 82.25,
+  "mciou": 56.42,
+  "per_class": {
+   "shaft": 60.06,
+   "clasper": 72.73,
+   "wrist": 36.48
+  },
+  "num_frames": 148,
+  "per_class_instantiable": {
+   "shaft": 60.06,
+   "clasper": 72.73,
+   "wrist": 36.48
+  },
+  "mciou_instantiable": 56.42,
+  "n_frames_per_class": {
+   "shaft": 147,
+   "clasper": 148,
+   "wrist": 140
+  },
+  "n_frames_per_class_instantiable": {
+   "shaft": 147,
+   "clasper": 148,
+   "wrist": 140
+  },
+  "biou": 82.25,
+  "ciou_cls_gt": 57.06,
+  "ciou_cls_union": 56.81,
+  "cum_miou": 54.97
+ },
+ {
+  "seq_id": 105,
+  "seq_tag": "train5",
+  "challenge_iou": 85.73,
+  "iou": 85.73,
+  "mciou": 38.73,
+  "per_class": {
+   "shaft": 77.4,
+   "clasper": 38.78,
+   "wrist": 0.0
+  },
+  "num_frames": 148,
+  "per_class_instantiable": {
+   "shaft": 77.4,
+   "clasper": 38.78,
+   "wrist": 0.0
+  },
+  "mciou_instantiable": 58.09,
+  "n_frames_per_class": {
+   "shaft": 136,
+   "clasper": 148,
+   "wrist": 136
+  },
+  "n_frames_per_class_instantiable": {
+   "shaft": 136,
+   "clasper": 148,
+   "wrist": 0
+  },
+  "biou": 85.73,
+  "ciou_cls_gt": 40.05,
+  "ciou_cls_union": 39.25,
+  "cum_miou": 36.41
+ },
+ {
+  "seq_id": 106,
+  "seq_tag": "train6",
+  "challenge_iou": 85.24,
+  "iou": 85.24,
+  "mciou": 69.77,
+  "per_class": {
+   "shaft": 90.62,
+   "clasper": 63.19,
+   "wrist": 55.5
+  },
+  "num_frames": 148,
+  "per_class_instantiable": {
+   "shaft": 90.62,
+   "clasper": 63.19,
+   "wrist": 55.5
+  },
+  "mciou_instantiable": 69.77,
+  "n_frames_per_class": {
+   "shaft": 145,
+   "clasper": 148,
+   "wrist": 120
+  },
+  "n_frames_per_class_instantiable": {
+   "shaft": 145,
+   "clasper": 148,
+   "wrist": 120
+  },
+  "biou": 85.24,
+  "ciou_cls_gt": 70.85,
+  "ciou_cls_union": 69.69,
+  "cum_miou": 68.63
+ },
+ {
+  "seq_id": 107,
+  "seq_tag": "train7",
+  "challenge_iou": 37.05,
+  "iou": 37.05,
+  "mciou": 46.18,
+  "per_class": {
+   "shaft": 70.0,
+   "clasper": 18.1,
+   "wrist": 50.42
+  },
+  "num_frames": 148,
+  "per_class_instantiable": {
+   "shaft": 70.0,
+   "clasper": 18.1,
+   "wrist": 50.42
+  },
+  "mciou_instantiable": 46.18,
+  "n_frames_per_class": {
+   "shaft": 94,
+   "clasper": 148,
+   "wrist": 119
+  },
+  "n_frames_per_class_instantiable": {
+   "shaft": 94,
+   "clasper": 148,
+   "wrist": 119
+  },
+  "biou": 37.05,
+  "ciou_cls_gt": 37.84,
+  "ciou_cls_union": 36.88,
+  "cum_miou": 48.92
+ },
+ {
+  "seq_id": 109,
+  "seq_tag": "train9",
+  "challenge_iou": 90.68,
+  "iou": 90.68,
+  "mciou": 51.81,
+  "per_class": {
+   "shaft": 64.6,
+   "clasper": 59.02,
+   "wrist": 31.8
+  },
+  "num_frames": 148,
+  "per_class_instantiable": {
+   "shaft": 64.6,
+   "clasper": 59.02,
+   "wrist": 31.8
+  },
+  "mciou_instantiable": 51.81,
+  "n_frames_per_class": {
+   "shaft": 129,
+   "clasper": 138,
+   "wrist": 100
+  },
+  "n_frames_per_class_instantiable": {
+   "shaft": 129,
+   "clasper": 138,
+   "wrist": 100
+  },
+  "biou": 90.68,
+  "ciou_cls_gt": 56.91,
+  "ciou_cls_union": 54.38,
+  "cum_miou": 56.47
+ },
+ {
+  "seq_id": 110,
+  "seq_tag": "train10",
+  "challenge_iou": 87.58,
+  "iou": 87.58,
+  "mciou": 63.58,
+  "per_class": {
+   "shaft": 91.03,
+   "clasper": 55.22,
+   "wrist": 44.5
+  },
+  "num_frames": 148,
+  "per_class_instantiable": {
+   "shaft": 91.03,
+   "clasper": 55.22,
+   "wrist": 44.5
+  },
+  "mciou_instantiable": 63.58,
+  "n_frames_per_class": {
+   "shaft": 139,
+   "clasper": 148,
+   "wrist": 117
+  },
+  "n_frames_per_class_instantiable": {
+   "shaft": 139,
+   "clasper": 148,
+   "wrist": 117
+  },
+  "biou": 87.58,
+  "ciou_cls_gt": 63.82,
+  "ciou_cls_union": 59.4,
+  "cum_miou": 58.33
+ },
+ {
+  "seq_id": 111,
+  "seq_tag": "train11",
+  "challenge_iou": 88.13,
+  "iou": 88.13,
+  "mciou": 58.73,
+  "per_class": {
+   "shaft": 74.62,
+   "clasper": 70.34,
+   "wrist": 31.22
+  },
+  "num_frames": 148,
+  "per_class_instantiable": {
+   "shaft": 74.62,
+   "clasper": 70.34,
+   "wrist": 31.22
+  },
+  "mciou_instantiable": 58.73,
+  "n_frames_per_class": {
+   "shaft": 132,
+   "clasper": 140,
+   "wrist": 83
+  },
+  "n_frames_per_class_instantiable": {
+   "shaft": 132,
+   "clasper": 140,
+   "wrist": 83
+  },
+  "biou": 88.13,
+  "ciou_cls_gt": 65.02,
+  "ciou_cls_union": 64.75,
+  "cum_miou": 55.42
+ },
+ {
+  "seq_id": 112,
+  "seq_tag": "train12",
+  "challenge_iou": 53.81,
+  "iou": 53.81,
+  "mciou": 19.28,
+  "per_class": {
+   "shaft": 0.0,
+   "clasper": 57.85,
+   "wrist": 0.0
+  },
+  "num_frames": 148,
+  "per_class_instantiable": {
+   "shaft": 0.0,
+   "clasper": 57.85,
+   "wrist": 0.0
+  },
+  "mciou_instantiable": 57.85,
+  "n_frames_per_class": {
+   "shaft": 135,
+   "clasper": 147,
+   "wrist": 94
+  },
+  "n_frames_per_class_instantiable": {
+   "shaft": 0,
+   "clasper": 147,
+   "wrist": 0
+  },
+  "biou": 53.81,
+  "ciou_cls_gt": 25.48,
+  "ciou_cls_union": 25.48,
+  "cum_miou": 16.47
+ },
+ {
+  "seq_id": 113,
+  "seq_tag": "train13",
+  "challenge_iou": 60.73,
+  "iou": 60.73,
+  "mciou": 51.53,
+  "per_class": {
+   "shaft": 91.46,
+   "clasper": 30.41,
+   "wrist": 32.71
+  },
+  "num_frames": 148,
+  "per_class_instantiable": {
+   "shaft": 91.46,
+   "clasper": 30.41,
+   "wrist": 32.71
+  },
+  "mciou_instantiable": 51.53,
+  "n_frames_per_class": {
+   "shaft": 148,
+   "clasper": 148,
+   "wrist": 148
+  },
+  "n_frames_per_class_instantiable": {
+   "shaft": 148,
+   "clasper": 148,
+   "wrist": 148
+  },
+  "biou": 60.73,
+  "ciou_cls_gt": 51.53,
+  "ciou_cls_union": 51.53,
+  "cum_miou": 48.55
+ },
+ {
+  "seq_id": 114,
+  "seq_tag": "train14",
+  "challenge_iou": 61.58,
+  "iou": 61.58,
+  "mciou": 44.15,
+  "per_class": {
+   "shaft": 45.94,
+   "clasper": 51.5,
+   "wrist": 35.02
+  },
+  "num_frames": 148,
+  "per_class_instantiable": {
+   "shaft": 45.94,
+   "clasper": 51.5,
+   "wrist": 35.02
+  },
+  "mciou_instantiable": 44.15,
+  "n_frames_per_class": {
+   "shaft": 145,
+   "clasper": 148,
+   "wrist": 147
+  },
+  "n_frames_per_class_instantiable": {
+   "shaft": 145,
+   "clasper": 148,
+   "wrist": 147
+  },
+  "biou": 61.58,
+  "ciou_cls_gt": 44.23,
+  "ciou_cls_union": 44.18,
+  "cum_miou": 40.24
+ },
+ {
+  "seq_id": 115,
+  "seq_tag": "train15",
+  "challenge_iou": 88.32,
+  "iou": 88.32,
+  "mciou": 67.29,
+  "per_class": {
+   "shaft": 90.27,
+   "clasper": 63.9,
+   "wrist": 47.7
+  },
+  "num_frames": 148,
+  "per_class_instantiable": {
+   "shaft": 90.27,
+   "clasper": 63.9,
+   "wrist": 47.7
+  },
+  "mciou_instantiable": 67.29,
+  "n_frames_per_class": {
+   "shaft": 147,
+   "clasper": 148,
+   "wrist": 67
+  },
+  "n_frames_per_class_instantiable": {
+   "shaft": 147,
+   "clasper": 148,
+   "wrist": 67
+  },
+  "biou": 88.32,
+  "ciou_cls_gt": 71.64,
+  "ciou_cls_union": 69.11,
+  "cum_miou": 67.88
+ },
+ {
+  "seq_id": 116,
+  "seq_tag": "train16",
+  "challenge_iou": 73.51,
+  "iou": 73.51,
+  "mciou": 59.86,
+  "per_class": {
+   "shaft": 85.77,
+   "clasper": 40.26,
+   "wrist": 53.53
+  },
+  "num_frames": 148,
+  "per_class_instantiable": {
+   "shaft": 85.77,
+   "clasper": 40.26,
+   "wrist": 53.53
+  },
+  "mciou_instantiable": 59.86,
+  "n_frames_per_class": {
+   "shaft": 141,
+   "clasper": 147,
+   "wrist": 40
+  },
+  "n_frames_per_class_instantiable": {
+   "shaft": 141,
+   "clasper": 147,
+   "wrist": 40
+  },
+  "biou": 73.51,
+  "ciou_cls_gt": 59.21,
+  "ciou_cls_union": 53.98,
+  "cum_miou": 53.62
+ }
+]

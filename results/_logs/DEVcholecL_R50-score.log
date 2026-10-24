@@ -1,0 +1,48 @@
+[0m[32mINFO 2026-10-23 18:45:14,312 33435 sam3_video_base.py: 125:[0m setting max_num_objects=10000 and num_obj_for_compile=16
+2026-10-23 18:45:50,410 [INFO] inference_ev17: cholec/dev: 11 sequences
+2026-10-23 18:45:54,214 [INFO] src.models.md_sam3:   replay control: 79/159 planned deletions for video12_15750
+2026-10-23 18:47:08,595 [INFO] inference_ev17:   video12_15750: 160 frames, classes=[1, 2], Done in 78.2s
+2026-10-23 18:47:13,516 [INFO] inference_ev17:     bIoU=90.69
+2026-10-23 18:47:21,202 [INFO] src.models.md_sam3:   replay control: 159/319 planned deletions for video12_19500
+2026-10-23 18:49:18,622 [INFO] inference_ev17:   video12_19500: 320 frames, classes=[1, 2], Done in 125.0s
+2026-10-23 18:49:24,066 [INFO] inference_ev17:     bIoU=71.55
+2026-10-23 18:49:27,072 [INFO] src.models.md_sam3:   replay control: 79/159 planned deletions for video12_19900
+2026-10-23 18:50:25,617 [INFO] inference_ev17:   video12_19900: 160 frames, classes=[1], Done in 61.5s
+2026-10-23 18:50:29,362 [INFO] inference_ev17:     bIoU=58.25
+2026-10-23 18:50:38,216 [INFO] src.models.md_sam3:   replay control: 79/159 planned deletions for video17_01563
+2026-10-23 18:51:38,573 [INFO] inference_ev17:   video17_01563: 160 frames, classes=[1], Done in 69.2s
+2026-10-23 18:51:39,630 [INFO] inference_ev17:     bIoU=70.71
+2026-10-23 18:51:40,405 [INFO] src.models.md_sam3:   replay control: 39/79 planned deletions for video17_01803
+2026-10-23 18:52:01,151 [INFO] inference_ev17:   video17_01803: 80 frames, classes=[1], Done in 21.5s
+2026-10-23 18:52:02,524 [INFO] inference_ev17:     bIoU=86.68
+2026-10-23 18:52:06,120 [INFO] src.models.md_sam3:   replay control: 39/79 planned deletions for video18_00979
+2026-10-23 18:52:38,027 [INFO] inference_ev17:   video18_00979: 80 frames, classes=[1, 2], Done in 35.5s
+2026-10-23 18:52:41,945 [INFO] inference_ev17:     bIoU=94.00
+2026-10-23 18:52:43,669 [INFO] src.models.md_sam3:   replay control: 39/79 planned deletions for video18_01139
+2026-10-23 18:53:08,518 [INFO] inference_ev17:   video18_01139: 80 frames, classes=[1, 2], Done in 26.5s
+2026-10-23 18:53:09,105 [INFO] inference_ev17:     bIoU=95.71
+2026-10-23 18:53:10,745 [INFO] src.models.md_sam3:   replay control: 79/159 planned deletions for video20_03260
+2026-10-23 18:53:56,840 [INFO] inference_ev17:   video20_03260: 160 frames, classes=[1, 2], Done in 47.7s
+2026-10-23 18:53:58,624 [INFO] inference_ev17:     bIoU=93.64
+2026-10-23 18:53:59,991 [INFO] src.models.md_sam3:   replay control: 79/159 planned deletions for video24_09596
+2026-10-23 18:54:46,021 [INFO] inference_ev17:   video24_09596: 160 frames, classes=[1], Done in 47.4s
+2026-10-23 18:54:55,816 [INFO] inference_ev17:     bIoU=55.34
+2026-10-23 18:55:02,514 [INFO] src.models.md_sam3:   replay control: 79/159 planned deletions for video24_09836
+2026-10-23 18:55:49,028 [INFO] inference_ev17:   video24_09836: 160 frames, classes=[1], Done in 53.1s
+2026-10-23 18:55:54,324 [INFO] inference_ev17:     bIoU=88.48
+2026-10-23 18:55:55,060 [INFO] src.models.md_sam3:   replay control: 39/79 planned deletions for video24_10076
+2026-10-23 18:56:19,812 [INFO] inference_ev17:   video24_10076: 80 frames, classes=[1], Done in 25.5s
+2026-10-23 18:56:22,119 [INFO] inference_ev17:     bIoU=93.20
+2026-10-23 18:56:22,119 [INFO] inference_ev17: RETENTION: pruned 789/1589 = 49.65% (mode=replay)
+2026-10-23 18:56:22,119 [INFO] inference_ev17:   retention video12_15750: 79/159 deleted (49.7%)
+2026-10-23 18:56:22,119 [INFO] inference_ev17:   retention video12_19500: 159/319 deleted (49.8%)
+2026-10-23 18:56:22,119 [INFO] inference_ev17:   retention video12_19900: 79/159 deleted (49.7%)
+2026-10-23 18:56:22,119 [INFO] inference_ev17:   retention video17_01563: 79/159 deleted (49.7%)
+2026-10-23 18:56:22,119 [INFO] inference_ev17:   retention video17_01803: 39/79 deleted (49.4%)
+2026-10-23 18:56:22,119 [INFO] inference_ev17:   retention video18_00979: 39/79 deleted (49.4%)
+2026-10-23 18:56:22,119 [INFO] inference_ev17:   retention video18_01139: 39/79 deleted (49.4%)
+2026-10-23 18:56:22,120 [INFO] inference_ev17:   retention video20_03260: 79/159 deleted (49.7%)
+2026-10-23 18:56:22,120 [INFO] inference_ev17:   retention video24_09596: 79/159 deleted (49.7%)
+2026-10-23 18:56:22,120 [INFO] inference_ev17:   retention video24_09836: 79/159 deleted (49.7%)
+2026-10-23 18:56:22,120 [INFO] inference_ev17:   retention video24_10076: 39/79 deleted (49.4%)
+2026-10-23 18:56:35,235 [INFO] inference_ev17: Challenge IoU: 78.48%

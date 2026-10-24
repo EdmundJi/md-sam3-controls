@@ -14,6 +14,57 @@ def compute_iou(pred: np.ndarray, gt: np.ndarray) -> float:
     return float(intersection) / float(union)
 
 
+class ClassAwareIoU:
+    """Class-aware IoU variants used by published EndoVis results.
+
+    Our primary metric ('challenge_iou' in older outputs) is binary foreground
+    IoU, which ignores instrument identity. These variants score the label map:
+      - cls_gt:    per frame, mean IoU over classes present in that frame's GT
+                   (frames with no instrument in GT are skipped)
+      - cls_union: per frame, mean IoU over classes in GT or prediction
+                   (frames with neither are skipped)
+      - cum_miou:  per class, total intersection / total union over all
+                   frames, then mean over classes that occur in GT
+    """
+
+    def __init__(self, class_ids):
+        self.class_ids = list(class_ids)
+        self.f_gt, self.f_union = [], []
+        self.inter = {c: 0 for c in self.class_ids}
+        self.uni = {c: 0 for c in self.class_ids}
+        self.seen = {c: False for c in self.class_ids}
+
+    def add(self, pred: np.ndarray, gt: np.ndarray):
+        ious_gt, ious_union = [], []
+        for c in self.class_ids:
+            p, g = pred == c, gt == c
+            ps, gs = bool(p.any()), bool(g.any())
+            if not (ps or gs):
+                continue
+            i = int(np.logical_and(p, g).sum())
+            u = int(np.logical_or(p, g).sum())
+            iou = i / u if u else 0.0
+            ious_union.append(iou)
+            if gs:
+                ious_gt.append(iou)
+                self.seen[c] = True
+            self.inter[c] += i
+            self.uni[c] += u
+        if ious_gt:
+            self.f_gt.append(float(np.mean(ious_gt)))
+        if ious_union:
+            self.f_union.append(float(np.mean(ious_union)))
+
+    def result(self) -> Dict:
+        present = [c for c in self.class_ids if self.seen[c]]
+        cum = [self.inter[c] / self.uni[c] for c in present if self.uni[c]]
+        return {
+            "ciou_cls_gt": round(float(np.mean(self.f_gt)) * 100, 2) if self.f_gt else 0.0,
+            "ciou_cls_union": round(float(np.mean(self.f_union)) * 100, 2) if self.f_union else 0.0,
+            "cum_miou": round(float(np.mean(cum)) * 100, 2) if cum else 0.0,
+        }
+
+
 class EndoVis17Evaluator:
     """Computes Challenge IoU, IoU, and mcIoU for EV17."""
 
@@ -45,6 +96,10 @@ class EndoVis17Evaluator:
         all_iou = []
         per_class_iou = {c: [] for c in self.CLASS_IDS}
         per_class_inst = {c: [] for c in self.CLASS_IDS}
+        cls_aware = ClassAwareIoU(self.CLASS_IDS)
+        # EV17 challenge binary protocol: frames without any instrument in GT
+        # are discounted (our default scores an empty/empty frame as 1.0)
+        biou_nonempty = []
 
         for ds_id, frames in self.results.items():
             inst = self.init_classes.get(int(ds_id))
@@ -54,7 +109,10 @@ class EndoVis17Evaluator:
                 gt_binary = (gt > 0).astype(np.uint8)
                 challenge_iou = compute_iou(pred_binary, gt_binary)
                 all_challenge_iou.append(challenge_iou)
-                all_iou.append(challenge_iou)  # IoU = Challenge IoU in standard protocol
+                all_iou.append(challenge_iou)  # NB: binary IoU (bIoU), not class-aware
+                cls_aware.add(pred, gt)
+                if gt_binary.any():
+                    biou_nonempty.append(challenge_iou)
 
                 # Per-class IoU
                 for cls_id in self.CLASS_IDS:
@@ -102,6 +160,10 @@ class EndoVis17Evaluator:
                 self.CLASS_ABBR[c]: len(per_class_inst[c]) for c in self.CLASS_IDS
             },
             "num_frames": len(all_challenge_iou),
+            "biou": round(mean_challenge_iou, 2),
+            "biou_nonempty": round(float(np.mean(biou_nonempty)) * 100, 2) if biou_nonempty else 0.0,
+            "n_frames_nonempty": len(biou_nonempty),
+            **cls_aware.result(),
         }
 
     def compute_per_dataset(self) -> Dict[int, Dict]:

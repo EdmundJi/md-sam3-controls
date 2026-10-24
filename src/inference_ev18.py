@@ -4,12 +4,12 @@ Inference script for EndoVis 2018 evaluation (instrument part segmentation).
 Tracks three instrument parts (shaft/clasper/wrist) as separate objects
 using the GT first-frame initialization protocol.
 
-Usage (on RunPod):
+Usage:
     python src/inference_ev18.py \\
         --config C7 \\
         --model-path checkpoints/sam3.pt \\
         --data-root data/endovis_2018 \\
-        --output-dir results/EV18_C7_seed1 \\
+        --output-dir results/C0 \\
         --seed 1
 
 Outputs:
@@ -33,14 +33,15 @@ import torch
 
 PROJECT_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
-from src.paths import REPO_ROOT, default_checkpoint, default_data_root
-REPO_RESULTS = REPO_ROOT / 'results'
+from src.paths import REPO_ROOT, default_checkpoint, default_data_root  # noqa: E402
 
 from src.data.endovis18 import (
     CLASS_IDS, CLASS_ABBR,
-    get_test_sequences, load_label_mask, extract_class_masks,
+    get_sequences, load_label_mask, extract_class_masks,
 )
 from src.models.md_sam3 import CONFIG_PRESETS, MDSam3Config, build_md_sam3, MDSam3Inferencer
+from src.evaluation.metrics import ClassAwareIoU
+from src.run_utils import add_control_args, apply_control_args, full_config, dump_decisions, save_pred
 
 logging.basicConfig(
     level=logging.INFO,
@@ -62,6 +63,10 @@ def parse_args():
     p.add_argument("--config", default="C7")
     p.add_argument("--model-path", default=default_checkpoint())
     p.add_argument("--data-root", default=default_data_root("ev18"))
+    p.add_argument("--split", default="test", choices=["test", "train", "all"],
+                   help="test = seq_1-4 (all earlier runs); train/all add the 15 training sequences")
+    p.add_argument("--seq-tags", default="",
+                   help="comma-separated seq tags to run (default: every sequence of the split)")
     p.add_argument("--output-dir", default=None)
     p.add_argument("--seed", type=int, default=1)
     p.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
@@ -76,10 +81,14 @@ def parse_args():
                    help="SRG: per-instance self-calibrated relevance threshold")
     p.add_argument("--adaptive-beta", type=float, default=None)
     p.add_argument("--prune-mode", default=None,
-                   choices=["reliability", "random", "stride"])
+                   choices=["reliability", "random", "stride", "perm", "shift", "even", "replay", "quantile"])
     p.add_argument("--prune-rate", type=float, default=None)
     p.add_argument("--srg-quantile", type=float, default=None)
-    return p.parse_args()
+    add_control_args(p)
+    args = p.parse_args()
+    if args.output_dir is None:
+        args.output_dir = str(REPO_ROOT / "results" / args.config)
+    return args
 
 
 def get_config(args) -> MDSam3Config:
@@ -102,6 +111,7 @@ def get_config(args) -> MDSam3Config:
         cfg.prune_rate = args.prune_rate
     if args.srg_quantile is not None:
         cfg.srg_quantile = args.srg_quantile
+    apply_control_args(cfg, args)
     return cfg
 
 
@@ -110,6 +120,13 @@ class EndoVis18Evaluator:
 
     def __init__(self):
         self.results = {}  # {seq_id: {frame_id: (pred_mask, gt_mask)}}
+        # Parts present in each sequence's init frame. Under GT-init a part
+        # absent from frame 0 is never tracked, so its frames are structural
+        # zeros; per_class_instantiable excludes them (as on EV17).
+        self.init_classes = {}
+
+    def set_init_classes(self, seq_id, classes):
+        self.init_classes[seq_id] = set(int(c) for c in classes)
 
     def add_frame(self, seq_id, frame_id, pred: np.ndarray, gt: np.ndarray):
         self.results.setdefault(seq_id, {})[frame_id] = (pred, gt)
@@ -118,19 +135,26 @@ class EndoVis18Evaluator:
         from src.evaluation.metrics import compute_iou
         all_ciou, all_iou = [], []
         per_class = {c: [] for c in CLASS_IDS}
+        per_class_inst = {c: [] for c in CLASS_IDS}
+        cls_aware = ClassAwareIoU(CLASS_IDS)
 
         for seq_id, frames in self.results.items():
+            inst = self.init_classes.get(seq_id)
             for fid, (pred, gt) in frames.items():
                 pred_bin = (pred > 0).astype(np.uint8)
                 gt_bin = (gt > 0).astype(np.uint8)
                 ciou = compute_iou(pred_bin, gt_bin)
                 all_ciou.append(ciou)
                 all_iou.append(ciou)
+                cls_aware.add(pred, gt)
                 for cls_id in CLASS_IDS:
                     gt_cls = (gt == cls_id).astype(np.uint8)
                     if gt_cls.sum() > 0:
                         pred_cls = (pred == cls_id).astype(np.uint8)
-                        per_class[cls_id].append(compute_iou(pred_cls, gt_cls))
+                        v = compute_iou(pred_cls, gt_cls)
+                        per_class[cls_id].append(v)
+                        if inst is None or cls_id in inst:
+                            per_class_inst[cls_id].append(v)
 
         mean_ciou = np.mean(all_ciou) * 100 if all_ciou else 0.0
         mean_iou = np.mean(all_iou) * 100 if all_iou else 0.0
@@ -145,6 +169,15 @@ class EndoVis18Evaluator:
             "mciou": round(mciou, 2),
             "per_class": {CLASS_ABBR[c]: round(class_means[c], 2) for c in CLASS_IDS},
             "num_frames": len(all_ciou),
+            "per_class_instantiable": {CLASS_ABBR[c]: round(float(np.mean(per_class_inst[c])) * 100, 2)
+                                       if per_class_inst[c] else 0.0 for c in CLASS_IDS},
+            "mciou_instantiable": round(float(np.mean([np.mean(per_class_inst[c]) * 100
+                                       for c in CLASS_IDS if per_class_inst[c]])), 2)
+                                  if any(per_class_inst[c] for c in CLASS_IDS) else 0.0,
+            "n_frames_per_class": {CLASS_ABBR[c]: len(per_class[c]) for c in CLASS_IDS},
+            "n_frames_per_class_instantiable": {CLASS_ABBR[c]: len(per_class_inst[c]) for c in CLASS_IDS},
+            "biou": round(mean_ciou, 2),
+            **cls_aware.result(),
         }
 
 
@@ -173,6 +206,8 @@ def run_sequence(inferencer: MDSam3Inferencer, seq: dict) -> dict:
     logger.info(f"seq_{seq['seq_id']}: {len(frame_files)} frames, "
                 f"parts={list(init_masks.keys())} {[CLASS_ABBR[c] for c in init_masks]}")
 
+    seq["init_parts"] = sorted(init_masks.keys())
+    inferencer.seq_tag = seq.get("seq_tag", f"test{seq['seq_id']}")
     t0 = time.time()
     predictions = inferencer.run_sequence(frame_files, init_masks, 0)
     elapsed = time.time() - t0
@@ -203,8 +238,6 @@ def main():
     cfg = get_config(args)
     logger.info(f"Config {args.config}: dms={cfg.dms}, dm={cfg.dm}, dfs={cfg.dfs}")
 
-    if args.output_dir is None:
-        args.output_dir = str(REPO_RESULTS / f'EV18_{args.config}_seed{args.seed}')
     os.makedirs(args.output_dir, exist_ok=True)
 
     import yaml
@@ -222,22 +255,29 @@ def main():
                 "memory_size": cfg.memory_size,
             },
         },
+        "split": args.split,
+        "full_config": full_config(cfg, args),
     }
     with open(os.path.join(args.output_dir, "config.yaml"), "w") as f:
         yaml.dump(config_dict, f, default_flow_style=False)
 
     logger.info(f"Loading SAM3 from {args.model_path}")
     inferencer = build_md_sam3(cfg, args.model_path, args.device)
-    _nm = os.environ.get('MDSAM3_NUM_MASKMEM')
+    _nm = args.num_maskmem or os.environ.get('MDSAM3_NUM_MASKMEM')
     if _nm:
         inferencer.predictor.num_maskmem = int(_nm)
         logger.info(f'CAPACITY OVERRIDE: num_maskmem={_nm}')
 
-    sequences = get_test_sequences(args.data_root)
+    sequences = get_sequences(args.data_root, args.split)
+    if args.seq_tags:
+        keep = set(args.seq_tags.split(","))
+        sequences = [s for s in sequences if s.get("seq_tag") in keep]
+        logger.info(f"SEQ SUBSET: {sorted(keep)}")
     if not sequences:
-        logger.error(f"No test sequences found in {args.data_root}")
+        logger.error(f"No {args.split} sequences found in {args.data_root}")
         return
-    logger.info(f"Found {len(sequences)} test sequences")
+    logger.info(f"Found {len(sequences)} {args.split} sequences: "
+                f"{[s.get('seq_tag', s['seq_id']) for s in sequences]}")
 
     evaluator = EndoVis18Evaluator()
     per_video_rows = []
@@ -253,10 +293,17 @@ def main():
                 f"EXCLUDED from evaluation (was previously scored as all-empty)"
             )
             continue
+        evaluator.set_init_classes(seq["seq_id"], seq.get("init_parts", []))
         evaluate_sequence(preds, seq, evaluator, H, W)
+        if args.save_preds:
+            for local_idx, frame_id in enumerate(seq["frame_ids"]):
+                if local_idx in preds:
+                    save_pred(args.output_dir, seq.get("seq_tag", seq["seq_id"]),
+                              frame_id, preds[local_idx])
 
         # Per-sequence metrics
         tmp_eval = EndoVis18Evaluator()
+        tmp_eval.set_init_classes(seq["seq_id"], seq.get("init_parts", []))
         for local_idx, (fpath, frame_id) in enumerate(
             zip(seq["frame_files"], seq["frame_ids"])
         ):
@@ -273,7 +320,8 @@ def main():
 
         if tmp_eval.results:
             vid_metrics = tmp_eval.compute()
-            per_video_rows.append({"seq_id": seq["seq_id"], **vid_metrics})
+            per_video_rows.append({"seq_id": seq["seq_id"],
+                                   "seq_tag": seq.get("seq_tag", ""), **vid_metrics})
             logger.info(f"  seq_{seq['seq_id']}: CIoU={vid_metrics['challenge_iou']:.2f}%")
 
     if getattr(inferencer, "n_prune_seen", 0):
@@ -281,6 +329,7 @@ def main():
         logger.info(f"RETENTION: pruned {inferencer.n_pruned}/"
                     f"{inferencer.n_prune_seen} = {_r*100:.2f}% "
                     f"(mode={cfg.prune_mode})")
+    dump_decisions(inferencer, args.output_dir, logger)
     metrics = evaluator.compute()
     logger.info("\n=== EV18 RESULTS ===")
     logger.info(f"Challenge IoU: {metrics['challenge_iou']:.2f}%")
@@ -292,7 +341,8 @@ def main():
         json.dump(metrics, f, indent=2)
 
     if per_video_rows:
-        keys = ["seq_id", "challenge_iou", "iou", "mciou"]
+        keys = ["seq_id", "seq_tag", "challenge_iou", "iou", "mciou", "mciou_instantiable",
+                "ciou_cls_gt", "ciou_cls_union", "cum_miou"]
         part_keys = list(per_video_rows[0].get("per_class", {}).keys())
         with open(os.path.join(args.output_dir, "per_video.csv"), "w", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=keys + part_keys)
@@ -301,6 +351,9 @@ def main():
                 flat = {k: row[k] for k in keys if k in row}
                 flat.update(row.get("per_class", {}))
                 writer.writerow(flat)
+
+    with open(os.path.join(args.output_dir, "per_video.json"), "w") as f:
+        json.dump(per_video_rows, f, indent=1, default=float)
 
     logger.info(f"\nResults saved to {args.output_dir}")
     return metrics

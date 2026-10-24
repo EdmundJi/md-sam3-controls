@@ -1,0 +1,28 @@
+dataset: ev17train
+experiment_id: C2-quant
+full_config:
+  adaptive_beta: 1.0
+  adaptive_tau: false
+  block_occ_pollution: false
+  dfs: false
+  dfs_mode: diversity
+  dm: true
+  dms: false
+  frame_format: jpg95
+  group_gate: false
+  lambda_dfs: 0.5
+  memory_size: 6
+  min_occ_frames: 2
+  num_maskmem_override: null
+  occ_score_thresh: 0.0
+  prune_mask_file: ''
+  prune_mode: quantile
+  prune_rate: 0.25
+  prune_seed: 12345
+  quantile_window: 16
+  srg_quantile: 0.5
+  store_mem_entries: false
+  tau_occ: 0.65
+  tau_rel: 0.95
+seed: 1
+split: all

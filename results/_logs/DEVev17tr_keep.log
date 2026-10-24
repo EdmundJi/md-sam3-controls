@@ -1,0 +1,28 @@
+[0m[32mINFO 2026-10-23 17:49:20,308 26474 sam3_video_base.py: 125:[0m setting max_num_objects=10000 and num_obj_for_compile=16
+2026-10-23 17:50:12,162 [INFO] inference_ev17: ev17train/all: 8 sequences
+2026-10-23 17:52:01,337 [INFO] inference_ev17:   tr1: 225 frames, classes=[1, 2, 7], Done in 109.1s
+2026-10-23 17:52:28,080 [INFO] inference_ev17:     bIoU=90.81
+2026-10-23 17:54:32,225 [INFO] inference_ev17:   tr2: 225 frames, classes=[2, 7], Done in 124.1s
+2026-10-23 17:54:56,816 [INFO] inference_ev17:     bIoU=91.20
+2026-10-23 17:56:48,529 [INFO] inference_ev17:   tr3: 225 frames, classes=[3], Done in 111.5s
+2026-10-23 17:57:00,072 [INFO] inference_ev17:     bIoU=94.82
+2026-10-23 17:58:37,809 [INFO] inference_ev17:   tr4: 225 frames, classes=[2, 3], Done in 97.7s
+2026-10-23 17:58:46,884 [INFO] inference_ev17:     bIoU=75.53
+2026-10-23 18:00:04,013 [INFO] inference_ev17:   tr5: 225 frames, classes=[1], Done in 77.1s
+2026-10-23 18:00:35,947 [INFO] inference_ev17:     bIoU=51.35
+2026-10-23 18:01:46,445 [INFO] inference_ev17:   tr6: 225 frames, classes=[3, 6], Done in 70.5s
+2026-10-23 18:02:18,914 [INFO] inference_ev17:     bIoU=71.80
+2026-10-23 18:03:37,847 [INFO] inference_ev17:   tr7: 225 frames, classes=[1], Done in 78.9s
+2026-10-23 18:03:53,940 [INFO] inference_ev17:     bIoU=46.02
+2026-10-23 18:05:40,775 [INFO] inference_ev17:   tr8: 225 frames, classes=[1, 5, 6], Done in 106.8s
+2026-10-23 18:05:50,828 [INFO] inference_ev17:     bIoU=90.30
+2026-10-23 18:05:50,828 [INFO] inference_ev17: RETENTION: pruned 0/1792 = 0.00% (mode=reliability)
+2026-10-23 18:05:50,828 [INFO] inference_ev17:   retention tr1: 0/224 deleted (0.0%)
+2026-10-23 18:05:50,828 [INFO] inference_ev17:   retention tr2: 0/224 deleted (0.0%)
+2026-10-23 18:05:50,828 [INFO] inference_ev17:   retention tr3: 0/224 deleted (0.0%)
+2026-10-23 18:05:50,828 [INFO] inference_ev17:   retention tr4: 0/224 deleted (0.0%)
+2026-10-23 18:05:50,828 [INFO] inference_ev17:   retention tr5: 0/224 deleted (0.0%)
+2026-10-23 18:05:50,828 [INFO] inference_ev17:   retention tr6: 0/224 deleted (0.0%)
+2026-10-23 18:05:50,828 [INFO] inference_ev17:   retention tr7: 0/224 deleted (0.0%)
+2026-10-23 18:05:50,828 [INFO] inference_ev17:   retention tr8: 0/224 deleted (0.0%)
+2026-10-23 18:07:36,074 [INFO] inference_ev17: Challenge IoU: 76.48%

@@ -1,0 +1,57 @@
+[
+ {
+  "seq_tag": "video12_15750",
+  "challenge_iou": 90.73,
+  "num_frames": 159
+ },
+ {
+  "seq_tag": "video12_19500",
+  "challenge_iou": 79.71,
+  "num_frames": 319
+ },
+ {
+  "seq_tag": "video12_19900",
+  "challenge_iou": 74.21,
+  "num_frames": 159
+ },
+ {
+  "seq_tag": "video17_01563",
+  "challenge_iou": 71.51,
+  "num_frames": 159
+ },
+ {
+  "seq_tag": "video17_01803",
+  "challenge_iou": 86.71,
+  "num_frames": 79
+ },
+ {
+  "seq_tag": "video18_00979",
+  "challenge_iou": 93.63,
+  "num_frames": 79
+ },
+ {
+  "seq_tag": "video18_01139",
+  "challenge_iou": 95.8,
+  "num_frames": 79
+ },
+ {
+  "seq_tag": "video20_03260",
+  "challenge_iou": 93.67,
+  "num_frames": 159
+ },
+ {
+  "seq_tag": "video24_09596",
+  "challenge_iou": 55.36,
+  "num_frames": 159
+ },
+ {
+  "seq_tag": "video24_09836",
+  "challenge_iou": 88.55,
+  "num_frames": 159
+ },
+ {
+  "seq_tag": "video24_10076",
+  "challenge_iou": 93.03,
+  "num_frames": 79
+ }
+]

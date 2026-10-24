@@ -1,0 +1,14 @@
+{
+ "challenge_iou": 80.87,
+ "biou": 80.87,
+ "num_frames": 1792,
+ "picks": [
+  1,
+  7
+ ],
+ "runs": [
+  "/workspace/results/ipcai/DEVev17tr_keep",
+  "/workspace/results/ipcai/DEVev17tr_R50-score"
+ ],
+ "rule": "seq"
+}

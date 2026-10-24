@@ -1,0 +1,44 @@
+2026-10-23 03:42:46,549 [INFO] inference_ev17: Config C4: dms=True, dm=True, dfs=False
+2026-10-23 03:42:46,549 [INFO] inference_ev17:   tau_rel=0.95, tau_occ=0.65, lambda_dfs=0.5, M=6
+2026-10-23 03:42:46,561 [INFO] inference_ev17: Loading SAM3 from /workspace/models/facebook/sam3/sam3.pt
+[0m[32mINFO 2026-10-23 03:42:57,554 4476 sam3_video_base.py: 125:[0m setting max_num_objects=10000 and num_obj_for_compile=16
+2026-10-23 03:43:03,732 [INFO] inference_ev17: Found 10 test sequences
+2026-10-23 03:43:03,801 [INFO] inference_ev17: Dataset 1: 75 frames, classes=[1, 2]
+2026-10-23 03:43:20,443 [INFO] inference_ev17:   Done in 16.6s (4.5 fps)
+2026-10-23 03:43:29,074 [INFO] inference_ev17:   DS1: CIoU=80.70%
+2026-10-23 03:43:29,169 [INFO] inference_ev17: Dataset 2: 75 frames, classes=[2]
+2026-10-23 03:43:57,472 [INFO] inference_ev17:   Done in 28.3s (2.6 fps)
+2026-10-23 03:44:05,875 [INFO] inference_ev17:   DS2: CIoU=87.00%
+2026-10-23 03:44:05,994 [INFO] inference_ev17: Dataset 3: 75 frames, classes=[3]
+2026-10-23 03:44:31,624 [INFO] inference_ev17:   Done in 25.6s (2.9 fps)
+2026-10-23 03:44:34,498 [INFO] inference_ev17:   DS3: CIoU=94.65%
+2026-10-23 03:44:34,565 [INFO] inference_ev17: Dataset 4: 75 frames, classes=[2, 3]
+2026-10-23 03:45:18,653 [INFO] inference_ev17:   Done in 44.1s (1.7 fps)
+2026-10-23 03:45:25,358 [INFO] inference_ev17:   DS4: CIoU=94.90%
+2026-10-23 03:45:25,476 [INFO] inference_ev17: Dataset 5: 75 frames, classes=[1, 4]
+2026-10-23 03:45:58,172 [INFO] inference_ev17:   Done in 32.7s (2.3 fps)
+2026-10-23 03:46:02,883 [INFO] inference_ev17:   DS5: CIoU=92.81%
+2026-10-23 03:46:02,984 [INFO] inference_ev17: Dataset 6: 75 frames, classes=[2, 3]
+2026-10-23 03:46:38,875 [INFO] inference_ev17:   Done in 35.9s (2.1 fps)
+2026-10-23 03:46:46,247 [INFO] inference_ev17:   DS6: CIoU=92.42%
+2026-10-23 03:46:46,303 [INFO] inference_ev17: Dataset 7: 75 frames, classes=[1, 4]
+2026-10-23 03:47:18,383 [INFO] inference_ev17:   Done in 32.1s (2.3 fps)
+2026-10-23 03:47:22,748 [INFO] inference_ev17:   DS7: CIoU=92.92%
+2026-10-23 03:47:22,804 [INFO] inference_ev17: Dataset 8: 75 frames, classes=[1, 6]
+2026-10-23 03:47:57,584 [INFO] inference_ev17:   Done in 34.8s (2.2 fps)
+2026-10-23 03:48:05,593 [INFO] inference_ev17:   DS8: CIoU=95.54%
+2026-10-23 03:48:05,682 [INFO] inference_ev17: Dataset 9: 300 frames, classes=[1, 2, 6]
+2026-10-23 03:52:04,030 [INFO] inference_ev17:   Done in 238.3s (1.3 fps)
+2026-10-23 03:52:21,904 [INFO] inference_ev17:   DS9: CIoU=90.50%
+2026-10-23 03:52:21,962 [INFO] inference_ev17: Dataset 10: 300 frames, classes=[3]
+2026-10-23 03:53:16,225 [INFO] inference_ev17:   Done in 54.3s (5.5 fps)
+2026-10-23 03:53:41,954 [INFO] inference_ev17:   DS10: CIoU=94.34%
+2026-10-23 03:53:41,954 [INFO] inference_ev17: RETENTION: pruned 1262/2232 = 56.54% (mode=reliability)
+2026-10-23 03:55:03,106 [INFO] inference_ev17: 
+=== RESULTS ===
+2026-10-23 03:55:03,107 [INFO] inference_ev17: Challenge IoU: 91.90%
+2026-10-23 03:55:03,107 [INFO] inference_ev17: IoU:           91.90%
+2026-10-23 03:55:03,107 [INFO] inference_ev17: mcIoU:         60.18%
+2026-10-23 03:55:03,107 [INFO] inference_ev17: Per-class: {'BF': 89.79, 'PF': 77.88, 'LND': 94.29, 'VS': 90.53, 'GR': 0.0, 'MCS': 68.79, 'UP': 0.0}
+2026-10-23 03:55:03,108 [INFO] inference_ev17: 
+Results saved to /workspace/results/ipcai/EV17_C4_ref

@@ -1,12 +1,12 @@
 """
 Inference script for EndoVis 2017 evaluation.
 
-Usage (on RunPod):
+Usage:
     python src/inference_ev17.py \
         --config C0 \
         --model-path checkpoints/sam3.pt \
         --data-root data/endovis_2017 \
-        --output-dir results/C0_seed1 \
+        --output-dir results/C0 \
         --seed 1
 
 Outputs:
@@ -31,14 +31,14 @@ import torch
 # Add project root to sys.path
 PROJECT_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
-from src.paths import REPO_ROOT, default_checkpoint, default_data_root
-REPO_RESULTS = REPO_ROOT / 'results'
+from src.paths import REPO_ROOT, default_checkpoint, default_data_root  # noqa: E402
 
 _INIT_CLASSES = {}
 
 from src.data.endovis17 import get_test_sequences, load_gt_mask, extract_class_masks, load_frame_rgb
 from src.evaluation.metrics import EndoVis17Evaluator
 from src.models.md_sam3 import CONFIG_PRESETS, MDSam3Config, build_md_sam3, MDSam3Inferencer
+from src.run_utils import add_control_args, apply_control_args, full_config, dump_decisions, save_pred
 
 logging.basicConfig(
     level=logging.INFO,
@@ -83,10 +83,14 @@ def parse_args():
                    help="SRG: per-instance self-calibrated relevance threshold")
     p.add_argument("--adaptive-beta", type=float, default=None)
     p.add_argument("--prune-mode", default=None,
-                   choices=["reliability", "random", "stride"])
+                   choices=["reliability", "random", "stride", "perm", "shift", "even", "replay", "quantile"])
     p.add_argument("--prune-rate", type=float, default=None)
     p.add_argument("--srg-quantile", type=float, default=None)
-    return p.parse_args()
+    add_control_args(p)
+    args = p.parse_args()
+    if args.output_dir is None:
+        args.output_dir = str(REPO_ROOT / "results" / args.config)
+    return args
 
 
 def get_config(args) -> MDSam3Config:
@@ -122,6 +126,7 @@ def get_config(args) -> MDSam3Config:
         cfg.prune_rate = args.prune_rate
     if args.srg_quantile is not None:
         cfg.srg_quantile = args.srg_quantile
+    apply_control_args(cfg, args)
 
     return cfg
 
@@ -190,8 +195,6 @@ def main():
     logger.info(f"  tau_rel={cfg.tau_rel}, tau_occ={cfg.tau_occ}, "
                 f"lambda_dfs={cfg.lambda_dfs}, M={cfg.memory_size}")
 
-    if args.output_dir is None:
-        args.output_dir = str(REPO_RESULTS / f'{args.config}_seed{args.seed}')
     os.makedirs(args.output_dir, exist_ok=True)
 
     # Save config snapshot
@@ -211,14 +214,9 @@ def main():
                 "dfs_mode": cfg.dfs_mode,
                 "adaptive_tau": cfg.adaptive_tau,
                 "adaptive_beta": cfg.adaptive_beta,
-                "srg_quantile": cfg.srg_quantile,
-                "group_gate": cfg.group_gate,
-                "store_mem_entries": cfg.store_mem_entries,
-                "prune_mode": cfg.prune_mode,
-                "prune_rate": cfg.prune_rate,
-                "num_maskmem": int(os.environ.get("MDSAM3_NUM_MASKMEM", 7)),
             },
         },
+        "full_config": full_config(cfg, args),
     }
     with open(os.path.join(args.output_dir, "config.yaml"), "w") as f:
         yaml.dump(config_dict, f, default_flow_style=False)
@@ -226,7 +224,7 @@ def main():
     # Load model
     logger.info(f"Loading SAM3 from {args.model_path}")
     inferencer = build_md_sam3(cfg, args.model_path, args.device)
-    _nm = os.environ.get('MDSAM3_NUM_MASKMEM')
+    _nm = args.num_maskmem or os.environ.get('MDSAM3_NUM_MASKMEM')
     if _nm:
         inferencer.predictor.num_maskmem = int(_nm)
         logger.info(f'CAPACITY OVERRIDE: num_maskmem={_nm}')
@@ -249,6 +247,10 @@ def main():
         evaluator.set_init_classes(seq['dataset_id'],
                                    _INIT_CLASSES.get(seq['dataset_id'], []))
         evaluate_sequence(preds, seq, evaluator, H, W)
+        if args.save_preds:
+            for local_idx, frame_id in enumerate(seq["frame_ids"]):
+                if local_idx in preds:
+                    save_pred(args.output_dir, f"ds{seq['dataset_id']}", frame_id, preds[local_idx])
 
         # Per-video metrics
         tmp_eval = EndoVis17Evaluator()
@@ -278,6 +280,7 @@ def main():
         logger.info(f"RETENTION: pruned {inferencer.n_pruned}/"
                     f"{inferencer.n_prune_seen} = {_r*100:.2f}% "
                     f"(mode={cfg.prune_mode})")
+    dump_decisions(inferencer, args.output_dir, logger)
     metrics = evaluator.compute()
     logger.info("\n=== RESULTS ===")
     logger.info(f"Challenge IoU: {metrics['challenge_iou']:.2f}%")
@@ -291,7 +294,8 @@ def main():
 
     # Save per-video CSV
     if per_video_rows:
-        keys = ["dataset_id", "challenge_iou", "iou", "mciou"]
+        keys = ["dataset_id", "challenge_iou", "iou", "mciou", "mciou_instantiable",
+                "biou_nonempty", "ciou_cls_gt", "ciou_cls_union", "cum_miou"]
         with open(os.path.join(args.output_dir, "per_video.csv"), "w", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=keys + list(per_video_rows[0].get("per_class", {}).keys()))
             writer.writeheader()
@@ -299,6 +303,9 @@ def main():
                 flat = {k: row[k] for k in keys if k in row}
                 flat.update(row.get("per_class", {}))
                 writer.writerow(flat)
+
+    with open(os.path.join(args.output_dir, "per_video.json"), "w") as f:
+        json.dump(per_video_rows, f, indent=1, default=float)
 
     logger.info(f"\nResults saved to {args.output_dir}")
     return metrics

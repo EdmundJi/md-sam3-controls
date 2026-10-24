@@ -1,0 +1,55 @@
+2026-10-23 04:31:21,301 [INFO] inference_ev17: Config C2: dms=False, dm=True, dfs=False
+2026-10-23 04:31:21,302 [INFO] inference_ev17:   tau_rel=0.95, tau_occ=0.65, lambda_dfs=0.5, M=6
+2026-10-23 04:31:21,312 [INFO] inference_ev17: Loading SAM3 from /workspace/models/facebook/sam3/sam3.pt
+[0m[32mINFO 2026-10-23 04:31:39,072 11211 sam3_video_base.py: 125:[0m setting max_num_objects=10000 and num_obj_for_compile=16
+2026-10-23 04:31:48,356 [INFO] inference_ev17: CAPACITY OVERRIDE: num_maskmem=5
+2026-10-23 04:31:48,361 [INFO] inference_ev17: Found 10 test sequences
+2026-10-23 04:31:48,430 [INFO] inference_ev17: Dataset 1: 75 frames, classes=[1, 2]
+2026-10-23 04:32:01,203 [INFO] inference_ev17:   Done in 12.8s (5.9 fps)
+2026-10-23 04:32:05,980 [INFO] inference_ev17:   DS1: CIoU=83.39%
+2026-10-23 04:32:06,067 [INFO] inference_ev17: Dataset 2: 75 frames, classes=[2]
+2026-10-23 04:32:29,956 [INFO] inference_ev17:   Done in 23.9s (3.1 fps)
+2026-10-23 04:32:33,874 [INFO] inference_ev17:   DS2: CIoU=88.30%
+2026-10-23 04:32:33,967 [INFO] inference_ev17: Dataset 3: 75 frames, classes=[3]
+2026-10-23 04:32:58,157 [INFO] inference_ev17:   Done in 24.2s (3.1 fps)
+2026-10-23 04:33:00,643 [INFO] inference_ev17:   DS3: CIoU=94.54%
+2026-10-23 04:33:00,707 [INFO] inference_ev17: Dataset 4: 75 frames, classes=[2, 3]
+2026-10-23 04:33:18,895 [INFO] inference_ev17:   Done in 18.2s (4.1 fps)
+2026-10-23 04:33:21,939 [INFO] inference_ev17:   DS4: CIoU=94.44%
+2026-10-23 04:33:22,004 [INFO] inference_ev17: Dataset 5: 75 frames, classes=[1, 4]
+2026-10-23 04:33:44,581 [INFO] inference_ev17:   Done in 22.6s (3.3 fps)
+2026-10-23 04:33:49,673 [INFO] inference_ev17:   DS5: CIoU=92.12%
+2026-10-23 04:33:49,790 [INFO] inference_ev17: Dataset 6: 75 frames, classes=[2, 3]
+2026-10-23 04:34:16,178 [INFO] inference_ev17:   Done in 26.4s (2.8 fps)
+2026-10-23 04:34:19,426 [INFO] inference_ev17:   DS6: CIoU=92.07%
+2026-10-23 04:34:19,482 [INFO] inference_ev17: Dataset 7: 75 frames, classes=[1, 4]
+2026-10-23 04:34:39,376 [INFO] inference_ev17:   Done in 19.9s (3.8 fps)
+2026-10-23 04:34:42,319 [INFO] inference_ev17:   DS7: CIoU=93.30%
+2026-10-23 04:34:42,375 [INFO] inference_ev17: Dataset 8: 75 frames, classes=[1, 6]
+2026-10-23 04:35:11,138 [INFO] inference_ev17:   Done in 28.8s (2.6 fps)
+2026-10-23 04:35:14,101 [INFO] inference_ev17:   DS8: CIoU=95.43%
+2026-10-23 04:35:14,186 [INFO] inference_ev17: Dataset 9: 300 frames, classes=[1, 2, 6]
+2026-10-23 04:36:34,100 [INFO] inference_ev17:   Done in 79.9s (3.8 fps)
+2026-10-23 04:36:58,371 [INFO] inference_ev17:   DS9: CIoU=89.64%
+2026-10-23 04:36:58,423 [INFO] inference_ev17: Dataset 10: 300 frames, classes=[3]
+2026-10-23 04:38:30,040 [INFO] inference_ev17:   Done in 91.6s (3.3 fps)
+2026-10-23 04:38:39,795 [INFO] inference_ev17:   DS10: CIoU=92.65%
+2026-10-23 04:38:39,795 [INFO] inference_ev17: RETENTION: pruned 918/1190 = 77.14% (mode=reliability)
+2026-10-23 04:38:39,795 [INFO] inference_ev17:   retention ds1: 73/74 deleted (98.7%)
+2026-10-23 04:38:39,795 [INFO] inference_ev17:   retention ds2: 72/74 deleted (97.3%)
+2026-10-23 04:38:39,795 [INFO] inference_ev17:   retention ds3: 63/74 deleted (85.1%)
+2026-10-23 04:38:39,795 [INFO] inference_ev17:   retention ds4: 12/74 deleted (16.2%)
+2026-10-23 04:38:39,795 [INFO] inference_ev17:   retention ds5: 69/74 deleted (93.2%)
+2026-10-23 04:38:39,795 [INFO] inference_ev17:   retention ds6: 69/74 deleted (93.2%)
+2026-10-23 04:38:39,795 [INFO] inference_ev17:   retention ds7: 55/74 deleted (74.3%)
+2026-10-23 04:38:39,795 [INFO] inference_ev17:   retention ds8: 1/74 deleted (1.4%)
+2026-10-23 04:38:39,795 [INFO] inference_ev17:   retention ds9: 270/299 deleted (90.3%)
+2026-10-23 04:38:39,795 [INFO] inference_ev17:   retention ds10: 234/299 deleted (78.3%)
+2026-10-23 04:39:27,639 [INFO] inference_ev17: 
+=== RESULTS ===
+2026-10-23 04:39:27,640 [INFO] inference_ev17: Challenge IoU: 91.42%
+2026-10-23 04:39:27,640 [INFO] inference_ev17: IoU:           91.42%
+2026-10-23 04:39:27,640 [INFO] inference_ev17: mcIoU:         59.19%
+2026-10-23 04:39:27,640 [INFO] inference_ev17: Per-class: {'BF': 88.74, 'PF': 74.7, 'LND': 90.66, 'VS': 90.81, 'GR': 0.0, 'MCS': 69.41, 'UP': 0.0}
+2026-10-23 04:39:27,641 [INFO] inference_ev17: 
+Results saved to /workspace/results/ipcai/EV17_C2_nm5

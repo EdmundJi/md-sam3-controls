@@ -1,0 +1,16 @@
+{
+ "challenge_iou": 81.92,
+ "biou": 81.92,
+ "num_frames": 1792,
+ "picks": [
+  974,
+  529,
+  289
+ ],
+ "runs": [
+  "/workspace/results/ipcai/DEVev17tr_keep",
+  "/workspace/results/ipcai/DEVev17tr_DM_sp",
+  "/workspace/results/ipcai/DEVev17tr_delall"
+ ],
+ "rule": "frame"
+}

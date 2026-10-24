@@ -1,6 +1,8 @@
 """Locating the two external SAM3 repositories.
 
-Neither is vendored here. We need both:
+Neither is vendored here. SAM3-DMS is required; vanilla sam3 is optional
+(SAM3-DMS ships its own ``sam3`` package, and all IPCAI 2027 runs used SAM3-DMS
+alone):
 
   * ``sam3``     -- Meta's release (github.com/facebookresearch/sam3)
   * ``SAM3-DMS`` -- the fork (github.com/FudanCVL/SAM3-DMS), which supplies the
@@ -58,9 +60,12 @@ def ensure_on_syspath() -> None:
     either package -- it re-asserts the ordering rather than assuming it.
     """
     dms = str(_resolve("SAM3-DMS"))
-    base = str(_resolve("sam3"))
+    try:
+        base = str(_resolve("sam3"))
+    except FileNotFoundError:  # _optional: SAM3-DMS contains the sam3 package
+        base = None
 
-    for path in (base, dms):  # insert base first so dms ends up ahead of it
+    for path in (p for p in (base, dms) if p):  # base first so dms ends up ahead
         if path in sys.path:
             sys.path.remove(path)
         sys.path.insert(0, path)
@@ -74,7 +79,8 @@ def default_checkpoint() -> str:
 
 
 def default_data_root(dataset: str) -> str:
-    """Default dataset root; override with ``ENDOVIS17_ROOT`` / ``ENDOVIS18_ROOT``."""
-    env_var = {"ev17": "ENDOVIS17_ROOT", "ev18": "ENDOVIS18_ROOT"}[dataset]
-    folder = {"ev17": "endovis_2017", "ev18": "endovis_2018"}[dataset]
+    """Default dataset root; override with ``ENDOVIS17_ROOT`` / ``ENDOVIS18_ROOT`` /
+    ``CHOLECSEG8K_ROOT``."""
+    env_var = {"ev17": "ENDOVIS17_ROOT", "ev18": "ENDOVIS18_ROOT", "cholec": "CHOLECSEG8K_ROOT"}[dataset]
+    folder = {"ev17": "endovis_2017", "ev18": "endovis_2018", "cholec": "CholecSeg8k"}[dataset]
     return os.environ.get(env_var, str(REPO_ROOT / "data" / folder))

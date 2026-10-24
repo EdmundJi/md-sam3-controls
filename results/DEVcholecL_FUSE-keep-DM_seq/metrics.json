@@ -1,0 +1,14 @@
+{
+ "challenge_iou": 82.58,
+ "biou": 82.58,
+ "num_frames": 1589,
+ "picks": [
+  9,
+  2
+ ],
+ "runs": [
+  "/workspace/results/ipcai/DEVcholecL_keep",
+  "/workspace/results/ipcai/DEVcholecL_DM"
+ ],
+ "rule": "seq"
+}

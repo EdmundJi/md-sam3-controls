@@ -1,0 +1,14 @@
+{
+ "challenge_iou": 76.96,
+ "biou": 76.96,
+ "num_frames": 2965,
+ "picks": [
+  3,
+  15
+ ],
+ "runs": [
+  "/workspace/results/ipcai/EV18all_C2_delall_sp",
+  "/workspace/results/ipcai/EV18all_Q50_sp"
+ ],
+ "rule": "seq"
+}

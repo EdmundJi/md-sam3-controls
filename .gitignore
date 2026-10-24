@@ -21,5 +21,10 @@ venv/
 *.pt
 *.pth
 
-# Run logs
+# Run logs (the committed per-run logs under results/ are kept)
 *.log
+!results/_logs/*.log
+!results/*.log
+
+# Predicted masks are not committed
+results/*/preds/

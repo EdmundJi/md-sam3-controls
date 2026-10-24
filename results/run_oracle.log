@@ -1,0 +1,318 @@
+98 oracle_jobs.txt
+[2026-10-23 14:30:12] start EV17_C0_scores (gpu 0)
+[2026-10-23 14:30:27] start EV18all_C0_scores (gpu 0)
+[2026-10-23 14:30:42] start EV18all_R50-oracle (gpu 0)
+[2026-10-23 14:30:57] start EV18all_R50-anti (gpu 0)
+[2026-10-23 14:31:27] start EV17_R50-oracle (gpu 0)
+[2026-10-23 14:31:27] start EV17_R50-anti (gpu 0)
+[2026-10-23 14:31:57] start EV17_C2-oracle (gpu 0)
+[2026-10-23 14:41:30] end EV17_C0_scores rc=0 678s "biou": 90.28
+[2026-10-23 14:41:30] start EV17_C2-anti (gpu 0)
+[2026-10-23 14:41:50] end EV17_C2-oracle rc=0 593s "biou": 91.79
+[2026-10-23 14:41:50] start EV18all_C2-oracle (gpu 0)
+[2026-10-23 14:42:16] score lists for EV17
+[2026-10-23 14:43:25] end EV17_R50-oracle rc=0 718s "biou": 92.29
+[2026-10-23 14:43:25] start EV18all_C2-anti (gpu 0)
+[2026-10-23 14:43:29] end EV17_R50-anti rc=0 722s "biou": 88.14
+[2026-10-23 14:43:29] start EV18all_R50-perm_s1 (gpu 0)
+[2026-10-23 14:48:11] end EV18all_C2-oracle rc=0 381s "biou": 78.86
+[2026-10-23 14:48:11] start EV17_R50-perm_s1 (gpu 0)
+[2026-10-23 14:50:14] end EV18all_C2-anti rc=0 409s "biou": 79.19
+[2026-10-23 14:50:14] start EV18all_R50-perm_s2 (gpu 0)
+[2026-10-23 14:52:10] end EV17_C2-anti rc=0 640s "biou": 87.77
+[2026-10-23 14:52:10] start EV17_R50-perm_s2 (gpu 0)
+[2026-10-23 14:55:10] end EV18all_C0_scores rc=0 1483s "biou": 73.71
+[2026-10-23 14:55:10] start EV18all_R50-perm_s3 (gpu 0)
+[2026-10-23 14:55:13] end EV18all_R50-anti rc=0 1456s "biou": 72.34
+[2026-10-23 14:55:13] start EV17_R50-perm_s3 (gpu 0)
+[2026-10-23 14:56:40] end EV18all_R50-oracle rc=0 1558s "biou": 73.11
+[2026-10-23 14:56:40] start EV18all_R50-perm_s4 (gpu 0)
+[2026-10-23 14:58:23] end EV17_R50-perm_s1 rc=0 612s "biou": 89.87
+[2026-10-23 14:58:23] start EV17_R50-perm_s4 (gpu 0)
+[2026-10-23 14:59:03] score lists for EV18
+[2026-10-23 15:02:47] end EV17_R50-perm_s2 rc=0 637s "biou": 89.6
+[2026-10-23 15:02:47] start EV17_R50-score (gpu 0)
+[2026-10-23 15:05:25] end EV17_R50-perm_s3 rc=0 612s "biou": 90.53
+[2026-10-23 15:05:25] start EV18all_R50-score (gpu 0)
+[2026-10-23 15:09:01] end EV17_R50-perm_s4 rc=0 638s "biou": 89.86
+[2026-10-23 15:09:01] start EV17_R50-perm_s5 (gpu 0)
+[2026-10-23 15:09:24] end EV18all_R50-perm_s1 rc=0 1555s "biou": 74.21
+[2026-10-23 15:09:24] start EV17_R50-perm_s6 (gpu 0)
+[2026-10-23 15:13:22] end EV17_R50-score rc=0 635s "biou": 91.37
+[2026-10-23 15:13:22] start EV17_R50-perm_s7 (gpu 0)
+[2026-10-23 15:14:13] end EV18all_R50-perm_s2 rc=0 1439s "biou": 71.89
+[2026-10-23 15:14:13] start EV17_R50-perm_s8 (gpu 0)
+[2026-10-23 15:18:47] end EV17_R50-perm_s5 rc=0 586s "biou": 90.17
+[2026-10-23 15:18:47] start EV17_R50-perm_s9 (gpu 0)
+[2026-10-23 15:19:10] end EV18all_R50-perm_s3 rc=0 1440s "biou": 73.65
+[2026-10-23 15:19:10] start EV17_R50-perm_s10 (gpu 0)
+[2026-10-23 15:20:02] end EV17_R50-perm_s6 rc=0 638s "biou": 90.58
+[2026-10-23 15:20:02] start EV17_R50-perm_s11 (gpu 0)
+[2026-10-23 15:20:16] end EV18all_R50-perm_s4 rc=0 1416s "biou": 74.21
+[2026-10-23 15:20:16] start EV17_R50-perm_s12 (gpu 0)
+[2026-10-23 15:23:31] end EV17_R50-perm_s7 rc=0 609s "biou": 89.38
+[2026-10-23 15:23:31] start EV17_R50-perm_s13 (gpu 0)
+[2026-10-23 15:24:29] end EV17_R50-perm_s8 rc=0 616s "biou": 90.33
+[2026-10-23 15:24:29] start EV17_R50-perm_s14 (gpu 0)
+[2026-10-23 15:29:36] end EV17_R50-perm_s9 rc=0 649s "biou": 88.91
+[2026-10-23 15:29:36] start EV17_R50-perm_s15 (gpu 0)
+[2026-10-23 15:29:42] end EV18all_R50-score rc=0 1457s "biou": 76.79
+[2026-10-23 15:29:43] start EV17_R50-perm_s16 (gpu 0)
+[2026-10-23 15:30:43] end EV17_R50-perm_s10 rc=0 693s "biou": 90.2
+[2026-10-23 15:30:43] start EV18all_R50-perm_s5 (gpu 0)
+[2026-10-23 15:30:45] end EV17_R50-perm_s11 rc=0 643s "biou": 89.37
+[2026-10-23 15:30:45] start EV18all_R50-perm_s6 (gpu 0)
+[2026-10-23 15:31:22] end EV17_R50-perm_s12 rc=0 666s "biou": 90.16
+[2026-10-23 15:31:22] start EV18all_R50-perm_s7 (gpu 0)
+[2026-10-23 15:33:40] end EV17_R50-perm_s13 rc=0 609s "biou": 89.52
+[2026-10-23 15:33:40] start EV18all_R50-perm_s8 (gpu 0)
+[2026-10-23 15:35:50] end EV17_R50-perm_s14 rc=0 681s "biou": 89.88
+[2026-10-23 15:35:50] start EV18all_R50-perm_s9 (gpu 0)
+[2026-10-23 15:40:11] end EV17_R50-perm_s15 rc=0 635s "biou": 89.68
+[2026-10-23 15:40:11] start EV18all_R50-perm_s10 (gpu 0)
+[2026-10-23 15:40:42] end EV17_R50-perm_s16 rc=0 659s "biou": 89.86
+[2026-10-23 15:40:42] start EV18all_R50-perm_s11 (gpu 0)
+[2026-10-23 15:56:56] end EV18all_R50-perm_s6 rc=0 1571s "biou": 74.03
+[2026-10-23 15:56:56] start EV18all_R50-perm_s12 (gpu 0)
+[2026-10-23 15:57:47] end EV18all_R50-perm_s5 rc=0 1624s "biou": 73.53
+[2026-10-23 15:57:47] start EV18all_R50-perm_s13 (gpu 0)
+[2026-10-23 15:57:48] end EV18all_R50-perm_s7 rc=0 1586s "biou": 75.28
+[2026-10-23 15:57:48] start EV18all_R50-perm_s14 (gpu 0)
+[2026-10-23 15:57:48] end EV18all_R50-perm_s8 rc=0 1448s "biou": 72.5
+[2026-10-23 15:57:48] start EV18all_R50-perm_s15 (gpu 0)
+[2026-10-23 16:01:25] end EV18all_R50-perm_s9 rc=0 1535s "biou": 73.5
+[2026-10-23 16:01:25] start EV18all_R50-perm_s16 (gpu 0)
+[2026-10-23 16:06:37] end EV18all_R50-perm_s10 rc=0 1586s "biou": 74.04
+[2026-10-23 16:06:38] start EV18all_R50-perm_s17 (gpu 0)
+[2026-10-23 16:08:10] end EV18all_R50-perm_s11 rc=0 1648s "biou": 72.65
+[2026-10-23 16:08:10] start EV18all_R50-perm_s18 (gpu 0)
+[2026-10-23 16:21:51] end EV18all_R50-perm_s12 rc=0 1495s "biou": 73.33
+[2026-10-23 16:21:51] start EV18all_R50-perm_s19 (gpu 0)
+[2026-10-23 16:22:05] end EV18all_R50-perm_s15 rc=0 1457s "biou": 74.99
+[2026-10-23 16:22:05] start EV18all_R50-perm_s20 (gpu 0)
+[2026-10-23 16:22:22] end EV18all_R50-perm_s14 rc=0 1474s "biou": 74.15
+[2026-10-23 16:22:22] start EV17_R50-perm_s17 (gpu 0)
+[2026-10-23 16:22:24] end EV18all_R50-perm_s13 rc=0 1477s "biou": 73.88
+[2026-10-23 16:22:24] start EV17_R50-perm_s18 (gpu 0)
+[2026-10-23 16:25:22] end EV18all_R50-perm_s16 rc=0 1437s "biou": 72.61
+[2026-10-23 16:25:22] start EV17_R50-perm_s19 (gpu 0)
+[2026-10-23 16:30:21] end EV18all_R50-perm_s17 rc=0 1423s "biou": 73.25
+[2026-10-23 16:30:21] start EV17_R50-perm_s20 (gpu 0)
+[2026-10-23 16:31:54] end EV18all_R50-perm_s18 rc=0 1424s "biou": 73.98
+[2026-10-23 16:31:54] start EV18all_R25-score (gpu 0)
+[2026-10-23 16:33:01] end EV17_R50-perm_s17 rc=0 639s "biou": 88.76
+[2026-10-23 16:33:01] start EV18all_R25-perm_s1 (gpu 0)
+[2026-10-23 16:34:11] end EV17_R50-perm_s18 rc=0 707s "biou": 87.88
+[2026-10-23 16:34:11] start EV18all_R25-perm_s2 (gpu 0)
+[2026-10-23 16:35:47] end EV17_R50-perm_s19 rc=0 625s "biou": 88.64
+[2026-10-23 16:35:47] start EV18all_R25-perm_s3 (gpu 0)
+[2026-10-23 16:40:07] end EV17_R50-perm_s20 rc=0 586s "biou": 90.81
+[2026-10-23 16:40:07] start EV18all_R25-perm_s4 (gpu 0)
+[2026-10-23 16:46:44] end EV18all_R50-perm_s19 rc=0 1493s "biou": 74.28
+[2026-10-23 16:46:44] start EV18all_R25-perm_s5 (gpu 0)
+[2026-10-23 16:48:17] end EV18all_R50-perm_s20 rc=0 1572s "biou": 72.8
+[2026-10-23 16:48:17] start EV17_R25-score (gpu 0)
+[2026-10-23 16:56:39] end EV18all_R25-score rc=0 1485s "biou": 73.67
+[2026-10-23 16:56:39] start EV17_R25-perm_s1 (gpu 0)
+[2026-10-23 16:57:38] end EV18all_R25-perm_s1 rc=0 1477s "biou": 75.1
+[2026-10-23 16:57:38] start EV17_R25-perm_s2 (gpu 0)
+[2026-10-23 16:57:46] end EV18all_R25-perm_s2 rc=0 1415s "biou": 72.53
+[2026-10-23 16:57:46] start EV17_R25-perm_s3 (gpu 0)
+[2026-10-23 16:58:19] end EV17_R25-score rc=0 602s "biou": 90.0
+[2026-10-23 16:58:19] start EV17_R25-perm_s4 (gpu 0)
+[2026-10-23 17:01:23] end EV18all_R25-perm_s3 rc=0 1536s "biou": 72.53
+[2026-10-23 17:01:23] start EV17_R25-perm_s5 (gpu 0)
+[2026-10-23 17:05:01] end EV18all_R25-perm_s4 rc=0 1494s "biou": 73.35
+[2026-10-23 17:05:01] start EV18all_R75-score (gpu 0)
+[2026-10-23 17:06:55] end EV17_R25-perm_s1 rc=0 616s "biou": 89.27
+[2026-10-23 17:06:55] start EV18all_R75-perm_s1 (gpu 0)
+[2026-10-23 17:08:14] end EV17_R25-perm_s2 rc=0 636s "biou": 90.16
+[2026-10-23 17:08:14] start EV18all_R75-perm_s2 (gpu 0)
+[2026-10-23 17:08:16] end EV17_R25-perm_s3 rc=0 630s "biou": 90.23
+[2026-10-23 17:08:16] start EV18all_R75-perm_s3 (gpu 0)
+[2026-10-23 17:08:41] end EV17_R25-perm_s4 rc=0 622s "biou": 90.19
+[2026-10-23 17:08:41] start EV18all_R75-perm_s4 (gpu 0)
+[2026-10-23 17:11:50] end EV17_R25-perm_s5 rc=0 627s "biou": 89.75
+[2026-10-23 17:11:51] start EV18all_R75-perm_s5 (gpu 0)
+[2026-10-23 17:12:04] end EV18all_R25-perm_s5 rc=0 1520s "biou": 72.67
+[2026-10-23 17:12:04] start DEVcholec_keep (gpu 0)
+[2026-10-23 17:21:52] end DEVcholec_keep rc=0 588s "biou": 86.34
+[2026-10-23 17:21:52] start DEVcholec_DM (gpu 0)
+[2026-10-23 17:31:32] end DEVcholec_DM rc=0 580s "biou": 86.33
+[2026-10-23 17:31:32] start DEVcholec_delall (gpu 0)
+[2026-10-23 17:33:16] end EV18all_R75-score rc=0 1695s "biou": 73.45
+[2026-10-23 17:33:16] start DEVcholec_SRG (gpu 0)
+[2026-10-23 17:35:08] end EV18all_R75-perm_s1 rc=0 1693s "biou": 70.35
+[2026-10-23 17:35:08] start DEVcholec_Q25 (gpu 0)
+[2026-10-23 17:36:14] end EV18all_R75-perm_s2 rc=0 1680s "biou": 73.94
+[2026-10-23 17:36:14] start DEVcholec_Q25w16 (gpu 0)
+[2026-10-23 17:36:15] end EV18all_R75-perm_s3 rc=0 1679s "biou": 73.97
+[2026-10-23 17:36:15] start DEVcholec_Q50 (gpu 0)
+[2026-10-23 17:37:54] end EV18all_R75-perm_s4 rc=0 1753s "biou": 74.01
+[2026-10-23 17:37:54] start EV17_C2_delall_sp (gpu 0)
+[2026-10-23 17:39:26] end DEVcholec_delall rc=0 474s "biou": 86.37
+[2026-10-23 17:39:26] start DEVcholec_delall_sp (gpu 0)
+[2026-10-23 17:40:41] end EV18all_R75-perm_s5 rc=0 1730s "biou": 74.18
+[2026-10-23 17:40:41] start EV18all_C2_delall_sp (gpu 0)
+[2026-10-23 17:43:13] end DEVcholec_SRG rc=0 597s "biou": 86.29
+[2026-10-23 17:43:13] start DEVcholec_Q50w16 (gpu 0)
+[2026-10-23 17:46:40] end DEVcholec_Q25 rc=0 693s "biou": 86.27
+[2026-10-23 17:46:41] start DEVcholec_Q75 (gpu 0)
+[2026-10-23 17:48:46] end DEVcholec_Q50 rc=0 751s "biou": 86.31
+[2026-10-23 17:48:46] start DEVcholec_Q75w16 (gpu 0)
+[2026-10-23 17:48:59] end DEVcholec_Q25w16 rc=0 765s "biou": 86.26
+[2026-10-23 17:48:59] start DEVev17tr_keep (gpu 0)
+[2026-10-23 17:49:08] end DEVcholec_delall_sp rc=0 582s "biou": 86.37
+[2026-10-23 17:49:08] start DEVev17tr_DM (gpu 0)
+[2026-10-23 17:51:49] end EV17_C2_delall_sp rc=0 835s "biou": 89.69
+[2026-10-23 17:51:49] start DEVev17tr_delall (gpu 0)
+[2026-10-23 17:54:44] end DEVcholec_Q50w16 rc=0 691s "biou": 86.25
+[2026-10-23 17:54:44] start DEVev17tr_SRG (gpu 0)
+[2026-10-23 17:56:59] end DEVcholec_Q75 rc=0 618s "biou": 86.26
+[2026-10-23 17:56:59] start DEVev17tr_DM_sp (gpu 0)
+[2026-10-23 17:58:43] end DEVcholec_Q75w16 rc=0 597s "biou": 86.35
+[2026-10-23 17:58:43] start DEVev17tr_Q25 (gpu 0)
+[2026-10-23 18:06:47] end DEVev17tr_delall rc=0 898s "biou": 82.29
+[2026-10-23 18:06:47] start DEVev17tr_Q25w16 (gpu 0)
+[2026-10-23 18:06:47] end DEVev17tr_DM rc=0 1059s "biou": 80.68
+[2026-10-23 18:06:47] start DEVev17tr_Q50 (gpu 0)
+[2026-10-23 18:07:39] end DEVev17tr_keep rc=0 1120s "biou": 76.48
+[2026-10-23 18:07:39] start DEVev17tr_Q50w16 (gpu 0)
+[2026-10-23 18:08:42] end EV18all_C2_delall_sp rc=0 1681s "biou": 74.98
+[2026-10-23 18:08:42] start DEVev17tr_Q75 (gpu 0)
+[2026-10-23 18:11:05] end DEVev17tr_SRG rc=0 981s "biou": 80.82
+[2026-10-23 18:11:05] start DEVev17tr_Q75w16 (gpu 0)
+[2026-10-23 18:12:04] end DEVev17tr_DM_sp rc=0 905s "biou": 80.68
+[2026-10-23 18:12:04] start DEVev17tr_R25-score (gpu 0)
+[2026-10-23 18:15:17] end DEVev17tr_Q25 rc=0 994s "biou": 80.56
+[2026-10-23 18:15:17] start DEVev17tr_R50-score (gpu 0)
+[2026-10-23 18:21:28] end DEVev17tr_Q25w16 rc=0 881s "biou": 79.76
+[2026-10-23 18:21:28] start DEVev17tr_R75-score (gpu 0)
+[2026-10-23 18:22:16] end DEVev17tr_Q50 rc=0 929s "biou": 81.23
+[2026-10-23 18:22:16] start DEVev17tr_R50-oracle (gpu 0)
+[2026-10-23 18:22:54] end DEVev17tr_Q50w16 rc=0 915s "biou": 80.89
+[2026-10-23 18:22:54] start DEVcholecL_keep (gpu 0)
+[2026-10-23 18:24:00] end DEVev17tr_Q75 rc=0 918s "biou": 80.33
+[2026-10-23 18:24:00] start DEVcholecL_DM (gpu 0)
+[2026-10-23 18:26:00] end DEVev17tr_Q75w16 rc=0 895s "biou": 79.85
+[2026-10-23 18:26:00] start DEVcholecL_delall (gpu 0)
+[2026-10-23 18:26:38] end DEVev17tr_R25-score rc=0 874s "biou": 78.58
+[2026-10-23 18:26:38] start DEVcholecL_SRG (gpu 0)
+[2026-10-23 18:31:42] end DEVev17tr_R50-score rc=0 985s "biou": 80.9
+[2026-10-23 18:31:42] start DEVcholecL_Q25 (gpu 0)
+[2026-10-23 18:32:28] end DEVcholecL_keep rc=0 574s "biou": 78.66
+[2026-10-23 18:32:28] start DEVcholecL_Q25w16 (gpu 0)
+[2026-10-23 18:32:31] end DEVcholecL_DM rc=0 511s "biou": 82.6
+[2026-10-23 18:32:31] start DEVcholecL_Q50 (gpu 0)
+[2026-10-23 18:34:45] end DEVcholecL_delall rc=0 525s "biou": 82.9
+[2026-10-23 18:34:45] start DEVcholecL_Q50w16 (gpu 0)
+[2026-10-23 18:38:51] end DEVcholecL_SRG rc=0 733s "biou": 78.87
+[2026-10-23 18:38:51] start DEVcholecL_Q75 (gpu 0)
+[2026-10-23 18:42:15] end DEVev17tr_R75-score rc=0 1247s "biou": 81.13
+[2026-10-23 18:42:15] start DEVcholecL_Q75w16 (gpu 0)
+[2026-10-23 18:43:51] end DEVcholecL_Q25 rc=0 729s "biou": 78.44
+[2026-10-23 18:43:51] start DEVcholecL_R25-score (gpu 0)
+[2026-10-23 18:44:11] end DEVev17tr_R50-oracle rc=0 1315s "biou": 80.16
+[2026-10-23 18:44:11] start DEVcholecL_R50-score (gpu 0)
+[2026-10-23 18:45:45] end DEVcholecL_Q50 rc=0 794s "biou": 79.29
+[2026-10-23 18:45:45] start DEVcholecL_R75-score (gpu 0)
+[2026-10-23 18:46:42] end DEVcholecL_Q25w16 rc=0 854s "biou": 78.47
+[2026-10-23 18:46:42] start DEVcholecL_R50-oracle (gpu 0)
+[2026-10-23 18:47:40] end DEVcholecL_Q50w16 rc=0 775s "biou": 78.46
+[2026-10-23 18:47:41] start EV17_R75-score (gpu 0)
+[2026-10-23 18:50:10] end DEVcholecL_Q75 rc=0 679s "biou": 79.46
+[2026-10-23 18:50:10] start EV17_R75-perm_s1 (gpu 0)
+[2026-10-23 18:54:18] end DEVcholecL_Q75w16 rc=0 723s "biou": 78.99
+[2026-10-23 18:54:18] start EV17_R75-perm_s2 (gpu 0)
+[2026-10-23 18:56:12] end DEVcholecL_R25-score rc=0 741s "biou": 78.46
+[2026-10-23 18:56:12] start EV17_R75-perm_s3 (gpu 0)
+[2026-10-23 18:56:36] end DEVcholecL_R50-score rc=0 745s "biou": 78.48
+[2026-10-23 18:56:36] start EV17_R75-perm_s4 (gpu 0)
+[2026-10-23 18:57:08] end DEVcholecL_R75-score rc=0 683s "biou": 78.43
+[2026-10-23 18:57:08] start EV17_R75-perm_s5 (gpu 0)
+[2026-10-23 18:58:10] end DEVcholecL_R50-oracle rc=0 688s "biou": 80.92
+[2026-10-23 18:58:10] start EV17_C2_delall_nm3 (gpu 0)
+[2026-10-23 19:01:03] end EV17_R75-score rc=0 802s "biou": 90.84
+[2026-10-23 19:01:03] start EV17_C2-oracle_nm3 (gpu 0)
+[2026-10-23 19:02:12] end EV17_R75-perm_s1 rc=0 722s "biou": 88.9
+[2026-10-23 19:02:12] start EV17_C2-anti_nm3 (gpu 0)
+[2026-10-23 19:05:35] end EV17_R75-perm_s2 rc=0 677s "biou": 88.54
+[2026-10-23 19:05:35] start EV17_C2_delall_nm4 (gpu 0)
+[2026-10-23 19:06:10] end EV17_R75-perm_s3 rc=0 598s "biou": 87.25
+[2026-10-23 19:06:10] start EV17_C2-oracle_nm4 (gpu 0)
+[2026-10-23 19:06:18] end EV17_R75-perm_s4 rc=0 582s "biou": 88.19
+[2026-10-23 19:06:18] start EV17_C2-anti_nm4 (gpu 0)
+[2026-10-23 19:07:58] end EV17_C2_delall_nm3 rc=0 588s "biou": 89.83
+[2026-10-23 19:07:58] start EV17_C2-perm_nm3_s1 (gpu 0)
+[2026-10-23 19:08:17] end EV17_R75-perm_s5 rc=0 669s "biou": 88.01
+[2026-10-23 19:08:17] start EV17_C2-perm_nm3_s2 (gpu 0)
+[2026-10-23 19:11:50] end EV17_C2-oracle_nm3 rc=0 647s "biou": 90.93
+[2026-10-23 19:11:50] start EV17_C2-perm_nm3_s3 (gpu 0)
+[2026-10-23 19:12:37] end EV17_C2-anti_nm3 rc=0 625s "biou": 86.32
+[2026-10-23 19:12:37] start EV17_C2-perm_nm3_s4 (gpu 0)
+[2026-10-23 19:15:10] end EV17_C2_delall_nm4 rc=0 575s "biou": 89.86
+[2026-10-23 19:15:10] start EV17_C2-perm_nm3_s5 (gpu 0)
+[2026-10-23 19:16:49] end EV17_C2-oracle_nm4 rc=0 639s "biou": 91.16
+[2026-10-23 19:16:49] start EV17_C2-perm_nm3_s6 (gpu 0)
+[2026-10-23 19:16:50] end EV17_C2-anti_nm4 rc=0 632s "biou": 88.04
+[2026-10-23 19:16:50] start EV17_C2-perm_nm3_s7 (gpu 0)
+[2026-10-23 19:18:16] end EV17_C2-perm_nm3_s1 rc=0 618s "biou": 86.74
+[2026-10-23 19:18:16] start EV17_C2-perm_nm3_s8 (gpu 0)
+[2026-10-23 19:18:51] end EV17_C2-perm_nm3_s2 rc=0 634s "biou": 87.79
+[2026-10-23 19:18:51] start EV17_C2-perm_nm3_s9 (gpu 0)
+[2026-10-23 19:22:57] end EV17_C2-perm_nm3_s3 rc=0 667s "biou": 85.27
+[2026-10-23 19:22:57] start EV17_C2-perm_nm3_s10 (gpu 0)
+[2026-10-23 19:23:28] end EV17_C2-perm_nm3_s4 rc=0 651s "biou": 88.14
+[2026-10-23 19:23:28] start EV17_C2-perm_nm3_s11 (gpu 0)
+[2026-10-23 19:25:45] end EV17_C2-perm_nm3_s5 rc=0 635s "biou": 87.53
+[2026-10-23 19:25:45] start EV17_C2-perm_nm3_s12 (gpu 0)
+[2026-10-23 19:27:13] end EV17_C2-perm_nm3_s7 rc=0 623s "biou": 87.89
+[2026-10-23 19:27:13] start EV17_C2-perm_nm3_s13 (gpu 0)
+[2026-10-23 19:27:14] end EV17_C2-perm_nm3_s6 rc=0 625s "biou": 86.7
+[2026-10-23 19:27:14] start EV17_C2-perm_nm3_s14 (gpu 0)
+[2026-10-23 19:27:44] end EV17_C2-perm_nm3_s8 rc=0 568s "biou": 88.37
+[2026-10-23 19:27:44] start EV17_C2-perm_nm3_s15 (gpu 0)
+[2026-10-23 19:29:17] end EV17_C2-perm_nm3_s9 rc=0 626s "biou": 87.56
+[2026-10-23 19:29:17] start TESTcholecL_keep (gpu 0)
+[2026-10-23 19:34:31] end EV17_C2-perm_nm3_s11 rc=0 663s "biou": 87.62
+[2026-10-23 19:34:31] start TESTcholecL_delall (gpu 0)
+[2026-10-23 19:34:34] end EV17_C2-perm_nm3_s10 rc=0 697s "biou": 87.78
+[2026-10-23 19:34:34] start TESTcholecL_Q50 (gpu 0)
+[2026-10-23 19:35:46] end EV17_C2-perm_nm3_s12 rc=0 601s "biou": 87.12
+[2026-10-23 19:35:47] start TESTcholecL_DM (gpu 0)
+[2026-10-23 19:38:53] end EV17_C2-perm_nm3_s13 rc=0 700s "biou": 89.5
+[2026-10-23 19:38:53] start EV18all_Q50_sp (gpu 0)
+[2026-10-23 19:39:50] end EV17_C2-perm_nm3_s14 rc=0 756s "biou": 87.96
+[2026-10-23 19:39:50] start EV17_Q50_sp (gpu 0)
+[2026-10-23 19:40:04] end EV17_C2-perm_nm3_s15 rc=0 741s "biou": 88.43
+[2026-10-23 19:40:05] start EV18all_C2_sp (gpu 0)
+[2026-10-23 19:54:40] end EV17_Q50_sp rc=0 890s "biou": 91.59
+[2026-10-23 19:54:40] start EV17_C2_sp (gpu 0)
+[2026-10-23 20:00:59] end TESTcholecL_delall rc=0 1588s "biou": 84.32
+[2026-10-23 20:00:59] start TESTcholecL_SRG (gpu 0)
+[2026-10-23 20:03:03] end TESTcholecL_keep rc=0 2026s "biou": 83.0
+[2026-10-23 20:03:03] start EV17_C2-perm_nm3_s16 (gpu 0)
+[2026-10-23 20:07:09] end TESTcholecL_DM rc=0 1882s "biou": 84.14
+[2026-10-23 20:07:09] start EV17_C2-perm_nm3_s17 (gpu 0)
+[2026-10-23 20:08:04] end EV17_C2_sp rc=0 804s "biou": 91.57
+[2026-10-23 20:08:04] start EV17_C2-perm_nm3_s18 (gpu 0)
+[2026-10-23 20:08:39] end TESTcholecL_Q50 rc=0 2045s "biou": 83.58
+[2026-10-23 20:08:39] start EV17_C2-perm_nm3_s19 (gpu 0)
+[2026-10-23 20:09:30] end EV18all_C2_sp rc=0 1765s "biou": 74.96
+[2026-10-23 20:09:30] start EV17_C2-perm_nm3_s20 (gpu 0)
+[2026-10-23 20:13:45] end EV17_C2-perm_nm3_s16 rc=0 642s "biou": 84.21
+[2026-10-23 20:13:45] worker exit
+[2026-10-23 20:14:02] end EV18all_Q50_sp rc=0 2109s "biou": 76.62
+[2026-10-23 20:14:02] worker exit
+[2026-10-23 20:16:46] end EV17_C2-perm_nm3_s17 rc=0 577s "biou": 86.13
+[2026-10-23 20:16:46] worker exit
+[2026-10-23 20:17:02] end EV17_C2-perm_nm3_s18 rc=0 538s "biou": 84.59
+[2026-10-23 20:17:02] worker exit
+[2026-10-23 20:17:17] end EV17_C2-perm_nm3_s19 rc=0 518s "biou": 86.3
+[2026-10-23 20:17:17] worker exit
+[2026-10-23 20:17:39] end EV17_C2-perm_nm3_s20 rc=0 489s "biou": 87.6
+[2026-10-23 20:17:39] worker exit
+[2026-10-23 20:19:55] end TESTcholecL_SRG rc=0 1136s "biou": 83.58
+[2026-10-23 20:19:55] worker exit
+[2026-10-23 20:19:55] ALL DONE
+[2026-10-24 00:05:35] CONTROL RUNS DONE

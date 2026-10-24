@@ -1,0 +1,10 @@
+ds1 {'n': 74, 'k_dm': 73, 'mean_q': 0.7272, 'dm_overlap_oracle': 73, 'chance_overlap': 72.0, 'spearman_score_quality': 0.3218390864264612, 'score_r50_overlap_oracle': 22, 'chance_overlap_r50': 18.5}
+ds2 {'n': 74, 'k_dm': 72, 'mean_q': 0.909, 'dm_overlap_oracle': 71, 'chance_overlap': 70.1, 'spearman_score_quality': 0.608495179948175, 'score_r50_overlap_oracle': 26, 'chance_overlap_r50': 18.5}
+ds3 {'n': 74, 'k_dm': 57, 'mean_q': 0.9459, 'dm_overlap_oracle': 45, 'chance_overlap': 43.9, 'spearman_score_quality': 0.010277029586536115, 'score_r50_overlap_oracle': 18, 'chance_overlap_r50': 18.5}
+ds4 {'n': 74, 'k_dm': 1, 'mean_q': 0.9439, 'dm_overlap_oracle': 0, 'chance_overlap': 0.0, 'spearman_score_quality': 0.502589002275976, 'score_r50_overlap_oracle': 22, 'chance_overlap_r50': 18.5}
+ds5 {'n': 74, 'k_dm': 55, 'mean_q': 0.8951, 'dm_overlap_oracle': 46, 'chance_overlap': 40.9, 'spearman_score_quality': 0.17725423577473623, 'score_r50_overlap_oracle': 22, 'chance_overlap_r50': 18.5}
+ds6 {'n': 74, 'k_dm': 74, 'mean_q': 0.829, 'dm_overlap_oracle': 74, 'chance_overlap': 74.0, 'spearman_score_quality': 0.29265624886255076, 'score_r50_overlap_oracle': 25, 'chance_overlap_r50': 18.5}
+ds7 {'n': 74, 'k_dm': 50, 'mean_q': 0.8179, 'dm_overlap_oracle': 36, 'chance_overlap': 33.8, 'spearman_score_quality': 0.04469061794455749, 'score_r50_overlap_oracle': 18, 'chance_overlap_r50': 18.5}
+ds8 {'n': 74, 'k_dm': 2, 'mean_q': 0.9546, 'dm_overlap_oracle': 0, 'chance_overlap': 0.1, 'spearman_score_quality': 0.7279001647912829, 'score_r50_overlap_oracle': 30, 'chance_overlap_r50': 18.5}
+ds9 {'n': 299, 'k_dm': 251, 'mean_q': 0.8501, 'dm_overlap_oracle': 211, 'chance_overlap': 210.7, 'spearman_score_quality': 0.01671834625796831, 'score_r50_overlap_oracle': 73, 'chance_overlap_r50': 74.3}
+ds10 {'n': 299, 'k_dm': 109, 'mean_q': 0.9434, 'dm_overlap_oracle': 74, 'chance_overlap': 39.7, 'spearman_score_quality': 0.6689306696488581, 'score_r50_overlap_oracle': 117, 'chance_overlap_r50': 74.3}

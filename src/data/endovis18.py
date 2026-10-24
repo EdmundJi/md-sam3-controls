@@ -124,3 +124,60 @@ def extract_class_masks(class_mask: np.ndarray) -> Dict[int, np.ndarray]:
         if binary.sum() > 0:
             out[cls_id] = binary
     return out
+
+
+def get_train_sequences(data_root: str) -> List[Dict]:
+    """EV18 training release (seq_1..16, no seq_8), used as extra evaluation
+    sequences: every method here is training-free, so no sequence was ever
+    seen in training. Labels share the test palette. Officially repaired label
+    frames (training_data_release_1/repairs/seq_<id>_frame<NNN>.png) replace
+    the originals. seq_id is offset by 100 to stay distinct from test ids."""
+    data_root = Path(data_root)
+    sequences = []
+    for rel in sorted(data_root.glob("training_data_release_*")):
+        repairs = rel / "repairs"
+        for sub in sorted(rel.glob("miccai_challenge*")):
+            for seq_dir in sorted(sub.glob("seq_*")):
+                if not seq_dir.is_dir():
+                    continue
+                sid = int(seq_dir.name.split("_")[1])
+                frame_dir, label_dir = seq_dir / "left_frames", seq_dir / "labels"
+                if not frame_dir.exists() or not label_dir.exists():
+                    continue
+                frames = sorted(
+                    (p for p in frame_dir.glob("*.png") if p.stem.startswith("frame")),
+                    key=lambda p: int(p.stem[5:]))
+                if not frames:
+                    continue
+                label_map = {}
+                for p in label_dir.glob("*.png"):
+                    if not p.stem.startswith("frame"):
+                        continue
+                    fid = int(p.stem[5:])
+                    fix = repairs / f"seq_{sid}_{p.stem}.png"
+                    label_map[fid] = str(fix if fix.exists() else p)
+                frame_ids = [int(p.stem[5:]) for p in frames]
+                sequences.append({
+                    "seq_id": 100 + sid,
+                    "seq_tag": f"train{sid}",
+                    "frame_dir": str(frame_dir),
+                    "label_dir": str(label_dir),
+                    "frame_ids": frame_ids,
+                    "init_frame_id": frame_ids[0],
+                    "frame_files": [str(f) for f in frames],
+                    "label_map": label_map,
+                })
+    sequences.sort(key=lambda s: s["seq_id"])
+    return sequences
+
+
+def get_sequences(data_root: str, split: str = "test") -> List[Dict]:
+    """split: 'test' (seq_1-4, as in all earlier runs), 'train' or 'all'."""
+    out = []
+    if split in ("test", "all"):
+        for s in get_test_sequences(data_root):
+            s.setdefault("seq_tag", f"test{s['seq_id']}")
+            out.append(s)
+    if split in ("train", "all"):
+        out.extend(get_train_sequences(data_root))
+    return out

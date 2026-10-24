@@ -1,0 +1,52 @@
+[
+ {
+  "seq_tag": "ds1",
+  "challenge_iou": 81.82,
+  "num_frames": 74
+ },
+ {
+  "seq_tag": "ds2",
+  "challenge_iou": 90.89,
+  "num_frames": 74
+ },
+ {
+  "seq_tag": "ds3",
+  "challenge_iou": 92.12,
+  "num_frames": 74
+ },
+ {
+  "seq_tag": "ds4",
+  "challenge_iou": 95.23,
+  "num_frames": 74
+ },
+ {
+  "seq_tag": "ds5",
+  "challenge_iou": 92.63,
+  "num_frames": 74
+ },
+ {
+  "seq_tag": "ds6",
+  "challenge_iou": 91.4,
+  "num_frames": 74
+ },
+ {
+  "seq_tag": "ds7",
+  "challenge_iou": 83.65,
+  "num_frames": 74
+ },
+ {
+  "seq_tag": "ds8",
+  "challenge_iou": 95.56,
+  "num_frames": 74
+ },
+ {
+  "seq_tag": "ds9",
+  "challenge_iou": 86.44,
+  "num_frames": 299
+ },
+ {
+  "seq_tag": "ds10",
+  "challenge_iou": 94.44,
+  "num_frames": 299
+ }
+]

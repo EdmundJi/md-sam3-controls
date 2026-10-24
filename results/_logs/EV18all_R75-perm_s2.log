@@ -1,0 +1,105 @@
+2026-10-23 17:08:15,329 [INFO] inference_ev18: Config C2-perm: dms=False, dm=True, dfs=False
+2026-10-23 17:08:15,341 [INFO] inference_ev18: Loading SAM3 from /workspace/models/facebook/sam3/sam3.pt
+[0m[32mINFO 2026-10-23 17:08:30,005 21212 sam3_video_base.py: 125:[0m setting max_num_objects=10000 and num_obj_for_compile=16
+2026-10-23 17:08:40,323 [INFO] inference_ev18: Found 19 all sequences: ['test1', 'test2', 'test3', 'test4', 'train1', 'train2', 'train3', 'train4', 'train5', 'train6', 'train7', 'train9', 'train10', 'train11', 'train12', 'train13', 'train14', 'train15', 'train16']
+2026-10-23 17:08:40,431 [INFO] inference_ev18: seq_1: 250 frames, parts=[1, 2, 3] ['shaft', 'clasper', 'wrist']
+2026-10-23 17:08:55,909 [INFO] src.models.md_sam3:   perm control: 186/249 planned deletions for test1
+2026-10-23 17:10:47,926 [INFO] inference_ev18:   Done in 127.5s (2.0 fps)
+2026-10-23 17:11:05,560 [INFO] inference_ev18:   seq_1: CIoU=58.21%
+2026-10-23 17:11:05,642 [INFO] inference_ev18: seq_2: 249 frames, parts=[1, 2, 3] ['shaft', 'clasper', 'wrist']
+2026-10-23 17:11:12,996 [INFO] src.models.md_sam3:   perm control: 186/248 planned deletions for test2
+2026-10-23 17:12:16,823 [INFO] inference_ev18:   Done in 71.2s (3.5 fps)
+2026-10-23 17:13:05,835 [INFO] inference_ev18:   seq_2: CIoU=89.32%
+2026-10-23 17:13:05,930 [INFO] inference_ev18: seq_3: 250 frames, parts=[1, 2, 3] ['shaft', 'clasper', 'wrist']
+2026-10-23 17:13:17,025 [INFO] src.models.md_sam3:   perm control: 186/249 planned deletions for test3
+2026-10-23 17:14:51,220 [INFO] inference_ev18:   Done in 105.3s (2.4 fps)
+2026-10-23 17:15:14,215 [INFO] inference_ev18:   seq_3: CIoU=81.41%
+2026-10-23 17:15:14,293 [WARNING] inference_ev18: seq_4: no instrument parts in init frame
+2026-10-23 17:15:14,293 [WARNING] inference_ev18: seq_4: not initializable under GT-init -> EXCLUDED from evaluation (was previously scored as all-empty)
+2026-10-23 17:15:14,364 [INFO] inference_ev18: seq_101: 149 frames, parts=[1, 2] ['shaft', 'clasper']
+2026-10-23 17:15:22,911 [INFO] src.models.md_sam3:   perm control: 111/148 planned deletions for train1
+2026-10-23 17:16:20,366 [INFO] inference_ev18:   Done in 66.0s (2.3 fps)
+2026-10-23 17:16:29,131 [INFO] inference_ev18:   seq_101: CIoU=82.93%
+2026-10-23 17:16:29,245 [INFO] inference_ev18: seq_102: 149 frames, parts=[1, 2, 3] ['shaft', 'clasper', 'wrist']
+2026-10-23 17:16:40,809 [INFO] src.models.md_sam3:   perm control: 111/148 planned deletions for train2
+2026-10-23 17:18:00,668 [INFO] inference_ev18:   Done in 91.4s (1.6 fps)
+2026-10-23 17:18:10,739 [INFO] inference_ev18:   seq_102: CIoU=81.21%
+2026-10-23 17:18:10,814 [INFO] inference_ev18: seq_103: 149 frames, parts=[1, 2] ['shaft', 'clasper']
+2026-10-23 17:18:19,241 [INFO] src.models.md_sam3:   perm control: 111/148 planned deletions for train3
+2026-10-23 17:19:24,116 [INFO] inference_ev18:   Done in 73.3s (2.0 fps)
+2026-10-23 17:19:31,909 [INFO] inference_ev18:   seq_103: CIoU=46.63%
+2026-10-23 17:19:31,980 [INFO] inference_ev18: seq_104: 149 frames, parts=[1, 2, 3] ['shaft', 'clasper', 'wrist']
+2026-10-23 17:19:43,513 [INFO] src.models.md_sam3:   perm control: 111/148 planned deletions for train4
+2026-10-23 17:20:40,657 [INFO] inference_ev18:   Done in 68.7s (2.2 fps)
+2026-10-23 17:20:55,730 [INFO] inference_ev18:   seq_104: CIoU=83.14%
+2026-10-23 17:20:55,911 [INFO] inference_ev18: seq_105: 149 frames, parts=[1, 2] ['shaft', 'clasper']
+2026-10-23 17:21:07,998 [INFO] src.models.md_sam3:   perm control: 111/148 planned deletions for train5
+2026-10-23 17:21:45,105 [INFO] inference_ev18:   Done in 49.2s (3.0 fps)
+2026-10-23 17:21:52,580 [INFO] inference_ev18:   seq_105: CIoU=87.71%
+2026-10-23 17:21:52,657 [INFO] inference_ev18: seq_106: 149 frames, parts=[1, 2, 3] ['shaft', 'clasper', 'wrist']
+2026-10-23 17:22:04,333 [INFO] src.models.md_sam3:   perm control: 111/148 planned deletions for train6
+2026-10-23 17:22:55,117 [INFO] inference_ev18:   Done in 62.5s (2.4 fps)
+2026-10-23 17:23:11,610 [INFO] inference_ev18:   seq_106: CIoU=89.05%
+2026-10-23 17:23:11,742 [INFO] inference_ev18: seq_107: 149 frames, parts=[1, 2, 3] ['shaft', 'clasper', 'wrist']
+2026-10-23 17:23:21,515 [INFO] src.models.md_sam3:   perm control: 111/148 planned deletions for train7
+2026-10-23 17:24:10,824 [INFO] inference_ev18:   Done in 59.1s (2.5 fps)
+2026-10-23 17:24:27,984 [INFO] inference_ev18:   seq_107: CIoU=37.90%
+2026-10-23 17:24:28,056 [INFO] inference_ev18: seq_109: 149 frames, parts=[1, 2, 3] ['shaft', 'clasper', 'wrist']
+2026-10-23 17:24:35,016 [INFO] src.models.md_sam3:   perm control: 111/148 planned deletions for train9
+2026-10-23 17:25:36,882 [INFO] inference_ev18:   Done in 68.8s (2.2 fps)
+2026-10-23 17:25:46,380 [INFO] inference_ev18:   seq_109: CIoU=67.85%
+2026-10-23 17:25:46,446 [INFO] inference_ev18: seq_110: 149 frames, parts=[1, 2, 3] ['shaft', 'clasper', 'wrist']
+2026-10-23 17:25:51,119 [INFO] src.models.md_sam3:   perm control: 111/148 planned deletions for train10
+2026-10-23 17:26:53,911 [INFO] inference_ev18:   Done in 67.5s (2.2 fps)
+2026-10-23 17:27:02,920 [INFO] inference_ev18:   seq_110: CIoU=85.97%
+2026-10-23 17:27:02,988 [INFO] inference_ev18: seq_111: 149 frames, parts=[1, 2, 3] ['shaft', 'clasper', 'wrist']
+2026-10-23 17:27:06,652 [INFO] src.models.md_sam3:   perm control: 111/148 planned deletions for train11
+2026-10-23 17:28:09,819 [INFO] inference_ev18:   Done in 66.8s (2.2 fps)
+2026-10-23 17:28:20,565 [INFO] inference_ev18:   seq_111: CIoU=87.70%
+2026-10-23 17:28:20,628 [INFO] inference_ev18: seq_112: 149 frames, parts=[2] ['clasper']
+2026-10-23 17:28:25,144 [INFO] src.models.md_sam3:   perm control: 111/148 planned deletions for train12
+2026-10-23 17:29:24,213 [INFO] inference_ev18:   Done in 63.6s (2.3 fps)
+2026-10-23 17:29:37,021 [INFO] inference_ev18:   seq_112: CIoU=53.75%
+2026-10-23 17:29:37,086 [INFO] inference_ev18: seq_113: 149 frames, parts=[1, 2, 3] ['shaft', 'clasper', 'wrist']
+2026-10-23 17:29:41,014 [INFO] src.models.md_sam3:   perm control: 111/148 planned deletions for train13
+2026-10-23 17:30:47,310 [INFO] inference_ev18:   Done in 70.2s (2.1 fps)
+2026-10-23 17:30:57,114 [INFO] inference_ev18:   seq_113: CIoU=75.27%
+2026-10-23 17:30:57,181 [INFO] inference_ev18: seq_114: 149 frames, parts=[1, 2, 3] ['shaft', 'clasper', 'wrist']
+2026-10-23 17:31:03,365 [INFO] src.models.md_sam3:   perm control: 111/148 planned deletions for train14
+2026-10-23 17:31:54,021 [INFO] inference_ev18:   Done in 56.8s (2.6 fps)
+2026-10-23 17:32:09,625 [INFO] inference_ev18:   seq_114: CIoU=55.11%
+2026-10-23 17:32:09,746 [INFO] inference_ev18: seq_115: 149 frames, parts=[1, 2, 3] ['shaft', 'clasper', 'wrist']
+2026-10-23 17:32:14,997 [INFO] src.models.md_sam3:   perm control: 111/148 planned deletions for train15
+2026-10-23 17:33:20,855 [INFO] inference_ev18:   Done in 71.1s (2.1 fps)
+2026-10-23 17:33:35,526 [INFO] inference_ev18:   seq_115: CIoU=88.59%
+2026-10-23 17:33:35,595 [INFO] inference_ev18: seq_116: 149 frames, parts=[1, 2, 3] ['shaft', 'clasper', 'wrist']
+2026-10-23 17:33:39,482 [INFO] src.models.md_sam3:   perm control: 111/148 planned deletions for train16
+2026-10-23 17:34:32,823 [INFO] inference_ev18:   Done in 57.2s (2.6 fps)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   seq_116: CIoU=74.43%
+2026-10-23 17:34:43,726 [INFO] inference_ev18: RETENTION: pruned 2223/2966 = 74.95% (mode=perm)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   retention test1: 186/249 deleted (74.7%)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   retention test2: 186/248 deleted (75.0%)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   retention test3: 186/249 deleted (74.7%)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   retention train1: 111/148 deleted (75.0%)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   retention train2: 111/148 deleted (75.0%)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   retention train3: 111/148 deleted (75.0%)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   retention train4: 111/148 deleted (75.0%)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   retention train5: 111/148 deleted (75.0%)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   retention train6: 111/148 deleted (75.0%)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   retention train7: 111/148 deleted (75.0%)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   retention train9: 111/148 deleted (75.0%)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   retention train10: 111/148 deleted (75.0%)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   retention train11: 111/148 deleted (75.0%)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   retention train12: 111/148 deleted (75.0%)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   retention train13: 111/148 deleted (75.0%)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   retention train14: 111/148 deleted (75.0%)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   retention train15: 111/148 deleted (75.0%)
+2026-10-23 17:34:43,726 [INFO] inference_ev18:   retention train16: 111/148 deleted (75.0%)
+2026-10-23 17:36:12,940 [INFO] inference_ev18: 
+=== EV18 RESULTS ===
+2026-10-23 17:36:12,940 [INFO] inference_ev18: Challenge IoU: 73.94%
+2026-10-23 17:36:12,940 [INFO] inference_ev18: IoU:           73.94%
+2026-10-23 17:36:12,940 [INFO] inference_ev18: mcIoU:         53.55%
+2026-10-23 17:36:12,940 [INFO] inference_ev18: Per-class: {'shaft': 67.06, 'clasper': 50.97, 'wrist': 42.61}
+2026-10-23 17:36:12,941 [INFO] inference_ev18: 
+Results saved to /workspace/results/ipcai/EV18all_R75-perm_s2

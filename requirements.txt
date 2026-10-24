@@ -2,10 +2,11 @@
 #
 # A CUDA build of PyTorch is assumed to be present already; the constraints
 # below verify compatibility rather than replace a working installation.
-# Results in results/ were produced on a single NVIDIA A40 with torch 2.8.
+# Results in results/ were produced on one NVIDIA RTX PRO 6000 Blackwell GPU
+# with torch 2.8.0+cu128 (Python 3.12).
 #
-# NOTE: scripts/tables.py and scripts/stats.py need NONE of this -- they read
-# the committed results/ and use only the standard library.
+# NOTE: the statistics scripts (scripts/analysis.py, oracle_analysis.py,
+# dev_analysis.py, test_analysis.py) need only numpy; they read results/.
 torch>=2.8,<2.9
 torchvision>=0.23,<0.24
 
