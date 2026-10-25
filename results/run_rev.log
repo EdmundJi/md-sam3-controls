@@ -1,0 +1,60 @@
+[2026-10-25 19:46:04] TIMING START
+[2026-10-25 19:46:04] start EV17_C0_time (gpu 0)
+[2026-10-25 19:50:57] end EV17_C0_time rc=0 293s "biou": 90.28
+[2026-10-25 19:50:57] start EV17_DM_time (gpu 0)
+[2026-10-25 19:55:53] end EV17_DM_time rc=0 296s "biou": 91.57
+[2026-10-25 19:55:53] start EV17_delall_time (gpu 0)
+[2026-10-25 20:00:40] end EV17_delall_time rc=0 287s "biou": 89.69
+[2026-10-25 20:00:40] start EV17_Q50_time (gpu 0)
+[2026-10-25 20:05:34] end EV17_Q50_time rc=0 294s "biou": 91.59
+[2026-10-25 20:05:34] start EV17_topk (gpu 0)
+[2026-10-25 20:10:35] end EV17_topk rc=0 301s "biou": 91.57
+[2026-10-25 20:10:35] TIMING DONE
+[2026-10-25 20:10:35] start TESTcholecL_topk (gpu 0)
+[2026-10-25 20:10:45] start TESTcholecL_keep_png (gpu 0)
+[2026-10-25 20:10:55] start TESTcholecL_DM_png (gpu 0)
+[2026-10-25 20:11:05] start TESTcholecL_delall_png (gpu 0)
+[2026-10-25 20:11:15] start TESTcholecL_Q50_png (gpu 0)
+[2026-10-25 20:43:46] end TESTcholecL_topk rc=0 1991s "biou": 83.62
+[2026-10-25 20:43:46] start TESTcholecL_Q25 (gpu 0)
+[2026-10-25 20:44:36] end TESTcholecL_delall_png rc=0 2011s "biou": 84.34
+[2026-10-25 20:44:36] start TESTcholecL_Q75 (gpu 0)
+[2026-10-25 20:46:05] end TESTcholecL_DM_png rc=0 2110s "biou": 84.11
+[2026-10-25 20:46:05] start EV18all_topk (gpu 0)
+[2026-10-25 20:48:27] end TESTcholecL_keep_png rc=0 2262s "biou": 83.17
+[2026-10-25 20:48:27] start EV18all_C0_png (gpu 0)
+[2026-10-25 20:48:59] end TESTcholecL_Q50_png rc=0 2264s "biou": 83.49
+[2026-10-25 20:48:59] start EV18all_DM_png (gpu 0)
+[2026-10-25 21:11:03] end TESTcholecL_Q25 rc=0 1637s "biou": 83.29
+[2026-10-25 21:11:03] start EV18all_delall_png (gpu 0)
+[2026-10-25 21:11:37] end TESTcholecL_Q75 rc=0 1621s "biou": 83.43
+[2026-10-25 21:11:37] start EV18all_Q50_png (gpu 0)
+[2026-10-25 21:15:41] end EV18all_topk rc=0 1776s "biou": 75.16
+[2026-10-25 21:15:41] start EV18all_Q25 (gpu 0)
+[2026-10-25 21:22:43] end EV18all_DM_png rc=0 2024s "biou": 74.63
+[2026-10-25 21:22:43] start EV18all_Q75 (gpu 0)
+[2026-10-25 21:23:10] end EV18all_C0_png rc=0 2083s "biou": 74.27
+[2026-10-25 21:23:10] start DEVev17tr_topk (gpu 0)
+[2026-10-25 21:39:26] end DEVev17tr_topk rc=0 976s "biou": 80.21
+[2026-10-25 21:39:26] start DEVcholecL_topk (gpu 0)
+[2026-10-25 21:40:47] end EV18all_delall_png rc=0 1784s "biou": 74.74
+[skip] EV17_C0_png
+[2026-10-25 21:40:48] start EV17_delall_png (gpu 0)
+[2026-10-25 21:41:53] end EV18all_Q25 rc=0 1572s "biou": 74.2
+[2026-10-25 21:41:53] start EV17_Q50_png (gpu 0)
+[2026-10-25 21:42:58] end EV18all_Q50_png rc=0 1881s "biou": 73.78
+[2026-10-25 21:42:58] start EV17_Q25 (gpu 0)
+[2026-10-25 21:46:37] end DEVcholecL_topk rc=0 431s "biou": 81.31
+[2026-10-25 21:46:38] start EV17_Q75 (gpu 0)
+[2026-10-25 21:48:03] end EV18all_Q75 rc=0 1520s "biou": 74.68
+[2026-10-25 21:48:03] worker exit
+[2026-10-25 21:53:02] end EV17_delall_png rc=0 734s "biou": 89.55
+[2026-10-25 21:53:02] worker exit
+[2026-10-25 21:53:02] end EV17_Q25 rc=0 604s "biou": 91.46
+[2026-10-25 21:53:02] worker exit
+[2026-10-25 21:53:46] end EV17_Q50_png rc=0 713s "biou": 91.6
+[2026-10-25 21:53:46] worker exit
+[2026-10-25 21:54:16] end EV17_Q75 rc=0 458s "biou": 91.33
+[2026-10-25 21:54:16] worker exit
+[2026-10-25 21:54:16] REV RUNS DONE
+[2026-10-25 22:03:45] REV FUSION DONE

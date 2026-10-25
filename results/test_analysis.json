@@ -9,6 +9,7 @@
    "fuse_frame": 91.6139831932773,
    "alt": 91.58763025210082,
    "SRG": 92.25210084033613,
+   "topk": 91.57089075630252,
    "random_choice": 90.63936974789917,
    "best_path": 92.01289915966387
   },
@@ -89,6 +90,7 @@
     "fuse_frame": 81.83,
     "alt": 80.41,
     "SRG": 81.81,
+    "topk": 81.67,
     "random_choice": 80.825,
     "best_path": 81.81
    },
@@ -101,6 +103,7 @@
     "fuse_frame": 94.44,
     "alt": 94.34,
     "SRG": 94.34,
+    "topk": 94.36,
     "random_choice": 94.39,
     "best_path": 94.4
    },
@@ -113,6 +116,7 @@
     "fuse_frame": 90.8,
     "alt": 86.89,
     "SRG": 90.57,
+    "topk": 90.64,
     "random_choice": 88.86,
     "best_path": 90.83
    },
@@ -125,6 +129,7 @@
     "fuse_frame": 90.76,
     "alt": 94.65,
     "SRG": 94.61,
+    "topk": 94.71,
     "random_choice": 91.55,
     "best_path": 94.61
    },
@@ -137,6 +142,7 @@
     "fuse_frame": 95.23,
     "alt": 95.23,
     "SRG": 94.89,
+    "topk": 94.98,
     "random_choice": 95.08500000000001,
     "best_path": 95.23
    },
@@ -149,6 +155,7 @@
     "fuse_frame": 92.73,
     "alt": 92.13,
     "SRG": 92.64,
+    "topk": 92.33,
     "random_choice": 89.0,
     "best_path": 92.72
    },
@@ -161,6 +168,7 @@
     "fuse_frame": 91.52,
     "alt": 91.51,
     "SRG": 92.47,
+    "topk": 92.8,
     "random_choice": 91.99000000000001,
     "best_path": 92.47
    },
@@ -173,6 +181,7 @@
     "fuse_frame": 91.04,
     "alt": 94.1,
     "SRG": 94.09,
+    "topk": 93.4,
     "random_choice": 85.725,
     "best_path": 94.15
    },
@@ -185,6 +194,7 @@
     "fuse_frame": 95.64,
     "alt": 95.58,
     "SRG": 95.58,
+    "topk": 95.6,
     "random_choice": 95.61,
     "best_path": 95.64
    },
@@ -197,6 +207,7 @@
     "fuse_frame": 89.62,
     "alt": 89.38,
     "SRG": 90.5,
+    "topk": 87.9,
     "random_choice": 88.49000000000001,
     "best_path": 89.29
    }
@@ -260,6 +271,7 @@
    "fuse_frame": 77.53846880269815,
    "alt": 75.04374704890388,
    "SRG": 73.39380775716694,
+   "topk": 75.16094435075885,
    "random_choice": 75.79833558178753,
    "best_path": 78.90844519392918
   },
@@ -340,6 +352,7 @@
     "fuse_frame": 81.6,
     "alt": 62.71,
     "SRG": 46.96,
+    "topk": 61.92,
     "random_choice": 73.425,
     "best_path": 84.14
    },
@@ -352,6 +365,7 @@
     "fuse_frame": 90.09,
     "alt": 89.25,
     "SRG": 89.82,
+    "topk": 90.03,
     "random_choice": 89.57,
     "best_path": 89.89
    },
@@ -364,6 +378,7 @@
     "fuse_frame": 80.75,
     "alt": 78.53,
     "SRG": 80.23,
+    "topk": 86.67,
     "random_choice": 79.32,
     "best_path": 80.11
    },
@@ -376,6 +391,7 @@
     "fuse_frame": 83.78,
     "alt": 79.92,
     "SRG": 83.85,
+    "topk": 81.73,
     "random_choice": 81.88499999999999,
     "best_path": 83.85
    },
@@ -388,6 +404,7 @@
     "fuse_frame": 89.76,
     "alt": 86.06,
     "SRG": 90.77,
+    "topk": 86.17,
     "random_choice": 88.41,
     "best_path": 90.76
    },
@@ -400,6 +417,7 @@
     "fuse_frame": 90.6,
     "alt": 85.2,
     "SRG": 88.4,
+    "topk": 85.2,
     "random_choice": 89.96000000000001,
     "best_path": 90.26
    },
@@ -412,6 +430,7 @@
     "fuse_frame": 55.67,
     "alt": 55.52,
     "SRG": 53.44,
+    "topk": 52.96,
     "random_choice": 54.67,
     "best_path": 55.52
    },
@@ -424,6 +443,7 @@
     "fuse_frame": 49.52,
     "alt": 59.85,
     "SRG": 48.07,
+    "topk": 65.97,
     "random_choice": 53.96,
     "best_path": 59.85
    },
@@ -436,6 +456,7 @@
     "fuse_frame": 56.61,
     "alt": 62.97,
     "SRG": 50.08,
+    "topk": 58.42,
     "random_choice": 56.525,
     "best_path": 62.97
    },
@@ -448,6 +469,7 @@
     "fuse_frame": 90.69,
     "alt": 88.85,
     "SRG": 90.74,
+    "topk": 91.27,
     "random_choice": 89.8,
     "best_path": 90.75
    },
@@ -460,6 +482,7 @@
     "fuse_frame": 86.43,
     "alt": 71.94,
     "SRG": 87.05,
+    "topk": 82.71,
     "random_choice": 79.37,
     "best_path": 86.8
    },
@@ -472,6 +495,7 @@
     "fuse_frame": 80.29,
     "alt": 79.55,
     "SRG": 78.31,
+    "topk": 75.36,
     "random_choice": 78.565,
     "best_path": 78.82
    },
@@ -484,6 +508,7 @@
     "fuse_frame": 55.12,
     "alt": 54.34,
     "SRG": 50.48,
+    "topk": 46.71,
     "random_choice": 52.045,
     "best_path": 54.34
    },
@@ -496,6 +521,7 @@
     "fuse_frame": 82.77,
     "alt": 81.94,
     "SRG": 81.81,
+    "topk": 81.43,
     "random_choice": 82.505,
     "best_path": 83.07
    },
@@ -508,6 +534,7 @@
     "fuse_frame": 86.76,
     "alt": 86.27,
     "SRG": 87.36,
+    "topk": 87.68,
     "random_choice": 86.315,
     "best_path": 87.35
    },
@@ -520,6 +547,7 @@
     "fuse_frame": 87.22,
     "alt": 84.54,
     "SRG": 87.58,
+    "topk": 87.96,
     "random_choice": 86.22,
     "best_path": 87.9
    },
@@ -532,6 +560,7 @@
     "fuse_frame": 43.29,
     "alt": 51.9,
     "SRG": 38.02,
+    "topk": 37.47,
     "random_choice": 44.715,
     "best_path": 51.9
    },
@@ -544,6 +573,7 @@
     "fuse_frame": 91.32,
     "alt": 87.91,
     "SRG": 90.44,
+    "topk": 84.45,
     "random_choice": 87.04499999999999,
     "best_path": 90.27
    }
@@ -615,6 +645,7 @@
    "fuse_frame": 84.10197617091208,
    "alt": 84.41143590797043,
    "SRG": 83.57917214461791,
+   "topk": 83.62533894823336,
    "random_choice": 83.94773315529991,
    "best_path": 84.62762119967132
   },
@@ -695,6 +726,7 @@
     "fuse_frame": 82.85,
     "alt": 82.86,
     "SRG": 82.97,
+    "topk": 79.84,
     "random_choice": 82.925,
     "best_path": 82.99
    },
@@ -707,6 +739,7 @@
     "fuse_frame": 78.85,
     "alt": 83.23,
     "SRG": 78.63,
+    "topk": 80.73,
     "random_choice": 80.56,
     "best_path": 83.23
    },
@@ -719,6 +752,7 @@
     "fuse_frame": 88.05,
     "alt": 88.01,
     "SRG": 88.55,
+    "topk": 88.82,
     "random_choice": 88.28,
     "best_path": 88.55
    },
@@ -731,6 +765,7 @@
     "fuse_frame": 86.04,
     "alt": 84.81,
     "SRG": 86.43,
+    "topk": 84.61,
     "random_choice": 85.625,
     "best_path": 86.44
    },
@@ -743,6 +778,7 @@
     "fuse_frame": 80.11,
     "alt": 80.12,
     "SRG": 79.55,
+    "topk": 79.84,
     "random_choice": 79.81,
     "best_path": 80.12
    },
@@ -755,6 +791,7 @@
     "fuse_frame": 87.63,
     "alt": 88.22,
     "SRG": 88.22,
+    "topk": 87.47,
     "random_choice": 87.695,
     "best_path": 88.2
    },
@@ -767,6 +804,7 @@
     "fuse_frame": 84.66,
     "alt": 84.43,
     "SRG": 84.18,
+    "topk": 83.58,
     "random_choice": 84.42,
     "best_path": 84.43
    },
@@ -779,6 +817,7 @@
     "fuse_frame": 93.95,
     "alt": 93.77,
     "SRG": 93.94,
+    "topk": 93.98,
     "random_choice": 93.905,
     "best_path": 94.04
    },
@@ -791,6 +830,7 @@
     "fuse_frame": 75.28,
     "alt": 78.15,
     "SRG": 75.11,
+    "topk": 77.03,
     "random_choice": 76.63,
     "best_path": 78.15
    },
@@ -803,6 +843,7 @@
     "fuse_frame": 79.06,
     "alt": 79.07,
     "SRG": 78.4,
+    "topk": 78.66,
     "random_choice": 79.215,
     "best_path": 79.36
    },
@@ -815,6 +856,7 @@
     "fuse_frame": 89.77,
     "alt": 89.75,
     "SRG": 88.08,
+    "topk": 88.51,
     "random_choice": 88.91499999999999,
     "best_path": 89.75
    },
@@ -827,6 +869,7 @@
     "fuse_frame": 82.78,
     "alt": 82.95,
     "SRG": 77.86,
+    "topk": 74.14,
     "random_choice": 80.405,
     "best_path": 82.95
    },
@@ -839,6 +882,7 @@
     "fuse_frame": 91.53,
     "alt": 91.53,
     "SRG": 91.45,
+    "topk": 91.43,
     "random_choice": 91.48,
     "best_path": 91.53
    },
@@ -851,6 +895,7 @@
     "fuse_frame": 83.44,
     "alt": 83.32,
     "SRG": 83.32,
+    "topk": 83.66,
     "random_choice": 83.38,
     "best_path": 83.52
    },
@@ -863,6 +908,7 @@
     "fuse_frame": 94.59,
     "alt": 94.61,
     "SRG": 94.61,
+    "topk": 94.54,
     "random_choice": 94.53,
     "best_path": 94.55
    },
@@ -875,6 +921,7 @@
     "fuse_frame": 92.51,
     "alt": 92.59,
     "SRG": 92.59,
+    "topk": 92.53,
     "random_choice": 92.435,
     "best_path": 92.57
    },
@@ -887,6 +934,7 @@
     "fuse_frame": 95.71,
     "alt": 95.71,
     "SRG": 95.71,
+    "topk": 95.72,
     "random_choice": 95.77,
     "best_path": 95.83
    },
@@ -899,6 +947,7 @@
     "fuse_frame": 82.67,
     "alt": 82.54,
     "SRG": 83.34,
+    "topk": 83.04,
     "random_choice": 82.94,
     "best_path": 83.34
    },
@@ -911,6 +960,7 @@
     "fuse_frame": 84.62,
     "alt": 84.28,
     "SRG": 84.66,
+    "topk": 84.71,
     "random_choice": 84.47,
     "best_path": 84.66
    },
@@ -923,6 +973,7 @@
     "fuse_frame": 88.21,
     "alt": 88.35,
     "SRG": 88.47,
+    "topk": 88.45,
     "random_choice": 88.19999999999999,
     "best_path": 88.21
    },
@@ -935,6 +986,7 @@
     "fuse_frame": 81.07,
     "alt": 81.01,
     "SRG": 81.1,
+    "topk": 81.13,
     "random_choice": 81.08000000000001,
     "best_path": 81.15
    },
@@ -947,6 +999,7 @@
     "fuse_frame": 81.31,
     "alt": 81.31,
     "SRG": 81.2,
+    "topk": 81.25,
     "random_choice": 81.265,
     "best_path": 81.31
    },
@@ -959,6 +1012,7 @@
     "fuse_frame": 88.05,
     "alt": 87.78,
     "SRG": 88.27,
+    "topk": 88.45,
     "random_choice": 88.035,
     "best_path": 88.29
    },
@@ -971,6 +1025,7 @@
     "fuse_frame": 79.08,
     "alt": 84.26,
     "SRG": 70.03,
+    "topk": 75.66,
     "random_choice": 77.155,
     "best_path": 84.26
    },
@@ -983,6 +1038,7 @@
     "fuse_frame": 52.05,
     "alt": 52.05,
     "SRG": 52.07,
+    "topk": 52.11,
     "random_choice": 52.025,
     "best_path": 52.04
    }

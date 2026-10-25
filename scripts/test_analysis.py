@@ -21,13 +21,13 @@ RES = ia.RES
 SETS = {
     "EV17": {"C0": "EV17_C0_ref", "DM": "EV17_C2_ref", "delall": "EV17_C2_delall", "Q50": "EV17_Q50_sp",
              "method": "EV17_FUSE-delall-Q50_seq", "fuse_frame": "EV17_FUSE-delall-Q50_frame",
-             "alt": "EV17_FUSE-delall-DM_seq", "SRG": "EV17_C2-SRG"},
+             "alt": "EV17_FUSE-delall-DM_seq", "SRG": "EV17_C2-SRG", "topk": "EV17_topk"},
     "EV18": {"C0": "EV18all_C0_ref", "DM": "EV18all_C2_ref", "delall": "EV18all_C2_delall", "Q50": "EV18all_Q50_sp",
              "method": "EV18all_FUSE-delall-Q50_seq", "fuse_frame": "EV18all_FUSE-delall-Q50_frame",
-             "alt": "EV18all_FUSE-delall-DM_seq", "SRG": "EV18all_C2-SRG"},
+             "alt": "EV18all_FUSE-delall-DM_seq", "SRG": "EV18all_C2-SRG", "topk": "EV18all_topk"},
     "Cholec": {"C0": "TESTcholecL_keep", "DM": "TESTcholecL_DM", "delall": "TESTcholecL_delall", "Q50": "TESTcholecL_Q50",
                "method": "TESTcholecL_FUSE-delall-Q50_seq", "fuse_frame": "TESTcholecL_FUSE-delall-Q50_frame",
-               "alt": "TESTcholecL_FUSE-delall-DM_seq", "SRG": "TESTcholecL_SRG"},
+               "alt": "TESTcholecL_FUSE-delall-DM_seq", "SRG": "TESTcholecL_SRG", "topk": "TESTcholecL_topk"},
 }
 
 

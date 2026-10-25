@@ -17,6 +17,7 @@ import os
 import random
 import shutil
 import tempfile
+import time
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
 
@@ -64,7 +65,7 @@ class MDSam3Config:
     # Matched-retention controls: does DM's gain come from WHICH frames it
     # drops, or merely from HOW MANY? 'random'/'stride' discard the same
     # fraction of frames while ignoring reliability entirely.
-    prune_mode: str = "reliability"   # 'reliability' | 'random' | 'stride' | 'perm' | 'shift' | 'even' | 'replay'
+    prune_mode: str = "reliability"   # 'reliability' | 'random' | 'stride' | 'perm' | 'shift' | 'even' | 'replay' | 'quantile' | 'topk'
     prune_rate: float = 0.0            # target fraction pruned (random/stride)
     # Seed for the random controls. The old code hard-wired 12345, so every
     # 'random' run was the same single draw.
@@ -83,6 +84,10 @@ class MDSam3Config:
     # prune_rate-quantile of the scores of earlier entries of this sequence
     # (the last quantile_window of them; 0 = all). Causal, single pass.
     quantile_window: int = 0
+    # 'topk': fixed-capacity bank that keeps the topk_size highest-scoring
+    # non-conditioning entries seen so far (0 = num_maskmem - 1, i.e. exactly
+    # the entries SAM3 reads). Evicts the lowest score; ties evict the oldest.
+    topk_size: int = 0
     # Input frames handed to SAM3. 'jpg95' reproduces all earlier runs (lossy
     # JPEG q95); 'png' is lossless (PNG bytes under a .jpg name: SAM3's tracker
     # loader filters by extension but PIL decodes by content).
@@ -264,6 +269,7 @@ class MDSam3Inferencer:
         the reference run's decisions on the same sequence."""
         mode = self.cfg.prune_mode
         self._qhist = []          # per-sequence score history ('quantile')
+        self._topk = []           # (score, frame_idx) of kept entries ('topk')
         if mode not in ("perm", "shift", "even", "replay"):
             return
         if self._ref_decisions is None:
@@ -329,6 +335,25 @@ class MDSam3Inferencer:
                 d["deleted"].append(int(frame_idx))
         return hit
 
+    def _topk_evict(self, eff_score: float, frame_idx: int) -> List[int]:
+        """'topk' bank: add the new entry, then evict the lowest-scoring kept
+        entry if the bank is over capacity. Returns frame indices to delete
+        (the new entry itself or an older one)."""
+        k = self.cfg.topk_size or max(1, getattr(self.predictor, "num_maskmem", 7) - 1)
+        self.n_prune_seen += 1
+        d = self.decisions.setdefault(self.seq_tag, {"tested": [], "deleted": []})
+        d["tested"].append(int(frame_idx))
+        d.setdefault("scores", []).append(round(float(eff_score), 6))
+        self._topk.append((float(eff_score), int(frame_idx)))
+        out = []
+        while len(self._topk) > k:
+            j = min(range(len(self._topk)), key=lambda i: self._topk[i])
+            _, fi = self._topk.pop(j)
+            out.append(fi)
+            d["deleted"].append(fi)
+            self.n_pruned += 1
+        return out
+
     def run_sequence(
         self,
         frame_files: List[str],
@@ -344,6 +369,9 @@ class MDSam3Inferencer:
             {local_idx: (H,W) uint8 type-mask}
         """
         tmpdir = tempfile.mkdtemp(prefix="mdsam3_")
+        cuda = torch.cuda.is_available()
+        t0 = time.perf_counter()
+        t1, n = None, len(frame_files)
         try:
             for i, fp in enumerate(frame_files):
                 img = cv2.imread(fp)
@@ -359,6 +387,13 @@ class MDSam3Inferencer:
             n = len(frame_files)
 
             self._plan_sequence()
+            if self.cfg.prune_mode == "topk" and (
+                    self.cfg.group_gate or self.cfg.dms or self.cfg.block_occ_pollution):
+                raise ValueError("topk is implemented for the joint path only")
+            if cuda:
+                torch.cuda.synchronize()
+                torch.cuda.reset_peak_memory_stats()
+            t1 = time.perf_counter()   # frames written; tracking starts
             if self.cfg.prune_mode in ("perm", "shift", "even", "replay") and (
                     self.cfg.group_gate or self.cfg.dms or self.cfg.block_occ_pollution):
                 raise ValueError("perm/shift controls are implemented for the joint path only")
@@ -369,6 +404,14 @@ class MDSam3Inferencer:
             else:
                 return self._run_coupled(tmpdir, H, W, n, init_masks, init_frame_local_idx)
         finally:
+            if cuda:
+                torch.cuda.synchronize()
+            t2 = time.perf_counter()
+            if t1 is not None:
+                peak = torch.cuda.max_memory_allocated() / 2**30 if cuda else 0.0
+                logger.info(f"  TIMING {self.seq_tag}: {n} frames, prep {t1 - t0:.1f} s, "
+                            f"track {t2 - t1:.1f} s ({1000 * (t2 - t1) / max(n, 1):.1f} ms/frame), "
+                            f"peak {peak:.2f} GiB")
             shutil.rmtree(tmpdir, ignore_errors=True)
 
     # ── Coupled (C0, C2, C3, C6) ─────────────────────────────
@@ -415,7 +458,10 @@ class MDSam3Inferencer:
                     if grp_rel_history:
                         tau_eff = min(tau_eff, self.cfg.adaptive_beta * float(
                             np.quantile(grp_rel_history, self.cfg.srg_quantile)))
-                if self._should_prune(eff, tau_eff, frame_idx):
+                if self.cfg.prune_mode == "topk":
+                    for fi in self._topk_evict(eff, frame_idx):
+                        nco.pop(fi, None)
+                elif self._should_prune(eff, tau_eff, frame_idx):
                     del nco[frame_idx]
 
             preds[frame_idx] = pred_type
@@ -710,6 +756,7 @@ CONFIG_PRESETS = {
     "C2-replay": MDSam3Config(dms=False, dm=True, dfs=False, prune_mode="replay"),
     # Online rank rule (needs --prune-rate; optional --quantile-window)
     "C2-quant": MDSam3Config(dms=False, dm=True, dfs=False, prune_mode="quantile"),
+    "C2-topk": MDSam3Config(dms=False, dm=True, dfs=False, prune_mode="topk"),
     "C7-SRG": MDSam3Config(dms=True, dm=True, dfs=True, dfs_mode="diversity",
                             adaptive_tau=True),
     # DMS deconfound: independent propagation + group-level gating

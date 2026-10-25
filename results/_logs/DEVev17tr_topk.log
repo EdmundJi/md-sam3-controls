@@ -1,0 +1,36 @@
+[0m[32mINFO 2026-10-25 21:24:13,837 11602 sam3_video_base.py: 125:[0m setting max_num_objects=10000 and num_obj_for_compile=16
+2026-10-25 21:24:30,531 [INFO] inference_ev17: ev17train/all: 8 sequences
+2026-10-25 21:25:17,920 [INFO] src.models.md_sam3:   TIMING tr1: 225 frames, prep 7.1 s, track 40.2 s (178.6 ms/frame), peak 8.17 GiB
+2026-10-25 21:25:17,931 [INFO] inference_ev17:   tr1: 225 frames, classes=[1, 2, 7], Done in 47.3s
+2026-10-25 21:25:57,551 [INFO] inference_ev17:     bIoU=87.36
+2026-10-25 21:27:09,530 [INFO] src.models.md_sam3:   TIMING tr2: 225 frames, prep 14.9 s, track 57.0 s (253.2 ms/frame), peak 7.72 GiB
+2026-10-25 21:27:09,542 [INFO] inference_ev17:   tr2: 225 frames, classes=[2, 7], Done in 71.9s
+2026-10-25 21:27:26,743 [INFO] inference_ev17:     bIoU=90.56
+2026-10-25 21:28:58,542 [INFO] src.models.md_sam3:   TIMING tr3: 225 frames, prep 18.2 s, track 73.5 s (326.6 ms/frame), peak 7.37 GiB
+2026-10-25 21:28:58,555 [INFO] inference_ev17:   tr3: 225 frames, classes=[3], Done in 91.7s
+2026-10-25 21:29:09,660 [INFO] inference_ev17:     bIoU=94.47
+2026-10-25 21:30:28,656 [INFO] src.models.md_sam3:   TIMING tr4: 225 frames, prep 7.5 s, track 71.5 s (317.7 ms/frame), peak 7.72 GiB
+2026-10-25 21:30:28,665 [INFO] inference_ev17:   tr4: 225 frames, classes=[2, 3], Done in 79.0s
+2026-10-25 21:30:40,826 [INFO] inference_ev17:     bIoU=92.29
+2026-10-25 21:32:11,646 [INFO] src.models.md_sam3:   TIMING tr5: 225 frames, prep 15.7 s, track 75.1 s (333.8 ms/frame), peak 7.37 GiB
+2026-10-25 21:32:11,729 [INFO] inference_ev17:   tr5: 225 frames, classes=[1], Done in 90.9s
+2026-10-25 21:32:22,056 [INFO] inference_ev17:     bIoU=54.67
+2026-10-25 21:33:40,172 [INFO] src.models.md_sam3:   TIMING tr6: 225 frames, prep 24.5 s, track 53.5 s (238.0 ms/frame), peak 7.73 GiB
+2026-10-25 21:33:40,231 [INFO] inference_ev17:   tr6: 225 frames, classes=[3, 6], Done in 78.1s
+2026-10-25 21:34:03,955 [INFO] inference_ev17:     bIoU=73.10
+2026-10-25 21:35:24,037 [INFO] src.models.md_sam3:   TIMING tr7: 225 frames, prep 13.5 s, track 66.5 s (295.4 ms/frame), peak 7.37 GiB
+2026-10-25 21:35:24,047 [INFO] inference_ev17:   tr7: 225 frames, classes=[1], Done in 80.0s
+2026-10-25 21:35:48,608 [INFO] inference_ev17:     bIoU=58.30
+2026-10-25 21:37:22,715 [INFO] src.models.md_sam3:   TIMING tr8: 225 frames, prep 14.8 s, track 79.2 s (352.2 ms/frame), peak 8.18 GiB
+2026-10-25 21:37:22,724 [INFO] inference_ev17:   tr8: 225 frames, classes=[1, 5, 6], Done in 94.1s
+2026-10-25 21:37:34,045 [INFO] inference_ev17:     bIoU=90.95
+2026-10-25 21:37:34,045 [INFO] inference_ev17: RETENTION: pruned 1744/1792 = 97.32% (mode=topk)
+2026-10-25 21:37:34,045 [INFO] inference_ev17:   retention tr1: 218/224 deleted (97.3%)
+2026-10-25 21:37:34,045 [INFO] inference_ev17:   retention tr2: 218/224 deleted (97.3%)
+2026-10-25 21:37:34,045 [INFO] inference_ev17:   retention tr3: 218/224 deleted (97.3%)
+2026-10-25 21:37:34,045 [INFO] inference_ev17:   retention tr4: 218/224 deleted (97.3%)
+2026-10-25 21:37:34,045 [INFO] inference_ev17:   retention tr5: 218/224 deleted (97.3%)
+2026-10-25 21:37:34,045 [INFO] inference_ev17:   retention tr6: 218/224 deleted (97.3%)
+2026-10-25 21:37:34,045 [INFO] inference_ev17:   retention tr7: 218/224 deleted (97.3%)
+2026-10-25 21:37:34,045 [INFO] inference_ev17:   retention tr8: 218/224 deleted (97.3%)
+2026-10-25 21:39:25,528 [INFO] inference_ev17: Challenge IoU: 80.21%

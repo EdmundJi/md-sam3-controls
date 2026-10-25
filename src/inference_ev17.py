@@ -83,7 +83,7 @@ def parse_args():
                    help="SRG: per-instance self-calibrated relevance threshold")
     p.add_argument("--adaptive-beta", type=float, default=None)
     p.add_argument("--prune-mode", default=None,
-                   choices=["reliability", "random", "stride", "perm", "shift", "even", "replay", "quantile"])
+                   choices=["reliability", "random", "stride", "perm", "shift", "even", "replay", "quantile", "topk"])
     p.add_argument("--prune-rate", type=float, default=None)
     p.add_argument("--srg-quantile", type=float, default=None)
     add_control_args(p)
