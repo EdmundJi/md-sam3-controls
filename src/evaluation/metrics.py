@@ -1,4 +1,6 @@
 """Metric computation for EndoVis evaluation."""
+import zlib
+
 import numpy as np
 from typing import Dict, List, Tuple
 
@@ -65,14 +67,28 @@ class ClassAwareIoU:
         }
 
 
+def _pack(m: np.ndarray):
+    m = np.ascontiguousarray(m)
+    return zlib.compress(m.tobytes(), 1), m.dtype.str, m.shape
+
+
+def _unpack(packed) -> np.ndarray:
+    buf, dtype, shape = packed
+    return np.frombuffer(zlib.decompress(buf), dtype=np.dtype(dtype)).reshape(shape).copy()
+
+
 class EndoVis17Evaluator:
     """Computes Challenge IoU, IoU, and mcIoU for EV17."""
 
     CLASS_IDS = [1, 2, 3, 4, 5, 6, 7]
     CLASS_ABBR = {1: "BF", 2: "PF", 3: "LND", 4: "VS", 5: "GR", 6: "MCS", 7: "UP"}
 
-    def __init__(self):
-        # Per-frame storage: {dataset_id: {frame_id: (pred_type_mask, gt_type_mask)}}
+    def __init__(self, compress: bool = False):
+        # Per-frame storage: {dataset_id: {frame_id: (pred_type_mask, gt_type_mask)}}.
+        # compress=True stores each mask losslessly zlib-compressed (bytes, dtype, shape) and
+        # restores it exactly in compute(); it keeps memory bounded on long full-HD test sets
+        # (SAR-RARP50: 16k frames at 1920x1080 would otherwise hold ~67 GB of masks).
+        self.compress = compress
         self.results = {}
         # {dataset_id: set(class ids present in that sequence's INIT frame)}.
         # Under GT-init a class absent from frame 0 can never be tracked, so its
@@ -87,6 +103,8 @@ class EndoVis17Evaluator:
         """Register a prediction frame for evaluation."""
         if dataset_id not in self.results:
             self.results[dataset_id] = {}
+        if self.compress:
+            pred_type_mask, gt_type_mask = _pack(pred_type_mask), _pack(gt_type_mask)
         self.results[dataset_id][frame_id] = (pred_type_mask, gt_type_mask)
 
     def compute(self) -> Dict:
@@ -104,6 +122,8 @@ class EndoVis17Evaluator:
         for ds_id, frames in self.results.items():
             inst = self.init_classes.get(int(ds_id))
             for frame_id, (pred, gt) in frames.items():
+                if self.compress:
+                    pred, gt = _unpack(pred), _unpack(gt)
                 # Challenge IoU: binary (any instrument vs background)
                 pred_binary = (pred > 0).astype(np.uint8)
                 gt_binary = (gt > 0).astype(np.uint8)

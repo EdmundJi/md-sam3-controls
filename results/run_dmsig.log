@@ -1,0 +1,17 @@
+[2026-10-26 11:42:35] start EV17_DMsig (gpu 0)
+[2026-10-26 11:46:32] end EV17_DMsig rc=0 237s "biou": 91.62
+[2026-10-26 11:46:32] start EV18all_DMsig (gpu 0)
+[2026-10-26 11:55:27] end EV18all_DMsig rc=0 535s "biou": 74.95
+[2026-10-26 11:55:27] start TESTcholecL_DMsig (gpu 0)
+[2026-10-26 12:03:48] end TESTcholecL_DMsig rc=0 501s "biou": 84.14
+[2026-10-26 12:03:48] worker exit
+[2026-10-26 13:09:49] start SAR_DMsig (gpu 0)
+Terminated
+[2026-10-26 13:28:21] end SAR_DMsig rc=143 1112s 
+[2026-10-26 13:28:21] worker exit
+[2026-10-26 13:28:21] DMSIG DONE
+[2026-10-26 22:14:23] rerun SAR_DMsig (stopped at 13:28 to free GPU memory)
+[2026-10-26 22:14:23] start SAR_DMsig (gpu 0)
+[2026-10-26 23:16:08] end SAR_DMsig rc=0 3705s "biou": 78.23
+[2026-10-26 23:16:08] worker exit
+[2026-10-26 23:16:08] DMSIG RERUN DONE

@@ -1,0 +1,272 @@
+[
+ {
+  "seq_tag": "video_01",
+  "challenge_iou": 74.45,
+  "num_frames": 562
+ },
+ {
+  "seq_tag": "video_02",
+  "challenge_iou": 64.86,
+  "num_frames": 329
+ },
+ {
+  "seq_tag": "video_03",
+  "challenge_iou": 79.46,
+  "num_frames": 521
+ },
+ {
+  "seq_tag": "video_04",
+  "challenge_iou": 75.06,
+  "num_frames": 130
+ },
+ {
+  "seq_tag": "video_05",
+  "challenge_iou": 44.06,
+  "num_frames": 271
+ },
+ {
+  "seq_tag": "video_06",
+  "challenge_iou": 88.83,
+  "num_frames": 705
+ },
+ {
+  "seq_tag": "video_07",
+  "challenge_iou": 77.85,
+  "num_frames": 271
+ },
+ {
+  "seq_tag": "video_08",
+  "challenge_iou": 87.69,
+  "num_frames": 147
+ },
+ {
+  "seq_tag": "video_09",
+  "challenge_iou": 83.29,
+  "num_frames": 263
+ },
+ {
+  "seq_tag": "video_10",
+  "challenge_iou": 85.77,
+  "num_frames": 127
+ },
+ {
+  "seq_tag": "video_11_1",
+  "challenge_iou": 84.3,
+  "num_frames": 236
+ },
+ {
+  "seq_tag": "video_11_2",
+  "challenge_iou": 84.11,
+  "num_frames": 134
+ },
+ {
+  "seq_tag": "video_12",
+  "challenge_iou": 86.18,
+  "num_frames": 131
+ },
+ {
+  "seq_tag": "video_13",
+  "challenge_iou": 74.85,
+  "num_frames": 272
+ },
+ {
+  "seq_tag": "video_14",
+  "challenge_iou": 52.52,
+  "num_frames": 281
+ },
+ {
+  "seq_tag": "video_15_1",
+  "challenge_iou": 86.72,
+  "num_frames": 179
+ },
+ {
+  "seq_tag": "video_15_2",
+  "challenge_iou": 89.63,
+  "num_frames": 131
+ },
+ {
+  "seq_tag": "video_16",
+  "challenge_iou": 83.91,
+  "num_frames": 384
+ },
+ {
+  "seq_tag": "video_17_1",
+  "challenge_iou": 89.27,
+  "num_frames": 280
+ },
+ {
+  "seq_tag": "video_17_2",
+  "challenge_iou": 87.82,
+  "num_frames": 131
+ },
+ {
+  "seq_tag": "video_18",
+  "challenge_iou": 80.3,
+  "num_frames": 544
+ },
+ {
+  "seq_tag": "video_19",
+  "challenge_iou": 79.02,
+  "num_frames": 266
+ },
+ {
+  "seq_tag": "video_20",
+  "challenge_iou": 79.08,
+  "num_frames": 289
+ },
+ {
+  "seq_tag": "video_21",
+  "challenge_iou": 68.86,
+  "num_frames": 454
+ },
+ {
+  "seq_tag": "video_22",
+  "challenge_iou": 86.11,
+  "num_frames": 382
+ },
+ {
+  "seq_tag": "video_23",
+  "challenge_iou": 84.21,
+  "num_frames": 256
+ },
+ {
+  "seq_tag": "video_24",
+  "challenge_iou": 87.14,
+  "num_frames": 249
+ },
+ {
+  "seq_tag": "video_25",
+  "challenge_iou": 84.67,
+  "num_frames": 153
+ },
+ {
+  "seq_tag": "video_26",
+  "challenge_iou": 58.09,
+  "num_frames": 163
+ },
+ {
+  "seq_tag": "video_27",
+  "challenge_iou": 77.74,
+  "num_frames": 187
+ },
+ {
+  "seq_tag": "video_28",
+  "challenge_iou": 85.57,
+  "num_frames": 181
+ },
+ {
+  "seq_tag": "video_29_1",
+  "challenge_iou": 87.91,
+  "num_frames": 257
+ },
+ {
+  "seq_tag": "video_29_2",
+  "challenge_iou": 89.12,
+  "num_frames": 232
+ },
+ {
+  "seq_tag": "video_30",
+  "challenge_iou": 86.63,
+  "num_frames": 573
+ },
+ {
+  "seq_tag": "video_31",
+  "challenge_iou": 79.31,
+  "num_frames": 564
+ },
+ {
+  "seq_tag": "video_32",
+  "challenge_iou": 88.56,
+  "num_frames": 489
+ },
+ {
+  "seq_tag": "video_33",
+  "challenge_iou": 81.54,
+  "num_frames": 157
+ },
+ {
+  "seq_tag": "video_34",
+  "challenge_iou": 75.17,
+  "num_frames": 100
+ },
+ {
+  "seq_tag": "video_35",
+  "challenge_iou": 82.4,
+  "num_frames": 503
+ },
+ {
+  "seq_tag": "video_36",
+  "challenge_iou": 89.94,
+  "num_frames": 338
+ },
+ {
+  "seq_tag": "video_37",
+  "challenge_iou": 87.12,
+  "num_frames": 359
+ },
+ {
+  "seq_tag": "video_38",
+  "challenge_iou": 84.48,
+  "num_frames": 305
+ },
+ {
+  "seq_tag": "video_39",
+  "challenge_iou": 64.51,
+  "num_frames": 238
+ },
+ {
+  "seq_tag": "video_40",
+  "challenge_iou": 88.69,
+  "num_frames": 275
+ },
+ {
+  "seq_tag": "video_41",
+  "challenge_iou": 85.17,
+  "num_frames": 237
+ },
+ {
+  "seq_tag": "video_42",
+  "challenge_iou": 69.79,
+  "num_frames": 357
+ },
+ {
+  "seq_tag": "video_43",
+  "challenge_iou": 56.92,
+  "num_frames": 197
+ },
+ {
+  "seq_tag": "video_44",
+  "challenge_iou": 84.02,
+  "num_frames": 142
+ },
+ {
+  "seq_tag": "video_45",
+  "challenge_iou": 87.22,
+  "num_frames": 116
+ },
+ {
+  "seq_tag": "video_46",
+  "challenge_iou": 79.38,
+  "num_frames": 632
+ },
+ {
+  "seq_tag": "video_47",
+  "challenge_iou": 81.04,
+  "num_frames": 333
+ },
+ {
+  "seq_tag": "video_48",
+  "challenge_iou": 84.53,
+  "num_frames": 300
+ },
+ {
+  "seq_tag": "video_49",
+  "challenge_iou": 63.2,
+  "num_frames": 686
+ },
+ {
+  "seq_tag": "video_50",
+  "challenge_iou": 89.97,
+  "num_frames": 242
+ }
+]

@@ -4,7 +4,7 @@ tracker = per-video rule, online variant = per-frame rule; same rules as
 scripts/fuse_paths.py). Uses the evaluators of the inference drivers, so a
 single run reproduces the class-aware numbers in its metrics.json.
 
-usage: python scripts/classaware_offline.py RESULTS_DIR D17 D18 DCH
+usage: python scripts/classaware_offline.py RESULTS_DIR D17 D18 DCH [DSAR]
 writes RESULTS_DIR/classaware_offline.json
 """
 import ast
@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from src.data import endovis17 as e17  # noqa: E402
 from src.data import endovis18 as e18  # noqa: E402
-from src.data.extra_datasets import cholec_sequences, extract_class_masks as cholec_classes  # noqa: E402
+from src.data.extra_datasets import cholec_sequences, sarrarp_sequences, extract_class_masks as cholec_classes  # noqa: E402
 from src.evaluation.metrics import ClassAwareIoU, EndoVis17Evaluator  # noqa: E402
 
 
@@ -57,7 +57,7 @@ def seqs(dataset, root):
             yield s["seq_id"], s.get("seq_tag", f"test{s['seq_id']}"), s["frame_ids"], load, \
                 sorted(e18.extract_class_masks(init)), H, W
     else:
-        for s in cholec_sequences(root, "test"):
+        for s in (sarrarp_sequences(root, "all") if dataset == "sarrarp" else cholec_sequences(root, "test")):
             H, W = cv2.imread(s["frame_files"][0]).shape[:2]
             load = (lambda s, H, W: lambda fid: s["gt"](fid, H, W))(s, H, W)
             yield s["dataset_id"], s["seq_tag"], s["frame_ids"], load, \
@@ -70,7 +70,7 @@ def scores(run_dir, tag):
 
 
 def evaluate(dataset, root, paths, rule=None):
-    ev = ev18_evaluator() if dataset == "ev18" else EndoVis17Evaluator()
+    ev = ev18_evaluator() if dataset == "ev18" else EndoVis17Evaluator(compress=True)   # masks kept compressed
     for eid, tag, fids, load, init_cls, H, W in seqs(dataset, root):
         if not (paths[0] / "preds" / tag).is_dir():
             continue
@@ -106,6 +106,8 @@ def main():
         return
     R = Path(sys.argv[1])
     roots = {"ev17": sys.argv[2], "ev18": sys.argv[3], "cholec": sys.argv[4]}
+    if len(sys.argv) > 5:
+        roots["sarrarp"] = sys.argv[5]
     runs = {
         "ev17": {"C0": ["EV17_C0_ref"], "DM": ["EV17_C2_sp"], "delall": ["EV17_C2_delall_sp"],
                  "Q50": ["EV17_Q50_sp"], "topk": ["EV17_topk"]},
@@ -113,7 +115,10 @@ def main():
                  "Q50": ["EV18all_Q50_sp"], "topk": ["EV18all_topk"]},
         "cholec": {"C0": ["TESTcholecL_keep"], "DM": ["TESTcholecL_DM"], "delall": ["TESTcholecL_delall"],
                    "Q50": ["TESTcholecL_Q50"], "topk": ["TESTcholecL_topk"]},
+        "sarrarp": {"C0": ["SAR_keep"], "DM": ["SAR_DM"], "delall": ["SAR_delall"], "Q50": ["SAR_Q50"],
+                    "topk": ["SAR_topk"]},
     }
+    runs = {ds: rr for ds, rr in runs.items() if ds in roots}
     out = {}
     for ds, rr in runs.items():
         out[ds] = {}

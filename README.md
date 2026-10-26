@@ -10,19 +10,21 @@ commit `88475d9`), initialized from the ground-truth masks of the first frame.
 
 ## Main results (test sets, bIoU %)
 
-| Method | EndoVis 2017 (10 seq.) | EndoVis 2018 (18 seq.) | CholecSeg8k (25 seq.) | Mean gain over SAM3 [95% CI] |
-|---|---|---|---|---|
-| SAM3 (keep all memory) | 90.28 | 73.71 | 83.00 | — |
-| DM, τ = 0.95 (ReMeDI-SAM3 retention) | 91.57 | 74.96 | 84.14 | +1.23 [−0.28, +2.84] |
-| First frame only (delete all memory) | 89.69 | 74.98 | 84.32 | +0.66 [−0.96, +2.15] |
-| Top-6 bank (keep the 6 highest-scoring entries; comparator added after testing) | 91.57 | 75.16 | 83.62 | +1.12 [−0.01, +2.41] |
-| Rank rule, ρ = 0.5 | 91.59 | 76.62 | 83.58 | +1.60 [−0.57, +4.09] |
-| **Two-path tracker** (first frame only + rank rule, per video; selected) | 91.55 | 76.96 | 84.47 | +2.00 [−0.25, +4.53] |
-| Two-path tracker, per frame (online variant) | 91.61 | 77.54 | 84.10 | +2.09 [−0.04, +4.38] |
+| Method | EndoVis 2017 (10 seq.) | EndoVis 2018 (18 seq.) | CholecSeg8k (25 seq.) | SAR-RARP50 (54 seq., preregistered) | Mean gain over SAM3 [95% CI] |
+|---|---|---|---|---|---|
+| SAM3 (keep all memory) | 90.28 | 73.71 | 83.00 | 78.21 | — |
+| DM, τ = 0.95 (ReMeDI-SAM3 retention) | 91.57 | 74.96 | 84.14 | 78.23 | +0.92 [−0.31, +2.21] |
+| First frame only (delete all memory) | 89.69 | 74.98 | 84.32 | 77.74 | +0.38 [−0.92, +1.58] |
+| Top-6 bank (keep the 6 highest-scoring entries; comparator added after testing) | 91.57 | 75.16 | 83.62 | 79.35 | +1.13 [+0.19, +2.17] |
+| Rank rule, ρ = 0.5 | 91.59 | 76.62 | 83.58 | 80.16 | +1.69 [+0.01, +3.57] |
+| **Two-path tracker** (first frame only + rank rule, per video; selected) | 91.55 | 76.96 | 84.47 | 80.18 | +1.99 [+0.25, +3.93] |
+| Two-path tracker, per frame (online variant) | 91.61 | 77.54 | 84.10 | 80.14 | +2.05 [+0.40, +3.80] |
 
-The two-path tracker is never more than 0.04 bIoU below the best single rule on
-any test set; every single rule (including the top-6 bank) trails the best one
-by 0.7 to 1.9 points on at least one set.
+Mean gain: mean of the four per-set frame-weighted gains; the interval resamples
+sequences within sets (SAR-RARP50: operations). The two-path tracker is never
+more than 0.04 bIoU below the best single rule on any test set; every single rule
+(including the top-6 bank) trails the best one by 0.7 to 2.4 points on at least
+one set.
 
 The two-path tracker was chosen on development data (EndoVis 2017 training
 split, five CholecSeg8k videos) by a criterion fixed before the runs, and the
@@ -39,14 +41,18 @@ What the rate-matched controls show (DM = reliability-threshold retention):
   all memory matches it (−0.02 [−0.67, +0.60]).
 * CholecSeg8k: DM deletes every entry of 11 of 25 sequences and is level with
   deleting all memory (84.14 vs 84.32).
-* Tracking from the first frame alone beats SAM3's full memory on four of five
-  datasets (both development sets, EndoVis 2018, CholecSeg8k).
+* SAR-RARP50: DM deletes 91.9% of the entries and every entry of 8 of 54 files,
+  and is level with SAM3 (+0.02 [−1.76, +2.00]).
+* Tracking from the first frame alone beats SAM3's full memory on both
+  development sets, EndoVis 2018 and CholecSeg8k, but loses on EndoVis 2017 and
+  SAR-RARP50: whether to forget depends on the video.
 * The rank rule, which ranks entries by the same score instead of thresholding
-  it, beats random deletion at its own per-sequence counts on all three test
+  it, beats random deletion at its own per-sequence counts on all four test
   sets, above all 20 draws each time (EndoVis 2017 +2.02 [+0.07, +4.88],
-  EndoVis 2018 +3.30 [−2.81, +10.31], CholecSeg8k +0.57 [+0.07, +1.44]).
-  Replacing the two-path tracker's memory-path deletions by random ones lowers
-  it on every test set (19, 19 and 20 of 20 draws below it).
+  EndoVis 2018 +3.30 [−2.81, +10.31], CholecSeg8k +0.57 [+0.07, +1.44],
+  SAR-RARP50 +0.98 [+0.11, +2.16]). Replacing the two-path tracker's
+  memory-path deletions by random ones lowers it on every test set (19, 19, 20
+  and 19 of 20 draws below it).
 
 ## Checks run after the method was chosen
 
@@ -62,8 +68,12 @@ What the rate-matched controls show (DM = reliability-threshold retention):
   +1.51 (rank rule +0.66 / +0.81); ρ = 0.5, chosen on development data, is the
   best of the three on test as well.
 * **Class-aware metrics** (`scripts/classaware_offline.py`, from saved
-  predictions): the two-path tracker raises mcIoU* over SAM3 on all three test
-  sets (+1.6, +1.9, +1.3).
+  predictions): the two-path tracker raises mcIoU* over SAM3 on EndoVis 2017,
+  EndoVis 2018 and CholecSeg8k (+1.6, +1.9, +1.3) and per-frame Challenge IoU on
+  EndoVis 2018, CholecSeg8k and SAR-RARP50 (+1.9, +1.6, +2.1); it lowers mcIoU*
+  on SAR-RARP50 (−1.6, all from the suction tool, which is in the first frame of
+  only three files; `results/classaware_sar_perclass.json`) and Challenge IoU on
+  EndoVis 2017 (−0.7).
 * **Runtime**: 129 ms per frame for SAM3 on EndoVis 2017, peak 9.35 GiB; no
   rule adds measurable time.
 
@@ -72,10 +82,39 @@ What the rate-matched controls show (DM = reliability-threshold retention):
 Before any model was run on it, the protocol for a fourth test set, the 54 videos of
 SAR-RARP50 (robot-assisted radical prostatectomy, masks at 1 Hz), was committed in
 [`PREREGISTRATION_SAR-RARP50.md`](PREREGISTRATION_SAR-RARP50.md): data handling,
-runs, hypotheses and analysis, with no setting changed from the paper.
-`experiments/get_sarrarp.sh` downloads and prepares the data,
-`experiments/run_sar.sh` runs the job list `experiments/gen_sar_jobs.sh`.
-Results will be added here unchanged, whatever they are.
+runs, hypotheses and analysis, with no setting changed from the paper
+(commit `c43169a`, tag `prereg-sar-rarp50`; Amendment 1, commit `bdbcc39`, tag
+`prereg-sar-rarp50-amendment1`, also before any run).
+`scripts/prepare_sarrarp.py` prepares the data (`experiments/get_sarrarp.sh`
+downloads it), `experiments/run_sar.sh` runs the job list
+`experiments/gen_sar_jobs.sh`, and `scripts/sar_analysis.py` computes the
+preregistered analysis (`results/sar_analysis.json`).
+
+Results, decided by the preregistered rule:
+
+* **H1 supported.** The two-path tracker gains +1.97 bIoU over SAM3, 95% CI over
+  the 50 operations [+0.67, +3.62]; better on 29 and worse on 21 operations
+  (sign test p = 0.32). Official test release (videos 41–50): +2.10 [+0.28, +4.27].
+* **H2.** The rank rule exceeds all 20 random-deletion draws at its own counts
+  (+0.98, nested CI over operations [+0.11, +2.16]); the two-path tracker
+  exceeds 19 of 20 draws with a random memory path (+0.68 [−0.39, +1.76]).
+* First frame only falls below SAM3 (77.74 vs 78.21; worse on 36 of 50
+  operations); the selector kept the rank-rule path on 53 of 54 files.
+* Secondary: over the four test sets the two-path tracker gains +1.99
+  [+0.25, +3.93] (every sequence weighted equally +2.16 [+0.77, +3.76]; leaving
+  out one set +1.57 to +2.23). The tracking failure rate on SAR-RARP50 falls from
+  8.26% to 5.43% of the frames showing an instrument (−2.83 [−5.54, −0.66]).
+* Exploratory (declared in the preregistration): DM with the lenient score
+  σ(ŝ)·c behaves like DM (78.23, deletes 91.3%); the per-video choice between
+  SAM3 and first frame only gains +0.52 [−0.08, +1.36].
+
+Deviations: the first launch was stopped after 35 min because five concurrent
+processes exceeded GPU memory and the evaluator kept every full-resolution mask
+in host memory; the evaluator now stores masks losslessly compressed
+(`EndoVis17Evaluator(compress=True)`, identical metrics) and all runs were
+restarted from scratch with four processes. The exploratory SAR_DMsig run waited
+for a free GPU slot (`experiments/rerun_dmsig_sar.sh`). Rule code and settings
+are unchanged; no output of the first launch is used.
 
 ## Recompute the statistics (no GPU)
 
@@ -88,8 +127,13 @@ python scripts/oracle_analysis.py   # fixed-rate / oracle / low-capacity control
 python scripts/dev_analysis.py      # development ranking (rule selection)
 python scripts/test_analysis.py     # test results of the chosen rule
 python scripts/rev_analysis.py      # PNG input, rho sensitivity, top-6 bank, runtime -> results/rev_analysis.json
-# class-aware metrics from saved predictions (needs the data and the runs' preds/, which are not committed)
-python scripts/classaware_offline.py results data/endovis_2017 data/endovis_2018 data/CholecSeg8k
+python scripts/sar_analysis.py      # preregistered SAR-RARP50 analysis, four-set summaries -> results/sar_analysis.json
+python scripts/panel_analysis.py    # effect concentration, online path switching -> results/panel_analysis.json
+python scripts/failure_rate.py results --pool-only   # failure rate, pooled CIs from the committed per-sequence counts
+# from saved predictions (needs the data and the runs' preds/, which are not committed)
+python scripts/classaware_offline.py results data/endovis_2017 data/endovis_2018 data/CholecSeg8k data/SAR-RARP50
+python scripts/failure_rate.py results data/endovis_2017 data/endovis_2018 data/CholecSeg8k data/SAR-RARP50
+python scripts/visibility_analysis.py results data/endovis_2017 data/endovis_2018 data/CholecSeg8k data/SAR-RARP50
 ```
 
 ## Reproduce the runs (GPU)
@@ -101,7 +145,8 @@ python scripts/classaware_offline.py results data/endovis_2017 data/endovis_2018
 2. Put the data under `data/` (or set `D17`, `D18`, `DCH`):
    `data/endovis_2017` (EndoVis 2017 test and training releases),
    `data/endovis_2018` (EndoVis 2018 training releases 1–2 and test data),
-   `data/CholecSeg8k` (CholecSeg8k, as released).
+   `data/CholecSeg8k` (CholecSeg8k, as released),
+   `data/SAR-RARP50` (`python scripts/prepare_sarrarp.py ZIP_DIR data/SAR-RARP50`).
 3. Run the job lists, e.g.
 
 ```bash
@@ -111,6 +156,7 @@ bash experiments/gen_dev_jobs.sh       # development runs  -> dev_jobs.txt
 bash experiments/gen_test_jobs.sh      # test runs         -> test_jobs.txt
 bash experiments/run_controls.sh 5     # controls for the two-path tracker
 bash experiments/run_rev.sh 5          # timing, top-6 bank, PNG input, rho = 0.25 / 0.75
+bash experiments/run_sar.sh 4          # SAR-RARP50 (preregistered), then fusion
 ```
 
 Each line of a job list is one call of `src/inference_ev17.py`,
@@ -151,7 +197,7 @@ rules add no measurable time, so the two-path tracker costs two passes.
 src/models/md_sam3.py       retention rules, controls, replay, rank rule (CONFIG_PRESETS)
 src/inference_ev17.py       EndoVis 2017 test driver (instrument types)
 src/inference_ev18.py       EndoVis 2018 driver (instrument parts)
-src/inference_extra.py      CholecSeg8k and EndoVis 2017 training split
+src/inference_extra.py      CholecSeg8k, SAR-RARP50 and EndoVis 2017 training split
 src/data/                   dataset loaders (extra_datasets.py: CholecSeg8k clip joining)
 src/evaluation/metrics.py   bIoU, mcIoU*, class-aware IoU
 scripts/                    statistics, offline deletion lists, fusion

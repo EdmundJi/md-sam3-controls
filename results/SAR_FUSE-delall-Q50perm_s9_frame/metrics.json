@@ -1,0 +1,14 @@
+{
+ "challenge_iou": 79.74,
+ "biou": 79.74,
+ "num_frames": 16241,
+ "picks": [
+  6256,
+  9985
+ ],
+ "runs": [
+  "/workspace/results/ipcai/SAR_delall",
+  "/workspace/results/ipcai/SAR_Q50-perm_s9"
+ ],
+ "rule": "frame"
+}

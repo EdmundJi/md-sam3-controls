@@ -1,0 +1,220 @@
+[0m[32mINFO 2026-10-26 22:14:34,193 33843 sam3_video_base.py: 125:[0m setting max_num_objects=10000 and num_obj_for_compile=16
+2026-10-26 22:14:38,040 [INFO] inference_ev17: sarrarp/all: 54 sequences
+2026-10-26 22:16:10,916 [INFO] src.models.md_sam3:   TIMING video_01: 563 frames, prep 20.5 s, track 72.4 s (128.5 ms/frame), peak 11.52 GiB
+2026-10-26 22:16:10,934 [INFO] inference_ev17:   video_01: 563 frames, classes=[1], Done in 92.8s
+2026-10-26 22:16:36,822 [INFO] inference_ev17:     bIoU=62.25
+2026-10-26 22:17:41,406 [INFO] src.models.md_sam3:   TIMING video_02: 330 frames, prep 15.0 s, track 49.5 s (150.1 ms/frame), peak 8.66 GiB
+2026-10-26 22:17:41,418 [INFO] inference_ev17:   video_02: 330 frames, classes=[1], Done in 64.6s
+2026-10-26 22:17:56,515 [INFO] inference_ev17:     bIoU=69.54
+2026-10-26 22:19:09,387 [INFO] src.models.md_sam3:   TIMING video_03: 522 frames, prep 18.7 s, track 54.1 s (103.7 ms/frame), peak 11.02 GiB
+2026-10-26 22:19:09,404 [INFO] inference_ev17:   video_03: 522 frames, classes=[1], Done in 72.8s
+2026-10-26 22:19:36,430 [INFO] inference_ev17:     bIoU=73.78
+2026-10-26 22:19:51,953 [INFO] src.models.md_sam3:   TIMING video_04: 131 frames, prep 4.6 s, track 10.9 s (83.0 ms/frame), peak 6.22 GiB
+2026-10-26 22:19:51,957 [INFO] inference_ev17:   video_04: 131 frames, classes=[1], Done in 15.5s
+2026-10-26 22:19:57,895 [INFO] inference_ev17:     bIoU=72.73
+2026-10-26 22:20:37,134 [INFO] src.models.md_sam3:   TIMING video_05: 272 frames, prep 11.8 s, track 27.3 s (100.5 ms/frame), peak 7.95 GiB
+2026-10-26 22:20:37,181 [INFO] inference_ev17:   video_05: 272 frames, classes=[1], Done in 39.2s
+2026-10-26 22:20:54,828 [INFO] inference_ev17:     bIoU=79.41
+2026-10-26 22:22:41,853 [INFO] src.models.md_sam3:   TIMING video_06: 706 frames, prep 35.3 s, track 71.6 s (101.4 ms/frame), peak 13.28 GiB
+2026-10-26 22:22:41,882 [INFO] inference_ev17:   video_06: 706 frames, classes=[1], Done in 107.0s
+2026-10-26 22:23:17,344 [INFO] inference_ev17:     bIoU=89.11
+2026-10-26 22:23:55,762 [INFO] src.models.md_sam3:   TIMING video_07: 272 frames, prep 10.8 s, track 27.6 s (101.4 ms/frame), peak 7.95 GiB
+2026-10-26 22:23:55,772 [INFO] inference_ev17:   video_07: 272 frames, classes=[1], Done in 38.4s
+2026-10-26 22:24:08,628 [INFO] inference_ev17:     bIoU=77.81
+2026-10-26 22:24:27,797 [INFO] src.models.md_sam3:   TIMING video_08: 148 frames, prep 5.7 s, track 13.4 s (90.6 ms/frame), peak 6.43 GiB
+2026-10-26 22:24:27,802 [INFO] inference_ev17:   video_08: 148 frames, classes=[1], Done in 19.1s
+2026-10-26 22:24:35,393 [INFO] inference_ev17:     bIoU=87.86
+2026-10-26 22:25:23,935 [INFO] src.models.md_sam3:   TIMING video_09: 264 frames, prep 10.9 s, track 37.6 s (142.4 ms/frame), peak 7.85 GiB
+2026-10-26 22:25:23,945 [INFO] inference_ev17:   video_09: 264 frames, classes=[1], Done in 48.5s
+2026-10-26 22:25:36,245 [INFO] inference_ev17:     bIoU=84.27
+2026-10-26 22:25:58,988 [INFO] src.models.md_sam3:   TIMING video_10: 128 frames, prep 5.0 s, track 17.7 s (138.6 ms/frame), peak 6.18 GiB
+2026-10-26 22:25:58,993 [INFO] inference_ev17:   video_10: 128 frames, classes=[1], Done in 22.7s
+2026-10-26 22:26:04,991 [INFO] inference_ev17:     bIoU=85.02
+2026-10-26 22:26:39,713 [INFO] src.models.md_sam3:   TIMING video_11_1: 237 frames, prep 10.2 s, track 24.4 s (103.0 ms/frame), peak 7.52 GiB
+2026-10-26 22:26:39,721 [INFO] inference_ev17:   video_11_1: 237 frames, classes=[1], Done in 34.7s
+2026-10-26 22:26:52,411 [INFO] inference_ev17:     bIoU=82.34
+2026-10-26 22:27:14,836 [INFO] src.models.md_sam3:   TIMING video_11_2: 135 frames, prep 7.6 s, track 14.8 s (109.3 ms/frame), peak 6.26 GiB
+2026-10-26 22:27:14,841 [INFO] inference_ev17:   video_11_2: 135 frames, classes=[1], Done in 22.4s
+2026-10-26 22:27:20,980 [INFO] inference_ev17:     bIoU=82.39
+2026-10-26 22:27:37,191 [INFO] src.models.md_sam3:   TIMING video_12: 132 frames, prep 5.4 s, track 10.8 s (81.7 ms/frame), peak 6.23 GiB
+2026-10-26 22:27:37,196 [INFO] inference_ev17:   video_12: 132 frames, classes=[1], Done in 16.2s
+2026-10-26 22:27:44,458 [INFO] inference_ev17:     bIoU=86.02
+2026-10-26 22:28:20,338 [INFO] src.models.md_sam3:   TIMING video_13: 273 frames, prep 13.8 s, track 22.0 s (80.6 ms/frame), peak 7.96 GiB
+2026-10-26 22:28:20,347 [INFO] inference_ev17:   video_13: 273 frames, classes=[1], Done in 35.8s
+2026-10-26 22:28:35,845 [INFO] inference_ev17:     bIoU=66.21
+2026-10-26 22:29:14,710 [INFO] src.models.md_sam3:   TIMING video_14: 282 frames, prep 10.1 s, track 28.7 s (101.8 ms/frame), peak 8.07 GiB
+2026-10-26 22:29:14,718 [INFO] inference_ev17:   video_14: 282 frames, classes=[1], Done in 38.8s
+2026-10-26 22:29:27,810 [INFO] inference_ev17:     bIoU=53.33
+2026-10-26 22:29:58,057 [INFO] src.models.md_sam3:   TIMING video_15_1: 180 frames, prep 6.7 s, track 23.5 s (130.3 ms/frame), peak 6.82 GiB
+2026-10-26 22:29:58,065 [INFO] inference_ev17:   video_15_1: 180 frames, classes=[1], Done in 30.2s
+2026-10-26 22:30:07,175 [INFO] inference_ev17:     bIoU=88.12
+2026-10-26 22:30:23,762 [INFO] src.models.md_sam3:   TIMING video_15_2: 132 frames, prep 5.1 s, track 11.5 s (87.0 ms/frame), peak 6.23 GiB
+2026-10-26 22:30:23,766 [INFO] inference_ev17:   video_15_2: 132 frames, classes=[1], Done in 16.5s
+2026-10-26 22:30:29,568 [INFO] inference_ev17:     bIoU=89.90
+2026-10-26 22:31:41,294 [INFO] src.models.md_sam3:   TIMING video_16: 385 frames, prep 14.0 s, track 57.7 s (149.9 ms/frame), peak 9.34 GiB
+2026-10-26 22:31:41,306 [INFO] inference_ev17:   video_16: 385 frames, classes=[1], Done in 71.7s
+2026-10-26 22:32:00,533 [INFO] inference_ev17:     bIoU=83.64
+2026-10-26 22:32:36,424 [INFO] src.models.md_sam3:   TIMING video_17_1: 281 frames, prep 12.0 s, track 23.9 s (84.9 ms/frame), peak 8.06 GiB
+2026-10-26 22:32:36,434 [INFO] inference_ev17:   video_17_1: 281 frames, classes=[1], Done in 35.8s
+2026-10-26 22:32:54,016 [INFO] inference_ev17:     bIoU=89.67
+2026-10-26 22:33:20,902 [INFO] src.models.md_sam3:   TIMING video_17_2: 132 frames, prep 6.9 s, track 19.9 s (150.8 ms/frame), peak 6.23 GiB
+2026-10-26 22:33:20,906 [INFO] inference_ev17:   video_17_2: 132 frames, classes=[1], Done in 26.8s
+2026-10-26 22:33:27,175 [INFO] inference_ev17:     bIoU=86.92
+2026-10-26 22:34:52,609 [INFO] src.models.md_sam3:   TIMING video_18: 545 frames, prep 23.3 s, track 62.1 s (114.0 ms/frame), peak 11.30 GiB
+2026-10-26 22:34:52,630 [INFO] inference_ev17:   video_18: 545 frames, classes=[1], Done in 85.4s
+2026-10-26 22:35:19,700 [INFO] inference_ev17:     bIoU=80.02
+2026-10-26 22:35:54,816 [INFO] src.models.md_sam3:   TIMING video_19: 267 frames, prep 12.2 s, track 22.9 s (85.6 ms/frame), peak 7.89 GiB
+2026-10-26 22:35:54,824 [INFO] inference_ev17:   video_19: 267 frames, classes=[1], Done in 35.0s
+2026-10-26 22:36:06,816 [INFO] inference_ev17:     bIoU=72.44
+2026-10-26 22:37:03,208 [INFO] src.models.md_sam3:   TIMING video_20: 290 frames, prep 10.9 s, track 45.5 s (156.8 ms/frame), peak 8.17 GiB
+2026-10-26 22:37:03,217 [INFO] inference_ev17:   video_20: 290 frames, classes=[1], Done in 56.4s
+2026-10-26 22:37:16,544 [INFO] inference_ev17:     bIoU=76.28
+2026-10-26 22:38:21,749 [INFO] src.models.md_sam3:   TIMING video_21: 455 frames, prep 19.5 s, track 45.6 s (100.3 ms/frame), peak 10.20 GiB
+2026-10-26 22:38:21,766 [INFO] inference_ev17:   video_21: 455 frames, classes=[1], Done in 65.2s
+2026-10-26 22:38:42,858 [INFO] inference_ev17:     bIoU=70.20
+2026-10-26 22:39:51,363 [INFO] src.models.md_sam3:   TIMING video_22: 383 frames, prep 15.2 s, track 53.2 s (139.0 ms/frame), peak 9.31 GiB
+2026-10-26 22:39:51,376 [INFO] inference_ev17:   video_22: 383 frames, classes=[1], Done in 68.5s
+2026-10-26 22:40:10,235 [INFO] inference_ev17:     bIoU=86.86
+2026-10-26 22:40:43,828 [INFO] src.models.md_sam3:   TIMING video_23: 257 frames, prep 11.6 s, track 21.9 s (85.3 ms/frame), peak 7.76 GiB
+2026-10-26 22:40:43,836 [INFO] inference_ev17:   video_23: 257 frames, classes=[1], Done in 33.5s
+2026-10-26 22:40:58,373 [INFO] inference_ev17:     bIoU=84.41
+2026-10-26 22:41:33,658 [INFO] src.models.md_sam3:   TIMING video_24: 250 frames, prep 9.4 s, track 25.9 s (103.5 ms/frame), peak 7.68 GiB
+2026-10-26 22:41:33,665 [INFO] inference_ev17:   video_24: 250 frames, classes=[1], Done in 35.2s
+2026-10-26 22:41:44,920 [INFO] inference_ev17:     bIoU=88.52
+2026-10-26 22:42:14,433 [INFO] src.models.md_sam3:   TIMING video_25: 154 frames, prep 5.5 s, track 23.9 s (155.4 ms/frame), peak 6.50 GiB
+2026-10-26 22:42:14,438 [INFO] inference_ev17:   video_25: 154 frames, classes=[1], Done in 29.5s
+2026-10-26 22:42:21,818 [INFO] inference_ev17:     bIoU=83.88
+2026-10-26 22:42:45,266 [INFO] src.models.md_sam3:   TIMING video_26: 164 frames, prep 7.1 s, track 16.3 s (99.6 ms/frame), peak 6.62 GiB
+2026-10-26 22:42:45,272 [INFO] inference_ev17:   video_26: 164 frames, classes=[1], Done in 23.4s
+2026-10-26 22:42:52,831 [INFO] inference_ev17:     bIoU=56.57
+2026-10-26 22:43:18,226 [INFO] src.models.md_sam3:   TIMING video_27: 188 frames, prep 7.7 s, track 17.7 s (94.0 ms/frame), peak 6.92 GiB
+2026-10-26 22:43:18,234 [INFO] inference_ev17:   video_27: 188 frames, classes=[1], Done in 25.4s
+2026-10-26 22:43:29,214 [INFO] inference_ev17:     bIoU=73.20
+2026-10-26 22:43:51,473 [INFO] src.models.md_sam3:   TIMING video_28: 182 frames, prep 6.9 s, track 15.3 s (84.3 ms/frame), peak 7.05 GiB
+2026-10-26 22:43:51,479 [INFO] inference_ev17:   video_28: 182 frames, classes=[1, 2], Done in 22.2s
+2026-10-26 22:44:01,012 [INFO] inference_ev17:     bIoU=83.03
+2026-10-26 22:44:35,315 [INFO] src.models.md_sam3:   TIMING video_29_1: 258 frames, prep 12.5 s, track 21.7 s (84.0 ms/frame), peak 7.78 GiB
+2026-10-26 22:44:35,323 [INFO] inference_ev17:   video_29_1: 258 frames, classes=[1], Done in 34.2s
+2026-10-26 22:44:47,023 [INFO] inference_ev17:     bIoU=88.11
+2026-10-26 22:45:33,311 [INFO] src.models.md_sam3:   TIMING video_29_2: 233 frames, prep 11.3 s, track 35.0 s (150.1 ms/frame), peak 7.47 GiB
+2026-10-26 22:45:33,320 [INFO] inference_ev17:   video_29_2: 233 frames, classes=[1], Done in 46.2s
+2026-10-26 22:45:44,524 [INFO] inference_ev17:     bIoU=88.67
+2026-10-26 22:46:55,417 [INFO] src.models.md_sam3:   TIMING video_30: 574 frames, prep 19.5 s, track 51.3 s (89.5 ms/frame), peak 11.66 GiB
+2026-10-26 22:46:55,434 [INFO] inference_ev17:   video_30: 574 frames, classes=[1], Done in 70.9s
+2026-10-26 22:47:30,139 [INFO] inference_ev17:     bIoU=85.64
+2026-10-26 22:48:45,561 [INFO] src.models.md_sam3:   TIMING video_31: 565 frames, prep 24.6 s, track 50.8 s (89.9 ms/frame), peak 11.55 GiB
+2026-10-26 22:48:45,583 [INFO] inference_ev17:   video_31: 565 frames, classes=[1], Done in 75.4s
+2026-10-26 22:49:17,145 [INFO] inference_ev17:     bIoU=76.43
+2026-10-26 22:50:26,663 [INFO] src.models.md_sam3:   TIMING video_32: 490 frames, prep 17.4 s, track 52.1 s (106.4 ms/frame), peak 11.25 GiB
+2026-10-26 22:50:26,678 [INFO] inference_ev17:   video_32: 490 frames, classes=[1, 2], Done in 69.5s
+2026-10-26 22:50:52,129 [INFO] inference_ev17:     bIoU=82.87
+2026-10-26 22:51:12,117 [INFO] src.models.md_sam3:   TIMING video_33: 158 frames, prep 6.0 s, track 14.0 s (88.4 ms/frame), peak 6.55 GiB
+2026-10-26 22:51:12,121 [INFO] inference_ev17:   video_33: 158 frames, classes=[1], Done in 19.9s
+2026-10-26 22:51:22,492 [INFO] inference_ev17:     bIoU=76.81
+2026-10-26 22:51:40,096 [INFO] src.models.md_sam3:   TIMING video_34: 101 frames, prep 5.7 s, track 11.9 s (117.6 ms/frame), peak 5.85 GiB
+2026-10-26 22:51:40,100 [INFO] inference_ev17:   video_34: 101 frames, classes=[1], Done in 17.6s
+2026-10-26 22:51:44,598 [INFO] inference_ev17:     bIoU=78.25
+2026-10-26 22:52:49,613 [INFO] src.models.md_sam3:   TIMING video_35: 504 frames, prep 21.1 s, track 43.9 s (87.0 ms/frame), peak 10.80 GiB
+2026-10-26 22:52:49,631 [INFO] inference_ev17:   video_35: 504 frames, classes=[1], Done in 65.0s
+2026-10-26 22:53:15,300 [INFO] inference_ev17:     bIoU=82.03
+2026-10-26 22:54:15,264 [INFO] src.models.md_sam3:   TIMING video_36: 339 frames, prep 15.1 s, track 44.8 s (132.1 ms/frame), peak 8.77 GiB
+2026-10-26 22:54:15,277 [INFO] inference_ev17:   video_36: 339 frames, classes=[1], Done in 59.9s
+2026-10-26 22:54:30,562 [INFO] inference_ev17:     bIoU=90.22
+2026-10-26 22:55:24,608 [INFO] src.models.md_sam3:   TIMING video_37: 360 frames, prep 13.2 s, track 40.8 s (113.2 ms/frame), peak 9.03 GiB
+2026-10-26 22:55:24,621 [INFO] inference_ev17:   video_37: 360 frames, classes=[1], Done in 54.0s
+2026-10-26 22:55:41,099 [INFO] inference_ev17:     bIoU=85.40
+2026-10-26 22:56:38,084 [INFO] src.models.md_sam3:   TIMING video_38: 306 frames, prep 15.7 s, track 41.2 s (134.8 ms/frame), peak 8.37 GiB
+2026-10-26 22:56:38,096 [INFO] inference_ev17:   video_38: 306 frames, classes=[1], Done in 57.0s
+2026-10-26 22:56:52,061 [INFO] inference_ev17:     bIoU=78.58
+2026-10-26 22:57:37,391 [INFO] src.models.md_sam3:   TIMING video_39: 239 frames, prep 9.3 s, track 36.0 s (150.6 ms/frame), peak 7.81 GiB
+2026-10-26 22:57:37,398 [INFO] inference_ev17:   video_39: 239 frames, classes=[1, 2], Done in 45.3s
+2026-10-26 22:57:48,631 [INFO] inference_ev17:     bIoU=63.70
+2026-10-26 22:58:37,222 [INFO] src.models.md_sam3:   TIMING video_40: 276 frames, prep 12.2 s, track 36.3 s (131.7 ms/frame), peak 8.00 GiB
+2026-10-26 22:58:37,231 [INFO] inference_ev17:   video_40: 276 frames, classes=[1], Done in 48.6s
+2026-10-26 22:58:50,046 [INFO] inference_ev17:     bIoU=49.63
+2026-10-26 22:59:40,210 [INFO] src.models.md_sam3:   TIMING video_41: 238 frames, prep 11.4 s, track 38.7 s (162.8 ms/frame), peak 7.53 GiB
+2026-10-26 22:59:40,218 [INFO] inference_ev17:   video_41: 238 frames, classes=[1], Done in 50.1s
+2026-10-26 22:59:51,066 [INFO] inference_ev17:     bIoU=79.43
+2026-10-26 23:00:50,688 [INFO] src.models.md_sam3:   TIMING video_42: 358 frames, prep 12.4 s, track 47.2 s (131.7 ms/frame), peak 9.00 GiB
+2026-10-26 23:00:50,700 [INFO] inference_ev17:   video_42: 358 frames, classes=[1], Done in 59.6s
+2026-10-26 23:01:09,565 [INFO] inference_ev17:     bIoU=69.95
+2026-10-26 23:01:42,558 [INFO] src.models.md_sam3:   TIMING video_43: 198 frames, prep 7.6 s, track 25.3 s (128.0 ms/frame), peak 7.04 GiB
+2026-10-26 23:01:42,564 [INFO] inference_ev17:   video_43: 198 frames, classes=[1], Done in 32.9s
+2026-10-26 23:01:51,613 [INFO] inference_ev17:     bIoU=61.33
+2026-10-26 23:02:09,561 [INFO] src.models.md_sam3:   TIMING video_44: 143 frames, prep 5.9 s, track 12.0 s (84.2 ms/frame), peak 6.36 GiB
+2026-10-26 23:02:09,566 [INFO] inference_ev17:   video_44: 143 frames, classes=[1], Done in 17.9s
+2026-10-26 23:02:19,838 [INFO] inference_ev17:     bIoU=84.04
+2026-10-26 23:02:43,016 [INFO] src.models.md_sam3:   TIMING video_45: 117 frames, prep 5.5 s, track 17.6 s (150.4 ms/frame), peak 6.04 GiB
+2026-10-26 23:02:43,020 [INFO] inference_ev17:   video_45: 117 frames, classes=[1], Done in 23.1s
+2026-10-26 23:02:49,571 [INFO] inference_ev17:     bIoU=86.06
+2026-10-26 23:04:06,617 [INFO] src.models.md_sam3:   TIMING video_46: 633 frames, prep 20.9 s, track 56.1 s (88.6 ms/frame), peak 12.38 GiB
+2026-10-26 23:04:06,675 [INFO] inference_ev17:   video_46: 633 frames, classes=[1], Done in 77.1s
+2026-10-26 23:04:39,588 [INFO] inference_ev17:     bIoU=73.98
+2026-10-26 23:05:38,365 [INFO] src.models.md_sam3:   TIMING video_47: 334 frames, prep 13.4 s, track 45.3 s (135.8 ms/frame), peak 8.71 GiB
+2026-10-26 23:05:38,379 [INFO] inference_ev17:   video_47: 334 frames, classes=[1], Done in 58.7s
+2026-10-26 23:05:53,270 [INFO] inference_ev17:     bIoU=80.36
+2026-10-26 23:06:32,255 [INFO] src.models.md_sam3:   TIMING video_48: 301 frames, prep 11.5 s, track 27.5 s (91.2 ms/frame), peak 8.30 GiB
+2026-10-26 23:06:32,282 [INFO] inference_ev17:   video_48: 301 frames, classes=[1], Done in 39.0s
+2026-10-26 23:06:52,803 [INFO] inference_ev17:     bIoU=82.18
+2026-10-26 23:08:18,388 [INFO] src.models.md_sam3:   TIMING video_49: 687 frames, prep 25.9 s, track 59.6 s (86.8 ms/frame), peak 13.05 GiB
+2026-10-26 23:08:18,412 [INFO] inference_ev17:   video_49: 687 frames, classes=[1], Done in 85.6s
+2026-10-26 23:08:54,685 [INFO] inference_ev17:     bIoU=72.05
+2026-10-26 23:09:25,314 [INFO] src.models.md_sam3:   TIMING video_50: 243 frames, prep 10.3 s, track 20.3 s (83.4 ms/frame), peak 7.59 GiB
+2026-10-26 23:09:25,324 [INFO] inference_ev17:   video_50: 243 frames, classes=[1], Done in 30.6s
+2026-10-26 23:09:36,342 [INFO] inference_ev17:     bIoU=90.63
+2026-10-26 23:09:36,342 [INFO] inference_ev17: RETENTION: pruned 14831/16241 = 91.32% (mode=reliability)
+2026-10-26 23:09:36,342 [INFO] inference_ev17:   retention video_01: 562/562 deleted (100.0%)
+2026-10-26 23:09:36,342 [INFO] inference_ev17:   retention video_02: 329/329 deleted (100.0%)
+2026-10-26 23:09:36,342 [INFO] inference_ev17:   retention video_03: 512/521 deleted (98.3%)
+2026-10-26 23:09:36,342 [INFO] inference_ev17:   retention video_04: 130/130 deleted (100.0%)
+2026-10-26 23:09:36,342 [INFO] inference_ev17:   retention video_05: 269/271 deleted (99.3%)
+2026-10-26 23:09:36,342 [INFO] inference_ev17:   retention video_06: 473/705 deleted (67.1%)
+2026-10-26 23:09:36,342 [INFO] inference_ev17:   retention video_07: 255/271 deleted (94.1%)
+2026-10-26 23:09:36,342 [INFO] inference_ev17:   retention video_08: 116/147 deleted (78.9%)
+2026-10-26 23:09:36,342 [INFO] inference_ev17:   retention video_09: 253/263 deleted (96.2%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_10: 119/127 deleted (93.7%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_11_1: 212/236 deleted (89.8%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_11_2: 134/134 deleted (100.0%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_12: 128/131 deleted (97.7%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_13: 272/272 deleted (100.0%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_14: 281/281 deleted (100.0%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_15_1: 149/179 deleted (83.2%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_15_2: 116/131 deleted (88.5%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_16: 379/384 deleted (98.7%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_17_1: 183/280 deleted (65.4%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_17_2: 127/131 deleted (97.0%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_18: 474/544 deleted (87.1%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_19: 264/266 deleted (99.2%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_20: 288/289 deleted (99.7%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_21: 452/454 deleted (99.6%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_22: 259/382 deleted (67.8%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_23: 217/256 deleted (84.8%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_24: 192/249 deleted (77.1%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_25: 147/153 deleted (96.1%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_26: 93/163 deleted (57.1%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_27: 165/187 deleted (88.2%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_28: 181/181 deleted (100.0%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_29_1: 227/257 deleted (88.3%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_29_2: 188/232 deleted (81.0%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_30: 502/573 deleted (87.6%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_31: 505/564 deleted (89.5%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_32: 472/489 deleted (96.5%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_33: 157/157 deleted (100.0%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_34: 97/100 deleted (97.0%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_35: 438/503 deleted (87.1%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_36: 275/338 deleted (81.4%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_37: 354/359 deleted (98.6%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_38: 288/305 deleted (94.4%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_39: 237/238 deleted (99.6%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_40: 231/275 deleted (84.0%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_41: 232/237 deleted (97.9%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_42: 354/357 deleted (99.2%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_43: 188/197 deleted (95.4%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_44: 136/142 deleted (95.8%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_45: 115/116 deleted (99.1%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_46: 630/632 deleted (99.7%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_47: 332/333 deleted (99.7%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_48: 289/300 deleted (96.3%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_49: 658/686 deleted (95.9%)
+2026-10-26 23:09:36,343 [INFO] inference_ev17:   retention video_50: 195/242 deleted (80.6%)
+2026-10-26 23:16:07,157 [INFO] inference_ev17: Challenge IoU: 78.23%

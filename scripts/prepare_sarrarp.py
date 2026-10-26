@@ -38,7 +38,7 @@ def prepare(zip_path: str, out_root: str, delete_zip: bool) -> str:
             ok, img = cap.read()
             if not ok:
                 break
-            cv2.imwrite(str(out / "frames" / f"{idx:09d}.png"), img)
+            cv2.imwrite(str(out / "frames" / f"{idx:09d}.png"), img, [cv2.IMWRITE_PNG_COMPRESSION, 6])  # lossless
             saved += 1
         else:
             if not cap.grab():

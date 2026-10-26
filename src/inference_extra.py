@@ -59,7 +59,7 @@ def main():
         seqs = [s for s in seqs if s["seq_tag"] in set(keep.split(","))]
     logger.info(f"{ds_name}/{split}: {len(seqs)} sequences")
 
-    evaluator = EndoVis17Evaluator()
+    evaluator = EndoVis17Evaluator(compress=True)   # whole-run metrics; masks stored compressed
     rows = []
     for s in seqs:
         H, W = cv2.imread(s["frame_files"][0]).shape[:2]

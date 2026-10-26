@@ -7,8 +7,8 @@
   539
  ],
  "runs": [
-  "/workspace/results/ipcai/EV17_C0_scores:/workspace/results/ipcai/EV17_C0_ref",
-  "/workspace/results/ipcai/EV17_C2_delall_sp"
+  "results_ipcai/EV17_C0_scores:results_ipcai/EV17_C0_ref",
+  "results_ipcai/EV17_C2_delall_sp"
  ],
  "rule": "frame"
 }

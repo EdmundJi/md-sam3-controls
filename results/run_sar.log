@@ -1,0 +1,58 @@
+[2026-10-26 13:50:20] SAR DATA READY: 54 videos
+[2026-10-26 13:50:20] start SAR_Q50 (gpu 0)
+[2026-10-26 13:50:40] start SAR_delall (gpu 0)
+[2026-10-26 13:51:00] start SAR_keep (gpu 0)
+[2026-10-26 13:51:20] start SAR_DM (gpu 0)
+[2026-10-26 15:13:28] end SAR_delall rc=0 4968s "biou": 77.74
+[2026-10-26 15:13:28] start SAR_topk (gpu 0)
+[2026-10-26 15:16:16] end SAR_DM rc=0 5096s "biou": 78.23
+[2026-10-26 15:16:16] start SAR_Q50-perm_s1 (gpu 0)
+[2026-10-26 15:16:52] end SAR_Q50 rc=0 5192s "biou": 80.16
+[2026-10-26 15:16:52] start SAR_Q50-perm_s2 (gpu 0)
+[2026-10-26 15:17:42] end SAR_keep rc=0 5202s "biou": 78.21
+[2026-10-26 15:17:42] start SAR_Q50-perm_s3 (gpu 0)
+[2026-10-26 16:34:58] end SAR_topk rc=0 4890s "biou": 79.35
+[2026-10-26 16:34:58] start SAR_Q50-perm_s4 (gpu 0)
+[2026-10-26 16:37:03] end SAR_Q50-perm_s1 rc=0 4847s "biou": 79.29
+[2026-10-26 16:37:03] start SAR_Q50-perm_s5 (gpu 0)
+[2026-10-26 16:37:47] end SAR_Q50-perm_s2 rc=0 4855s "biou": 79.34
+[2026-10-26 16:37:47] start SAR_Q50-perm_s6 (gpu 0)
+[2026-10-26 16:38:20] end SAR_Q50-perm_s3 rc=0 4838s "biou": 78.97
+[2026-10-26 16:38:20] start SAR_Q50-perm_s7 (gpu 0)
+[2026-10-26 17:59:56] end SAR_Q50-perm_s4 rc=0 5098s "biou": 79.14
+[2026-10-26 17:59:56] start SAR_Q50-perm_s8 (gpu 0)
+[2026-10-26 18:00:21] end SAR_Q50-perm_s5 rc=0 4998s "biou": 79.08
+[2026-10-26 18:00:21] start SAR_Q50-perm_s9 (gpu 0)
+[2026-10-26 18:01:40] end SAR_Q50-perm_s6 rc=0 5033s "biou": 79.68
+[2026-10-26 18:01:40] start SAR_Q50-perm_s10 (gpu 0)
+[2026-10-26 18:03:04] end SAR_Q50-perm_s7 rc=0 5084s "biou": 78.69
+[2026-10-26 18:03:04] start SAR_Q50-perm_s11 (gpu 0)
+[2026-10-26 19:26:16] end SAR_Q50-perm_s8 rc=0 5180s "biou": 79.33
+[2026-10-26 19:26:16] start SAR_Q50-perm_s12 (gpu 0)
+[2026-10-26 19:27:08] end SAR_Q50-perm_s9 rc=0 5207s "biou": 79.16
+[2026-10-26 19:27:08] start SAR_Q50-perm_s13 (gpu 0)
+[2026-10-26 19:27:55] end SAR_Q50-perm_s11 rc=0 5091s "biou": 79.53
+[2026-10-26 19:27:55] start SAR_Q50-perm_s14 (gpu 0)
+[2026-10-26 19:28:00] end SAR_Q50-perm_s10 rc=0 5180s "biou": 79.09
+[2026-10-26 19:28:00] start SAR_Q50-perm_s15 (gpu 0)
+[2026-10-26 20:50:02] end SAR_Q50-perm_s12 rc=0 5026s "biou": 79.0
+[2026-10-26 20:50:02] start SAR_Q50-perm_s16 (gpu 0)
+[2026-10-26 20:51:33] end SAR_Q50-perm_s13 rc=0 5065s "biou": 79.3
+[2026-10-26 20:51:33] start SAR_Q50-perm_s17 (gpu 0)
+[2026-10-26 20:53:07] end SAR_Q50-perm_s14 rc=0 5112s "biou": 79.46
+[2026-10-26 20:53:07] start SAR_Q50-perm_s18 (gpu 0)
+[2026-10-26 20:53:35] end SAR_Q50-perm_s15 rc=0 5135s "biou": 78.99
+[2026-10-26 20:53:35] start SAR_Q50-perm_s19 (gpu 0)
+[2026-10-26 22:12:59] end SAR_Q50-perm_s16 rc=0 4977s "biou": 78.7
+[2026-10-26 22:12:59] start SAR_Q50-perm_s20 (gpu 0)
+[2026-10-26 22:14:14] end SAR_Q50-perm_s17 rc=0 4961s "biou": 79.64
+[2026-10-26 22:14:14] worker exit
+[2026-10-26 22:16:27] end SAR_Q50-perm_s18 rc=0 5000s "biou": 79.54
+[2026-10-26 22:16:27] worker exit
+[2026-10-26 22:16:42] end SAR_Q50-perm_s19 rc=0 4987s "biou": 78.33
+[2026-10-26 22:16:42] worker exit
+[2026-10-26 23:15:12] end SAR_Q50-perm_s20 rc=0 3733s "biou": 79.25
+[2026-10-26 23:15:12] worker exit
+[2026-10-26 23:15:12] SAR RUNS DONE
+[2026-10-27 01:13:42] fusions s14-s20 started in parallel (s13 running: pid 41554)
+[2026-10-27 01:22:04] SAR FUSION DONE

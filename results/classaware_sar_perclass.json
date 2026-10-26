@@ -1,0 +1,84 @@
+{
+ "C0": {
+  "mciou": 26.83,
+  "per_class": {
+   "BF": 75.65,
+   "PF": 4.83,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 58.91,
+  "per_class_instantiable": {
+   "BF": 75.65,
+   "PF": 42.16,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 15824,
+   "PF": 1939,
+   "LND": 458,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 15824,
+   "PF": 222,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "biou": 78.21
+ },
+ "method": {
+  "mciou": 27.38,
+  "per_class": {
+   "BF": 77.96,
+   "PF": 4.19,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "mciou_instantiable": 57.28,
+  "per_class_instantiable": {
+   "BF": 77.96,
+   "PF": 36.6,
+   "LND": 0.0,
+   "VS": 0.0,
+   "GR": 0.0,
+   "MCS": 0.0,
+   "UP": 0.0
+  },
+  "n_frames_per_class": {
+   "BF": 15824,
+   "PF": 1939,
+   "LND": 458,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "n_frames_per_class_instantiable": {
+   "BF": 15824,
+   "PF": 222,
+   "LND": 0,
+   "VS": 0,
+   "GR": 0,
+   "MCS": 0,
+   "UP": 0
+  },
+  "biou": 80.18
+ }
+}

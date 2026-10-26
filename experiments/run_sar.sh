@@ -9,6 +9,9 @@ DS=/workspace/data/SAR-RARP50
 PY=/workspace/.venvs/mdsam3-verify/bin/python
 L=$R/run_sar.log
 cd "$(dirname "$0")"
+# start only once all 54 videos are prepared (get_sarrarp.sh)
+while [ "$(ls $DS/video_*/DONE 2>/dev/null | wc -l)" -lt 54 ]; do sleep 60; done
+echo "[$(date '+%F %T')] SAR DATA READY: $(ls $DS/video_*/DONE | wc -l) videos" >> $L
 bash gen_sar_jobs.sh
 cp sar_jobs.txt queue_sar.txt
 for i in $(seq 1 $N); do bash worker.sh queue_sar.txt 0 >> $L 2>&1 < /dev/null & sleep 20; done
