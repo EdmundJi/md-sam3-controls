@@ -53,9 +53,11 @@ def sequences(dataset, root):
             load = (lambda s, H, W: lambda fid: load_gt_mask(s["gt_dir"], fid, H, W))(s, H, W)
             init = load(s["init_frame_id"])
             yield f"ds{s['dataset_id']}", s["frame_ids"], load, sorted(extract_class_masks(init))
-    elif dataset in ("ev17train", "cholec"):
-        from src.data.extra_datasets import cholec_sequences, ev17_train_sequences, extract_class_masks
-        for s in (ev17_train_sequences(root) if dataset == "ev17train" else cholec_sequences(root, "all")):
+    elif dataset in ("ev17train", "cholec", "sarrarp"):
+        from src.data.extra_datasets import (cholec_sequences, ev17_train_sequences, extract_class_masks,
+                                             sarrarp_sequences)
+        for s in (ev17_train_sequences(root) if dataset == "ev17train"
+                  else sarrarp_sequences(root, "all") if dataset == "sarrarp" else cholec_sequences(root, "all")):
             H, W = cv2.imread(s["frame_files"][0]).shape[:2]
             load = (lambda s, H, W: lambda fid: s["gt"](fid, H, W))(s, H, W)
             yield s["seq_tag"], s["frame_ids"], load, sorted(extract_class_masks(load(s["init_frame_id"])))

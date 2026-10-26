@@ -67,6 +67,16 @@ What the rate-matched controls show (DM = reliability-threshold retention):
 * **Runtime**: 129 ms per frame for SAM3 on EndoVis 2017, peak 9.35 GiB; no
   rule adds measurable time.
 
+## Fourth test set, preregistered: SAR-RARP50
+
+Before any model was run on it, the protocol for a fourth test set, the 54 videos of
+SAR-RARP50 (robot-assisted radical prostatectomy, masks at 1 Hz), was committed in
+[`PREREGISTRATION_SAR-RARP50.md`](PREREGISTRATION_SAR-RARP50.md): data handling,
+runs, hypotheses and analysis, with no setting changed from the paper.
+`experiments/get_sarrarp.sh` downloads and prepares the data,
+`experiments/run_sar.sh` runs the job list `experiments/gen_sar_jobs.sh`.
+Results will be added here unchanged, whatever they are.
+
 ## Recompute the statistics (no GPU)
 
 All per-run outputs are committed under `results/` (metrics, per-sequence
@@ -152,5 +162,5 @@ results/                    every run's metrics, per-sequence results, decisions
 ## License and data
 
 Code: see `LICENSE`. EndoVis 2017/2018 are available from the challenge
-organizers; CholecSeg8k is released under CC BY-NC-SA 4.0. Neither data nor
+organizers; CholecSeg8k and SAR-RARP50 are released under CC BY-NC-SA 4.0. Neither data nor
 SAM3 weights are redistributed here.

@@ -13,6 +13,16 @@ cholec     CholecSeg8k: 101 clips of 80 frames from 17 cholecystectomy videos;
            and are skipped. Split by video: CHOLEC_DEV_VIDEOS for development,
            the rest for confirmation.
 
+sarrarp    SAR-RARP50 (robot-assisted radical prostatectomy, suturing step): 50
+           operations in 54 video files, masks at 1 Hz (prepared with
+           scripts/prepare_sarrarp.py). One sequence per video file, tracked on
+           the annotated frames only and starting at the first one showing an
+           instrument. Instrument categories: robotic instrument (tool clasper,
+           wrist and shaft, ids 1-3 -> 1), suction tool (6 -> 2) and needle
+           holder (7 -> 3); needle, thread, clamps and catheter are background.
+           Split: official test release (videos 41-50) or train release.
+           Never used for development (fourth test set, preregistered).
+
 Each sequence dict has seq_tag, dataset_id (int), frame_files, frame_ids,
 init_frame_id and gt(frame_id, H, W) -> HxW uint8 type map (or None).
 """
@@ -113,6 +123,40 @@ def cholec_sequences(root: str, split: str = "all", merge: bool = True) -> List[
         out.append({"seq_tag": f"{video}_{ids[0]:05d}", "dataset_id": 1000 + i,
                     "frame_files": [str(f) for _, f in frames],
                     "frame_ids": ids, "init_frame_id": ids[0], "gt": gt, "n_clips": len(clips)})
+    return out
+
+
+SAR_IDS = {1: 1, 2: 1, 3: 1, 6: 2, 7: 3}
+SAR_TEST_VIDEOS = {f"video_{i}" for i in range(41, 51)}
+
+
+def sarrarp_sequences(root: str, split: str = "all") -> List[Dict]:
+    root = Path(root)
+    out = []
+    videos = sorted((p for p in root.glob("video_*") if (p / "DONE").exists()),
+                    key=lambda p: [int(x) for x in p.name[6:].split("_")])
+    for i, vdir in enumerate(videos):
+        test = vdir.name in SAR_TEST_VIDEOS
+        if (split == "test" and not test) or (split == "train" and test):
+            continue
+        ids = sorted(int(p.stem) for p in (vdir / "segmentation").glob("*.png"))
+
+        def gt(fid, H, W, vdir=vdir):
+            p = vdir / "segmentation" / f"{fid:09d}.png"
+            if not p.exists():
+                return None
+            w = cv2.imread(str(p), cv2.IMREAD_GRAYSCALE)
+            m = np.zeros(w.shape, np.uint8)
+            for v, cl in SAR_IDS.items():
+                m[w == v] = cl
+            return _resize(m, H, W)
+        k = next((j for j, fid in enumerate(ids) if gt(fid, 1080, 1920).any()), None)
+        if k is None or len(ids) - k < 40:
+            continue
+        ids = ids[k:]
+        out.append({"seq_tag": vdir.name, "dataset_id": 2000 + i,
+                    "frame_files": [str(vdir / "frames" / f"{fid:09d}.png") for fid in ids],
+                    "frame_ids": ids, "init_frame_id": ids[0], "gt": gt})
     return out
 
 

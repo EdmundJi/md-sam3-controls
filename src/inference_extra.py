@@ -3,7 +3,7 @@
 Same configurations, controls and outputs as src/inference_ev17.py; bIoU is the
 binary instrument IoU per frame (an empty/empty frame scores 1).
 usage:
-  python src/inference_extra.py --dataset ev17train|cholec [--split dev|test|all] \
+  python src/inference_extra.py --dataset ev17train|cholec|sarrarp [--split dev|test|train|all] \
       --data-root D --config C0 --output-dir OUT [control args as in inference_ev17.py]
 """
 import json
@@ -17,7 +17,8 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from src import inference_ev17 as ev17  # noqa: E402  (shared args, config, logging)
-from src.data.extra_datasets import cholec_sequences, ev17_train_sequences, extract_class_masks  # noqa: E402
+from src.data.extra_datasets import (cholec_sequences, ev17_train_sequences, extract_class_masks,  # noqa: E402
+                                     sarrarp_sequences)
 from src.evaluation.metrics import EndoVis17Evaluator  # noqa: E402
 from src.models.md_sam3 import build_md_sam3  # noqa: E402
 from src.run_utils import dump_decisions, full_config, save_pred  # noqa: E402
@@ -51,6 +52,7 @@ def main():
     if nm:
         inferencer.predictor.num_maskmem = int(nm)
     seqs = (ev17_train_sequences(args.data_root) if ds_name == "ev17train"
+            else sarrarp_sequences(args.data_root, split) if ds_name == "sarrarp"
             else cholec_sequences(args.data_root, split))
     keep = os.environ.get("SEQ_TAGS")
     if keep:

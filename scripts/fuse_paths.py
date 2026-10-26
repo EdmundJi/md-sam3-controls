@@ -29,7 +29,7 @@ from src.evaluation.metrics import compute_iou  # noqa: E402
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--dataset", required=True, choices=["ev17", "ev18", "ev17train", "cholec"])
+    ap.add_argument("--dataset", required=True, choices=["ev17", "ev18", "ev17train", "cholec", "sarrarp"])
     ap.add_argument("--data-root", required=True)
     ap.add_argument("--run", action="append", required=True)
     ap.add_argument("--out", required=True)
