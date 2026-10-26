@@ -74,3 +74,41 @@ Whatever the outcome, the SAR-RARP50 results will be reported in the paper as a
 fourth test set, citing this document. If not all 20 controls finish before the
 paper deadline, the number of completed draws is reported. Any deviation from
 this document will be listed in the paper.
+
+## Amendment 1 (2026-10-26, before any model was run on SAR-RARP50)
+
+Made after an internal statistical review of the plan above; still no prediction
+exists on SAR-RARP50.
+
+1. **Status of the estimates.** The confirmatory primary result is H1 on
+   SAR-RARP50 alone. The pooled gain over the four test sets is secondary,
+   because three of its four sets have a history (EV17 and EV18 analysed before
+   the design; CholecSeg8k first run after it). Sensitivity analyses for the
+   pooled gain: each of the 107 sequences weighted equally, and leaving out one
+   set at a time.
+2. **Clustering.** The 54 video files come from 50 operations (operations 11, 15,
+   17 and 29 have two files each). Confidence intervals on SAR-RARP50 resample
+   operations (cluster bootstrap, all files of a drawn operation together), and
+   the sign test counts operations (frame-weighted gain per operation). The
+   sequence-level versions written above are reported as sensitivity analyses.
+   The failure rate uses the same resampling (frame-weighted share).
+3. **Decision rule for H1.** Supported if the lower bound of the 95% CI of the
+   gain is above zero; replicated in direction if the gain is positive and the
+   sign test gives p < 0.05; otherwise not supported. The abstract reports the
+   SAR-RARP50 estimate with its CI, separately from the pooled estimate, worded
+   for the observed case: "gained X [CI]" (supported); "gained X, with a CI that
+   includes zero, and was better on W of N operations" (replicated in
+   direction); "did not improve on SAM3 (X [CI])" (not supported, in which case
+   title, abstract and conclusion are revised around the controls).
+4. **Ties.** Sign tests drop ties and report their number. When the two paths of
+   the tracker have equal mean scores, the memory-free path is kept (as in
+   `scripts/fuse_paths.py`).
+5. **Power.** With per-sequence gain SDs of 3-10 points on the earlier sets, the
+   standard error on 50 operations is about 0.4-1.4 points: adequate for gains of
+   1-2.5 points, not for sub-point effects. The paper will say so.
+6. **Exploratory additions** (declared now, reported as exploratory, not part of
+   H1/H2), run on all four test sets: (i) DM with r = sigmoid(s)·c, the most
+   lenient reading of ReMeDI-SAM3's r = s·c (Eq. 1 uses SAM3's own memory score,
+   max(0, 2·sigmoid(s) - 1)·c); run from a separate copy of the code so that the
+   preregistered runs use the code of this commit; (ii) the per-video fusion of
+   SAM3 (keep all) with first frame only, from saved outputs.
