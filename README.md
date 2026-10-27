@@ -205,6 +205,13 @@ experiments/                job lists and the queue used for every run
 results/                    every run's metrics, per-sequence results, decisions, logs
 ```
 
+## Data sources
+
+* EndoVis 2017 (Robotic Instrument Segmentation): https://endovissub2017-roboticinstrumentsegmentation.grand-challenge.org
+* EndoVis 2018 (Robotic Scene Segmentation): https://endovissub2018-roboticscenesegmentation.grand-challenge.org
+* CholecSeg8k: https://www.kaggle.com/datasets/newslab/cholecseg8k
+* SAR-RARP50: training release https://doi.org/10.5522/04/24932529.v1, test release https://doi.org/10.5522/04/24932499.v1
+
 ## License and data
 
 Code: see `LICENSE`. EndoVis 2017/2018 are available from the challenge
