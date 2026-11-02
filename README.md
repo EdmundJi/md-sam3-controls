@@ -57,16 +57,17 @@ What the rate-matched controls show (DM = reliability-threshold retention):
 ## Checks run after the method was chosen
 
 * **Top-6 bank** (`--config C2-topk`): keeps the six highest-scoring entries,
-  as many as SAM3 reads. +1.12 [−0.01, +2.41] over SAM3; it would have ranked
-  19th of 32 development candidates.
-* **Lossless input** (`--frame-format png`): the two-path tracker gains +1.64
-  [+0.23, +3.11] over SAM3 with the same input, more than any single rule. The
-  single rules reorder on EndoVis 2018, where one sequence swings by 32 points
-  for the rank rule; with PNG input the two-path tracker trails the best single
-  rule by up to 0.25.
-* **Deletion share ρ**: with ρ = 0.25 / 0.75 the two-path tracker gains +0.93 /
-  +1.51 (rank rule +0.66 / +0.81); ρ = 0.5, chosen on development data, is the
-  best of the three on test as well.
+  as many as SAM3 reads. +1.13 [+0.19, +2.17] over SAM3 on the four test sets,
+  less than the two-path tracker; it would have ranked 19th of 32 development
+  candidates.
+* **Lossless input** (`--frame-format png`; first three test sets, run before
+  SAR-RARP50 was added): the two-path tracker gains +1.64 [+0.23, +3.11] over
+  SAM3 with the same input, more than any single rule. The single rules reorder
+  on EndoVis 2018, where one sequence swings by 32 points for the rank rule;
+  with PNG input the two-path tracker trails the best single rule by up to 0.25.
+* **Deletion share ρ** (first three test sets): with ρ = 0.25 / 0.75 the
+  two-path tracker gains +0.93 / +1.51 (rank rule +0.66 / +0.81); ρ = 0.5,
+  chosen on development data, is the best of the three on test as well.
 * **Class-aware metrics** (`scripts/classaware_offline.py`, from saved
   predictions): the two-path tracker raises mcIoU* over SAM3 on EndoVis 2017,
   EndoVis 2018 and CholecSeg8k (+1.6, +1.9, +1.3) and per-frame Challenge IoU on
